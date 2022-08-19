@@ -2344,21 +2344,23 @@ void CheckDRLASetWeapons()
         "RLNuclearOnslaught"
     };
 
-    // Weapon portion of Nuclear Set Bonus Checking
-    for (int i = 0; i < 15; i++)
-        if (CheckInventory(NuclearWeapons[i]))
+    if (CheckInventory("RLNuclearWeaponSetBonusWeapon")) {
+        // Weapon portion of Nuclear Set Bonus Checking
+        for (int i = 0; i < 15; i++)
+            if (CheckInventory(NuclearWeapons[i]))
+            {
+                hasNuclearWeapon = true;
+                break;
+            }
+        if (!hasNuclearWeapon)
         {
-            hasNuclearWeapon = true;
-            break;
+            TakeInventory("RLNuclearWeaponSetBonusWeapon", 1);
+            TakeInventory("RLNuclearWeaponSetBonusActive", 1);
         }
-    if (!hasNuclearWeapon)
-    {
-        TakeInventory("RLNuclearWeaponSetBonusWeapon", 1);
-        TakeInventory("RLNuclearWeaponSetBonusActive", 1);
     }
 
     // Tristar blaster Set Bonus Checking
-    if (!CheckInventory("RLTristarBlaster") || !CheckInventory("RLHighPowerTristarBlaster") || !CheckInventory("RLNanomanufactureAmmoTristarBlaster"))
+    if (!CheckInventory("RLTristarBlaster") && !CheckInventory("RLHighPowerTristarBlaster") && !CheckInventory("RLNanomanufactureAmmoTristarBlaster"))
     {
         TakeInventory("RLCerberusSetBonusTristarBlaster", 1);
         TakeInventory("RLCerberusSetBonusActive", 1);
