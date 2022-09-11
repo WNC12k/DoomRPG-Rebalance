@@ -99,9 +99,9 @@ NamedScript MapSpecial void ArenaLoop()
                 if (!Player.InMenu && !Player.InShop && !Player.OutpostMenu)
                 {
                     if (GetCVar("use_joystick") || GetUserCVar(PlayerNumber(), "drpg_deltatouch"))
-                        HudMessage("Hold \Cd%S\C- to start the next wave\nHold \Cd%S\C- to end the Arena", "Use", "Run");
+                        HudMessage("Hold \Cd%S\C- to start the next wave\nHold \Cd%S\C- to end the Arena", "Use", "Jump");
                     else
-                        HudMessage("Hold \Cd%jS\C- to start the next wave\nHold \Cd%jS\C- to end the Arena", "+use", "+speed");
+                        HudMessage("Hold \Cd%jS\C- to start the next wave\nHold \Cd%jS\C- to end the Arena", "+use", "+jump");
                     EndHudMessage(HUDMSG_PLAIN, 0, "White", 1.5, 0.75, 0.05);
                 }
 
@@ -114,10 +114,17 @@ NamedScript MapSpecial void ArenaLoop()
 
                     if (Ready)
                     {
-                        ArenaKeyTimer++;
-                        ArenaKeyTimerType = AKTIMER_CONTINUE;
+                        if (ArenaKeyTimerType == AKTIMER_CONTINUE)
+                            ArenaKeyTimer++;
+                        else
+                        {
+                            ArenaKeyTimer = 0;
+                            ArenaKeyTimerType = AKTIMER_CONTINUE;
+                        }
+
                         if (ArenaKeyTimer > ARENA_HOLDTIME)
                         {
+                            ArenaKeyTimer = 0;
                             // Multiplayer Countdown
                             if (InMultiplayer)
                             {
@@ -140,18 +147,27 @@ NamedScript MapSpecial void ArenaLoop()
                         ActivatorSound("menu/error", 127);
                     }
                 }
-                else if (CheckInput(BT_SPEED, KEY_HELD, false, ArenaPlayerNumber) && (!Player.InMenu && !Player.InShop && !Player.OutpostMenu && !Player.CrateOpen))
+                else if (CheckInput(BT_JUMP, KEY_HELD, false, ArenaPlayerNumber) && (!Player.InMenu && !Player.InShop && !Player.OutpostMenu && !Player.CrateOpen))
                 {
-                    ArenaKeyTimer++;
-                    ArenaKeyTimerType = AKTIMER_STOP;
+                    if (ArenaKeyTimerType == AKTIMER_STOP)
+                        ArenaKeyTimer++;
+                    else
+                    {
+                        ArenaKeyTimer = 0;
+                        ArenaKeyTimerType = AKTIMER_STOP;
+                    }
+
                     if (ArenaKeyTimer > ARENA_HOLDTIME)
                     {
+                        ArenaKeyTimer = 0;
                         ArenaStop();
                         return;
                     }
                 }
                 else
+                {
                     ArenaKeyTimer = 0;
+                }
 
                 // Reset menu block
                 if (CheckInput(0, KEY_ANYIDLE, false, ArenaPlayerNumber))
