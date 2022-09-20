@@ -60,15 +60,24 @@ Class WidowBigShotRPG : WidowBigShot replaces WidowBigShot
 	}
 }
 
-//Monsters Things (damage types etc.)
+//Monsters Things (damage types, drop items and etc.)
 
 //Zombies
 Class PistolZombieRPG : PistolZombie replaces PistolZombie
 {
 	Default
 	{
-		DropItem "DRPGPistol", 48;
-		DropItem "DRPGClipSpawner";
+		DropItem "PistolZombieDropRPG";
+	}
+}
+
+Class PistolZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGPistol",         255, 48;
+		DropItem "DRPGPistolSpawner",  255, 4;
+		DropItem "DRPGClipSpawner",    255, 208;
 	}
 }
 
@@ -76,8 +85,18 @@ Class LaserRifleZombieRPG : LaserRifleZombie replaces LaserRifleZombie
 {
 	Default
 	{
-		DropItem "DRPGCellSpawner";
+		DropItem "LaserRifleZombieDropRPG";
 		DamageType "Plasma";
+	}
+}
+
+Class LaserRifleZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGPlasmaRifle",         255, 48;
+		DropItem "DRPGPlasmaRifleSpawner",  255, 4;
+		DropItem "DRPGCellSpawner",         255, 208;
 	}
 }
 
@@ -94,18 +113,57 @@ Class SpecOpsRiflemanRPG : SpecOpsRifleman replaces SpecOpsRifleman
 {
 	Default
 	{
-		DropItem "DRPGClipSpawner";
-		DropItem "DRPGCellSpawner", 32;
+		DropItem "SpecOpsRiflemanDropRPG";
 		DamageType "Plasma";
 	}
 }
 
+Class SpecOpsRiflemanDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGPistol",         255, 48;
+		DropItem "DRPGPistolSpawner",  255, 4;
+		DropItem "DRPGClipSpawner",    255, 208;
+		DropItem "DRPGCellSpawner",    255, 48;
+	}
+}
+
 //Shotgunners
+Class NewShotgunguyRPG : NewShotgunguy replaces NewShotgunguy
+{
+	Default
+	{
+		DropItem "NewShotgunguyDropRPG";
+	}
+}
+
+Class NewShotgunguyDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGShotgun",         255, 48;
+		DropItem "DRPGShotgunSpawner",  255, 4;
+		DropItem "DRPGShellSpawner",    255, 208;
+	}
+}
+
 Class AutoShotgunZombieRPG : AutoShotgunZombie replaces AutoShotgunZombie
 {
 	Default
 	{
-		DropItem "DRPGShellSpawner", 256;
+		DropItem "AutoShotgunZombieDropRPG";
+	}
+}
+
+Class AutoShotgunZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGCombatShotgun",           255, 48;
+		DropItem "DRPGCombatShotgunSpawner",    255, 4;
+		DropItem "DRPGShellSpawner",            255, 208;
+		DropItem "DRPGShellBoxSpawner",         255, 48;
 	}
 }
 
@@ -113,8 +171,17 @@ Class RocketZombieRPG : RocketZombie replaces RocketZombie
 {
 	Default
 	{
-		DropItem "DRPGRocketLauncher", 48;
-		DropItem "DRPGRocketAmmoSpawner";
+		DropItem "RocketZombieDropRPG";
+	}
+}
+
+Class RocketZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGRocketLauncher",          255, 48;
+		DropItem "DRPGRocketLauncherSpawner",   255, 4;
+		DropItem "DRPGRocketAmmoSpawner",       255, 208;
 	}
 }
 
@@ -122,17 +189,17 @@ Class ShotgunAdmiralRPG : ShotgunAdmiral replaces ShotgunAdmiral
 {
 	Default
 	{
-		DropItem "DRPGShellSpawner", 256;
-		DropItem "DRPGShellSpawner", 32;
+		DropItem "ShotgunAdmiralDropRPG";
 	}
 }
 
-Class NewShotgunguyRPG : NewShotgunguy replaces NewShotgunguy
+Class ShotgunAdmiralDropRPG : RandomSpawner
 {
 	Default
 	{
-		DropItem "DRPGShotgun", 48;
-		DropItem "DRPGShellSpawner";
+		DropItem "DRPGChaingun",           255, 48;
+		DropItem "DRPGChaingunSpawner",    255, 4;
+		DropItem "DRPGShellBoxSpawner",    255, 208;
 	}
 }
 
@@ -140,8 +207,17 @@ Class SlugShotgunZombieRPG : SlugShotgunZombie replaces SlugShotgunZombie
 {
 	Default
 	{
-		DropItem "DRPGShellSpawner", 256;
-		DropItem "DRPGShellSpawner", 32;
+		DropItem "SlugShotgunZombieDropRPG";
+	}
+}
+
+Class SlugShotgunZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGShotgun",          255, 48;
+		DropItem "DRPGShotgunSpawner",   255, 4;
+		DropItem "DRPGShellSpawner",     255, 208;
 	}
 }
 
@@ -149,8 +225,18 @@ Class SpecOpsShotgunnerRPG : SpecOpsShotgunner replaces SpecOpsShotgunner
 {
 	Default
 	{
-		DropItem "DRPGShellSpawner", 256;
-		DropItem "DRPGShellSpawner", 32;
+		DropItem "SpecOpsShotgunnerDropRPG";
+	}
+}
+
+Class SpecOpsShotgunnerDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGCombatShotgun",           255, 48;
+		DropItem "DRPGCombatShotgunSpawner",    255, 4;
+		DropItem "DRPGShellSpawner",            255, 208;
+		DropItem "DRPGShellBoxSpawner",         255, 48;
 	}
 }
 
@@ -158,8 +244,17 @@ Class SuperShotgunZombieRPG : SuperShotgunZombie replaces SuperShotgunZombie
 {
 	Default
 	{
-		DropItem "DRPGSuperShotgun", 48;
-		DropItem "DRPGShellSpawner";
+		DropItem "SuperShotgunZombieDropRPG";
+	}
+}
+
+Class SuperShotgunZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGSuperShotgun",          255, 48;
+		DropItem "DRPGSuperShotgunSpawner",   255, 4;
+		DropItem "DRPGShellSpawner",          255, 208;
 	}
 }
 
@@ -167,11 +262,21 @@ Class ChaosWarriorRPG : ChaosWarrior replaces ChaosWarrior
 {
 	Default
 	{
-		DropItem "DRPGCellSpawner";
+		DropItem "ChaosWarriorDropRPG";
 		DamageType "Radiation";
 		DamageFactor "Radiation", 0;
 	}
 }
+
+Class ChaosWarriorDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGCellSpawner",          255, 208;
+		DropItem "DRPGCellPackSpawner",      255, 48;
+	}
+}
+
 Class ChaosWarriorProjectileDRPG : ChaosWarriorProjectile replaces ChaosWarriorProjectile
 {
 	Default
@@ -181,20 +286,39 @@ Class ChaosWarriorProjectileDRPG : ChaosWarriorProjectile replaces ChaosWarriorP
 }
 
 //Chaingunners
-Class AssaultGunnerRPG : AssaultGunner replaces AssaultGunner
-{
-	Default
-	{
-		DropItem "DRPGClipSpawner", 256;
-	}
-}
-
 Class ChaingunZombieRPG : ChaingunZombie replaces ChaingunZombie
 {
 	Default
 	{
-		DropItem "DRPGChaingun", 48;
-		DropItem "DRPGClipBoxSpawner";
+		DropItem "ChaingunZombieDropRPG";
+	}
+}
+
+Class ChaingunZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGChaingun",          255, 48;
+		DropItem "DRPGChaingunSpawner",   255, 4;
+		DropItem "DRPGClipBoxSpawner",    255, 208;
+	}
+}
+
+Class AssaultGunnerRPG : AssaultGunner replaces AssaultGunner
+{
+	Default
+	{
+		DropItem "AssaultGunnerDropRPG";
+	}
+}
+
+Class AssaultGunnerDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGBattleRifle",          255, 48;
+		DropItem "DRPGBattleRifleSpawner",   255, 4;
+		DropItem "DRPGClipBoxSpawner",       255, 208;
 	}
 }
 
@@ -202,8 +326,17 @@ Class NailborgCommandoRPG : NailborgCommando replaces NailborgCommando
 {
 	Default
 	{
-		DropItem "DRPGChaingun", 48;
-		DropItem "DRPGClipBoxSpawner";
+		DropItem "NailborgCommandoDropRPG";
+	}
+}
+
+Class NailborgCommandoDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGChaingun",          255, 48;
+		DropItem "DRPGChaingunSpawner",   255, 4;
+		DropItem "DRPGClipBoxSpawner",    255, 208;
 	}
 }
 
@@ -211,9 +344,20 @@ Class SpecOpsGunnerRPG : SpecOpsGunner replaces SpecOpsGunner
 {
 	Default
 	{
-		DropItem "DRPGClipSpawner", 224;
-		DropItem "DRPGClipBoxSpawner", 32;
+		DropItem "SpecOpsGunnerDropRPG";
 		DropItem "PandGameLevelIncreaser", 40;
+	}
+}
+
+Class SpecOpsGunnerDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGPistol",              255, 48;
+		DropItem "DRPGBattleRifle",         255, 48;
+		DropItem "DRPGPistolSpawner",       255, 4;
+		DropItem "DRPGBattleRifleSpawner",  255, 4;
+		DropItem "DRPGClipBoxSpawner",      255, 208;
 	}
 }
 
@@ -221,9 +365,19 @@ Class SpecOpsLieutenantRPG : SpecOpsLieutenant replaces SpecOpsLieutenant
 {
 	Default
 	{
-		DropItem "DRPGClipBoxSpawner", 128;
-		DropItem "DRPGRocketAmmoSpawner", 128;
+		DropItem "SpecOpsLieutenantDropRPG";
 		DropItem "PandGameLevelIncreaser", 32;
+	}
+}
+
+Class SpecOpsLieutenantDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGChaingun",           255, 48;
+		DropItem "DRPGChaingunSpawner",    255, 4;
+		DropItem "DRPGClipBoxSpawner",     255, 128;
+		DropItem "DRPGRocketAmmoSpawner",  255, 128;
 	}
 }
 
@@ -231,11 +385,21 @@ Class ChaosDeathmarkRPG : ChaosDeathmark replaces ChaosDeathmark
 {
 	Default
 	{
-		DropItem "DRPGCellSpawner", 256;
+		DropItem "ChaosDeathmarkDropRPG";
 		DamageType "Radiation";
 		DamageFactor "Radiation", 0;
 	}
 }
+
+Class ChaosDeathmarkDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGCellSpawner",          255, 208;
+		DropItem "DRPGCellPackSpawner",      255, 48;
+	}
+}
+
 Class DeathmarkPuffDRPG : DeathmarkPuff replaces DeathmarkPuff
 {
 	Default
@@ -248,19 +412,38 @@ Class PlasmaRifleZombieRPG : PlasmaRifleZombie replaces PlasmaRifleZombie
 {
 	Default
 	{
-		DropItem "DRPGPlasmaRifle", 48;
-		DropItem "DRPGCellSpawner";
+		DropItem "PlasmaRifleZombieDropRPG";
 		DamageType "Plasma";
 	}
 }
+
+Class PlasmaRifleZombieDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGPlasmaRifle",         255, 48;
+		DropItem "DRPGPlasmaRifleSpawner",  255, 4;
+		DropItem "DRPGCellSpawner",         255, 208;
+	}
+}
+
 
 Class BFG10kWarriorRPG : BFG10kWarrior replaces BFG10kWarrior
 {
 	Default
 	{
-		DropItem "DRPGCellSpawner", 224;
-		DropItem "DRPGCellPackSpawner", 32;
+		DropItem "BFG10kWarriorDropRPG";
 		DamageType "Plasma";
+	}
+}
+
+Class BFG10kWarriorDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGBFG9000",          255, 48;
+		DropItem "DRPGBFG9000Spawner",   255, 4;
+		DropItem "DRPGCellPackSpawner",  255, 208;
 	}
 }
 
@@ -268,9 +451,18 @@ Class BFGCommandoRPG : BFGCommando replaces BFGCommando
 {
 	Default
 	{
-		DropItem "DRPGCellSpawner", 224;
-		DropItem "DRPGCellPackSpawner", 32;
+		DropItem "BFGCommandoDropRPG";
 		DamageType "Plasma";
+	}
+}
+
+Class BFGCommandoDropRPG : RandomSpawner
+{
+	Default
+	{
+		DropItem "DRPGBFG9000",          255, 48;
+		DropItem "DRPGBFG9000Spawner",   255, 4;
+		DropItem "DRPGCellPackSpawner",  255, 208;
 	}
 }
 
