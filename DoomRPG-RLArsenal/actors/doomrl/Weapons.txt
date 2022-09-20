@@ -2,7 +2,9 @@
 actor RLChainsaw1 : RLChainsawPickup replaces DRPGChainsaw {}
 actor RLPistol1 : RLPistolPickup replaces DRPGPistol {}
 actor RLShotgun1 : RLShotgunPickup replaces DRPGShotgun {}
+actor RLCombatShotgun1 : RLCombatShotgunPickup replaces DRPGCombatShotgun {}
 actor RLDoubleShotgun1 : RLDoubleShotgunPickup replaces DRPGSuperShotgun {}
+actor RLBattleRifle1 : RLBattleRiflePickup replaces DRPGBattleRifle {}
 actor RLChaingun1 : RLChaingunPickup replaces DRPGChaingun {}
 actor RLRocketLauncher1 : RLRocketLauncherPickup replaces DRPGRocketLauncher {}
 actor RLPlasmaRifle1 : RLPlasmaRiflePickup replaces DRPGPlasmaRifle {}
