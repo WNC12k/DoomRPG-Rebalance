@@ -2,7 +2,7 @@ actor DRPGAugCanister : Inventory 25070
 {
     Inventory.MaxAmount 100
     Inventory.InterHubAmount 100
-    Inventory.PickupMessage "You got an Aug Canister!"
+    Inventory.PickupMessage "You picked up an augmentation canister."
     Inventory.PickupSound "aug/pickup"
     
     States
@@ -18,7 +18,7 @@ actor DRPGAugUpgradeCanister : Inventory 25071
 {
     Inventory.MaxAmount 100
     Inventory.InterHubAmount 100
-    Inventory.PickupMessage "You got an Aug Upgrade Canister!"
+    Inventory.PickupMessage "You picked up an augmentation upgrade canister"
     Inventory.PickupSound "aug/pickup"
     
     States
@@ -36,7 +36,7 @@ actor DRPGAugSlotUpgrade : Inventory 25072
     
     Inventory.MaxAmount 100
     Inventory.InterHubAmount 100
-    Inventory.PickupMessage "You got an Aug Slot Upgrade!"
+    Inventory.PickupMessage "You picked up an augmentation slot upgrade."
     Inventory.PickupSound "aug/pickup"
     
     States
@@ -51,13 +51,13 @@ actor DRPGAugSlotUpgrade : Inventory 25072
 // Small Battery
 actor DRPGBatterySmall : CustomInventory
 {
-    Tag "Small Battery - Restores 20% of your Augmentation Battery"
+    Tag "Small battery (replenishes augmentation battery by 20%)"
     
     +INVBAR
     
     Inventory.MaxAmount 1000
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a Small Battery."
+    Inventory.PickupMessage "You picked up a small battery."
     Inventory.PickupSound "items/battery"
     Inventory.UseSound "items/battery"
     Inventory.Icon "BATT1"
@@ -86,13 +86,13 @@ actor DRPGBatterySmall : CustomInventory
 // Large Battery
 actor DRPGBatteryLarge : CustomInventory
 {
-    Tag "Large Battery - Restores 50% of your Augmentation Battery"
+    Tag "Large battery (replenishes augmentation battery by 50%)"
     
     +INVBAR
     
     Inventory.MaxAmount 1000
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a Large Battery."
+    Inventory.PickupMessage "You picked up a large battery."
     Inventory.PickupSound "items/battery"
     Inventory.UseSound "items/battery"
     Inventory.Icon "BATT2"
