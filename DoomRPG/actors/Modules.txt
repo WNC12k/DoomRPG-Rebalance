@@ -10,7 +10,7 @@ actor DRPGModulePickup : CustomInventory
     Scale 0.33
     
     Inventory.MaxAmount 0
-    Inventory.PickupMessage "You got some Upgrade Modules!"
+    Inventory.PickupMessage "You picked up upgrade modules."
     Inventory.PickupSound "items/module"
     
     +INVENTORY.ALWAYSPICKUP
