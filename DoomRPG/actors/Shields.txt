@@ -14,7 +14,7 @@ actor DRPGShieldBooster : CustomInventory 25080
     Scale 0.5
     
     Inventory.MaxAmount 0
-    Inventory.PickupMessage "Got a Shield Booster!"
+    Inventory.PickupMessage "You picked up a shield booster."
     Inventory.PickupSound "shield/booster"
     
     States
@@ -63,7 +63,7 @@ actor DRPGBasicShieldPackage : CustomInventory
     +INVENTORY.AUTOACTIVATE
     
     Inventory.MaxAmount 0
-    Inventory.PickupMessage "You got a Basic Shield Package."
+    Inventory.PickupMessage "You picked up a basic shield package."
     Inventory.PickupSound "shield/pickup"
     
     Scale 0.5
@@ -88,7 +88,7 @@ actor DRPGShieldPart : Inventory
     
     Inventory.MaxAmount 100
     Inventory.InterHubAmount 100
-    Inventory.PickupMessage "Got a Shield Part!"
+    Inventory.PickupMessage "You picked up a shield part."
     Inventory.PickupSound "shield/pickup"
 
     States
