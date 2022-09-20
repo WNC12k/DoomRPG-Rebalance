@@ -31,7 +31,7 @@ actor DRPGHealthBonus : CustomInventory
     +COUNTITEM
     +INVENTORY.ALWAYSPICKUP
     
-    Inventory.PickupMessage "$GOTHTHBONUS"
+    Inventory.PickupMessage "You picked up a health flask."
     Inventory.PickupSound "items/vial"
     
     States
@@ -49,7 +49,7 @@ actor DRPGHealthBonus : CustomInventory
 // Stimpack
 ACTOR DRPGStimpack : CustomInventory
 {
-    Inventory.PickupMessage "You got a Stimpack!"
+    Inventory.PickupMessage "You picked up a stimpack."
     Inventory.PickupSound "items/health"
     
     States
@@ -71,7 +71,7 @@ ACTOR DRPGStimpack : CustomInventory
 // Medikit
 ACTOR DRPGMedikit : CustomInventory
 {
-    Inventory.PickupMessage "You got a medium Medikit!"
+    Inventory.PickupMessage "You picked up a medium medikit."
     Inventory.PickupSound "items/health"
 
     States
@@ -93,7 +93,7 @@ ACTOR DRPGMedikit : CustomInventory
 // Large Medikit
 actor DRPGLargeMedikit : CustomInventory 25030
 {
-    Inventory.PickupMessage "You got a large Medikit!"
+    Inventory.PickupMessage "You picked up a large medikit."
     Inventory.PickupSound "items/health"
     
     States
@@ -115,7 +115,7 @@ actor DRPGLargeMedikit : CustomInventory 25030
 // Extra-Large Medikit
 actor DRPGXLMedikit : CustomInventory 25031
 {
-    Inventory.PickupMessage "You got an Extra-large Medikit!"
+    Inventory.PickupMessage "You picked up an extra large medikit."
     Inventory.PickupSound "items/health"
     
     States
@@ -137,7 +137,7 @@ actor DRPGXLMedikit : CustomInventory 25031
 // Med Pack
 actor DRPGMedPack : CustomInventory 25032
 {
-    Inventory.PickupMessage "You got a Med Pack!"
+    Inventory.PickupMessage "You picked up a med pack."
     Inventory.PickupSound "items/health"
     
     States
@@ -159,7 +159,7 @@ actor DRPGMedPack : CustomInventory 25032
 // Surgery Kit
 actor DRPGSurgeryKit : CustomInventory 25033
 {
-    Inventory.PickupMessage "You got a Surgery Kit!"
+    Inventory.PickupMessage "You picked up a surgery kit."
     Inventory.PickupSound "items/health"
     
     States
@@ -181,7 +181,7 @@ actor DRPGSurgeryKit : CustomInventory 25033
 // Medkit Refill
 ACTOR DRPGMedkitRefill : CustomInventory
 {
-    Inventory.PickupMessage "You got a Medkit refill."
+    Inventory.PickupMessage "You picked up a medkit refill."
     Inventory.PickupSound "items/health"
 
     States
@@ -206,7 +206,7 @@ ACTOR DRPGSoulsphere : CustomInventory
     +INVENTORY.FANCYPICKUPSOUND
     +INVENTORY.BIGPOWERUP
     
-    Inventory.PickupMessage "You got a Soulsphere!"
+    Inventory.PickupMessage "You picked up a lesser soul sphere."
     Inventory.PickupSound "powerups/soulsphere"
     
     States
@@ -224,6 +224,8 @@ ACTOR DRPGSoulsphere : CustomInventory
 
 ACTOR DRPGSoulsphere2 : DRPGSoulsphere 25034
 {
+    Inventory.PickupMessage "You picked up a soul sphere."
+
     Translation "192 : 207 = 112 : 127", "240 : 247 = 127 : 127"
     
     States
@@ -237,6 +239,8 @@ ACTOR DRPGSoulsphere2 : DRPGSoulsphere 25034
 
 ACTOR DRPGSoulsphere3 : DRPGSoulsphere 25035
 {
+    Inventory.PickupMessage "You picked up a greater soul sphere."
+
     Translation "192 : 207 = 172 : 187", "240 : 247 = 191 : 191"
     
     States
@@ -255,7 +259,7 @@ ACTOR DRPGLife : Inventory
     
     Inventory.MaxAmount 5
     Inventory.InterHubAmount 5
-    Inventory.PickupMessage "You got a Life!"
+    Inventory.PickupMessage "You picked up a life."
     Inventory.PickupSound "health/1up"
 }
 
@@ -265,7 +269,7 @@ ACTOR DRPG1Up : CustomInventory 25036
     +FLOATBOB
     +INVENTORY.FANCYPICKUPSOUND
     
-    Inventory.PickupMessage "You got a \cd1-Up!"
+    Inventory.PickupMessage "You picked up a \cd1-Up."
     Inventory.PickupSound "health/1up"
     
     Scale 0.5
@@ -287,7 +291,7 @@ ACTOR DRPG1Up : CustomInventory 25036
 
 ACTOR DRPG3Up : DRPG1Up
 {
-    Inventory.PickupMessage "You got a \ch3-Up!"
+    Inventory.PickupMessage "You picked up a \ch3-Up."
     Inventory.PickupSound "health/3up"
     
     States
@@ -307,7 +311,7 @@ ACTOR DRPG3Up : DRPG1Up
 
 ACTOR DRPG5Up : DRPG1Up
 {
-    Inventory.PickupMessage "You got a \cg5-Up!"
+    Inventory.PickupMessage "You picked up a \cg5-Up."
     Inventory.PickupSound "health/5up"
     
     States
@@ -328,7 +332,7 @@ ACTOR DRPG5Up : DRPG1Up
 // EP Capsule
 actor DRPGEPCapsule : CustomInventory 25037
 {
-    inventory.PickupMessage "Got an EP Capsule!"
+    Inventory.PickupMessage "You picked up an energy capsule."
     Inventory.PickupSound "health/epcapsule"
     
     Scale 0.5
@@ -350,6 +354,8 @@ actor DRPGEPCapsule : CustomInventory 25037
 // Little EP Capsule
 actor DRPGLittleEPCapsule : DRPGEPCapsule 25039
 {
+    Inventory.PickupMessage "You picked up a little energy capsule."
+
     Scale 0.40
     
     States
@@ -364,6 +370,8 @@ actor DRPGLittleEPCapsule : DRPGEPCapsule 25039
 // Big EP Capsule
 actor DRPGBigEPCapsule : DRPGEPCapsule 25038
 {
+    Inventory.PickupMessage "You picked up a big energy capsule."
+
     Scale 0.75
     
     States
