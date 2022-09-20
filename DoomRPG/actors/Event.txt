@@ -72,7 +72,7 @@ actor DRPGThermonuclearBombPickup : CustomInventory
     
     Inventory.MaxAmount 1
     Inventory.InterHubAmount 1
-    Inventory.PickupMessage "Picked up the ThermoNuclear Bomb!"
+    Inventory.PickupMessage "You picked up a thermobuclear bomb."
     Inventory.PickupSound "nuke/pickup"
     Inventory.Icon "NUKE"
     
@@ -212,7 +212,7 @@ actor DRPGNukeKey : Inventory
 {
     Inventory.Amount 1
     Inventory.MaxAmount 1
-    Inventory.PickupMessage "You got a Thermonuclear Bomb key."
+    Inventory.PickupMessage "You picked up a thermonuclear bomb key."
     Inventory.PickupSound "arena/keydrop"
     
     Scale 0.5
@@ -374,7 +374,7 @@ actor DRPGGeneratorCell : Inventory
     
     Inventory.Amount 1
     Inventory.MaxAmount 1
-    Inventory.PickupMessage "You got a Generator Power Cell."
+    Inventory.PickupMessage "You picked up a generator power cell."
     Inventory.PickupSound "items/vial"
     
     States
@@ -395,7 +395,7 @@ actor DRPGGeneratorCellDead : Inventory
     
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a dead Generator Power Cell."
+    Inventory.PickupMessage "You picked up a dead generator power cell."
     Inventory.PickupSound "items/vial"
     
     States
@@ -731,7 +731,7 @@ actor DRPGNeutralizerFuel : Inventory
     
     Inventory.Amount 1
     Inventory.MaxAmount 5
-    Inventory.PickupMessage "You got a Radiation Neutralizer fuel tank."
+    Inventory.PickupMessage "You picked up a radiation neutralizer fuel tank."
     Inventory.PickupSound "radiation/tankup"
     
     States
