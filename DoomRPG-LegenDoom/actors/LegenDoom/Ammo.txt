@@ -3,6 +3,8 @@
 
 actor LDClipPickupRPG : LDClipPickup Replaces DRPGClip
 {
+    Inventory.PickupMessage "You picked up a bullet clip."
+
     States
     {
     Spawn:
@@ -13,6 +15,8 @@ actor LDClipPickupRPG : LDClipPickup Replaces DRPGClip
 
 actor LDClipPickupHalfRPG : LDClipPickup Replaces DRPGClipHalf
 {
+    Inventory.PickupMessage "You picked up a short bullet clip."
+
     States
     {
     Spawn:
@@ -36,6 +40,8 @@ actor LDClipPickupHalfRPG : LDClipPickup Replaces DRPGClipHalf
 
 actor LDClipBoxPickupRPG : LDClipBoxPickup Replaces DRPGClipBox
 {
+    Inventory.PickupMessage "You picked up a bullet box."
+
     States
     {
     Spawn:
@@ -46,6 +52,8 @@ actor LDClipBoxPickupRPG : LDClipBoxPickup Replaces DRPGClipBox
 
 actor LDClipBoxPickupHalfRPG : LDClipBoxPickup Replaces DRPGClipBoxHalf
 {
+    Inventory.PickupMessage "You picked up a small bullet box."
+
     States
     {
     Spawn:
@@ -69,6 +77,8 @@ actor LDClipBoxPickupHalfRPG : LDClipBoxPickup Replaces DRPGClipBoxHalf
 
 actor LDShellPickupRPG : LDShellPickup replaces DRPGShell
 {
+    Inventory.PickupMessage "You picked up four shotgun shells."
+
     States
     {
     Spawn:
@@ -79,6 +89,8 @@ actor LDShellPickupRPG : LDShellPickup replaces DRPGShell
 
 actor LDShellPickupHalfRPG : LDShellPickup replaces DRPGShellHalf
 {
+    Inventory.PickupMessage "You picked up two shotgun shells."
+
     States
     {
     Spawn:
@@ -102,6 +114,8 @@ actor LDShellPickupHalfRPG : LDShellPickup replaces DRPGShellHalf
 
 actor LDShellBoxPickupRPG : LDShellBoxPickup replaces DRPGShellBox
 {
+    Inventory.PickupMessage "You picked up a shotgun shell box."
+
     States
     {
     Spawn:
@@ -112,6 +126,8 @@ actor LDShellBoxPickupRPG : LDShellBoxPickup replaces DRPGShellBox
 
 actor LDShellBoxPickupHalfRPG : LDShellBoxPickup replaces DRPGShellBoxHalf
 {
+    Inventory.PickupMessage "You picked up a spare shotgun shell box."
+
     States
     {
     Spawn:
@@ -135,6 +151,8 @@ actor LDShellBoxPickupHalfRPG : LDShellBoxPickup replaces DRPGShellBoxHalf
 
 actor LDRocketPickupRPG : LDRocketPickup replaces DRPGRocketAmmo
 {
+    Inventory.PickupMessage "You picked up a rocket."
+
     States
     {
     Spawn:
@@ -149,6 +167,8 @@ actor LDRocketPickupRPG : LDRocketPickup replaces DRPGRocketAmmo
 
 actor LDRocketBoxPickupRPG : LDRocketBoxPickup replaces DRPGRocketBox
 {
+    Inventory.PickupMessage "You picked up a rocket crate."
+
     States
     {
     Spawn:
@@ -159,6 +179,8 @@ actor LDRocketBoxPickupRPG : LDRocketBoxPickup replaces DRPGRocketBox
 
 actor LDRocketBoxPickupHalfRPG : LDRocketBoxPickup replaces DRPGRocketBoxHalf
 {
+    Inventory.PickupMessage "You picked up a mini rocket crate."
+
     States
     {
     Spawn:
@@ -181,6 +203,8 @@ actor LDRocketBoxPickupHalfRPG : LDRocketBoxPickup replaces DRPGRocketBoxHalf
 
 actor LDCellPickupRPG : LDCellPickup replaces DRPGCell
 {
+    Inventory.PickupMessage "You picked up an energy cell."
+
     States
     {
     Spawn:
@@ -191,6 +215,8 @@ actor LDCellPickupRPG : LDCellPickup replaces DRPGCell
 
 actor LDCellPickupHalfRPG : LDCellPickup replaces DRPGCellHalf
 {
+    Inventory.PickupMessage "You picked up a weak energy cell."
+
     States
     {
     Spawn:
@@ -214,6 +240,8 @@ actor LDCellPickupHalfRPG : LDCellPickup replaces DRPGCellHalf
 
 actor LDCellPackPickupRPG : LDCellPackPickup replaces DRPGCellPack
 {
+    Inventory.PickupMessage "You picked up an energy cell pack."
+    
     States
     {
     Spawn:
@@ -224,6 +252,8 @@ actor LDCellPackPickupRPG : LDCellPackPickup replaces DRPGCellPack
 
 actor LDCellPackPickupHalfRPG : LDCellPackPickup replaces DRPGCellPackHalf
 {
+    Inventory.PickupMessage "You picked up a half spent energy cell pack."
+
     States
     {
     Spawn:
@@ -247,6 +277,8 @@ actor LDCellPackPickupHalfRPG : LDCellPackPickup replaces DRPGCellPackHalf
 
 actor LDBackpackPickupRPG : LDBackpackPickup replaces LDBackpackPickup
 {
+    Inventory.PickupMessage "You picked up a backpack with ammo."
+    
     States
     {
     Spawn:
@@ -263,7 +295,7 @@ actor LDBackpackPickupRPG : LDBackpackPickup replaces LDBackpackPickup
 
 actor DRPGSmallBackpackLD : LDBackpackPickup Replaces DRPGSmallBackpack
 {
-    Inventory.PickupMessage "Picked up a Satchel with some ammo!"
+    Inventory.PickupMessage "You picked up a satchel with some ammo."
     Inventory.PickupSound "items/pack"
     
     States
@@ -283,7 +315,7 @@ actor DRPGSmallBackpackLD : LDBackpackPickup Replaces DRPGSmallBackpack
 
 actor DRPGBigBackpackLD : LDBackpackPickup Replaces DRPGBigBackpack
 {
-    Inventory.PickupMessage "Picked up a Big Golden Backpack loaded with ammo!"
+    Inventory.PickupMessage "You picked up a big golden backpack loaded with ammo."
     Inventory.PickupSound "items/pack"
     
     States
@@ -304,7 +336,7 @@ actor DRPGBigBackpackLD : LDBackpackPickup Replaces DRPGBigBackpack
 
 actor DRPGBigBackpackLD : LDBackpackPickup Replaces DRPGBigBackpack
 {
-    Inventory.PickupMessage "Picked up a Big Golden Backpack loaded with ammo!"
+    Inventory.PickupMessage "You picked up a big golden backpack loaded with ammo."
     Inventory.PickupSound "items/pack"
     
     States
