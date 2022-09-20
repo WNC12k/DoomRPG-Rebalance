@@ -7,6 +7,7 @@
 
 actor DRPGClip : Clip Replaces Clip
 {
+	Inventory.PickupMessage "You picked up a bullet clip."
     Inventory.PickupSound "items/clip"
     
     States
@@ -20,6 +21,7 @@ actor DRPGClip : Clip Replaces Clip
 
 actor DRPGClipBox : ClipBox replaces ClipBox
 {
+    Inventory.PickupMessage "You picked up a bullet box."
     Inventory.PickupSound "items/clipbox"
     
     States
@@ -33,6 +35,7 @@ actor DRPGClipBox : ClipBox replaces ClipBox
 
 actor DRPGShell : Shell Replaces Shell
 {
+	Inventory.PickupMessage "You picked up four shotgun shells."
     Inventory.PickupSound "items/shell"
     
     States
@@ -46,6 +49,7 @@ actor DRPGShell : Shell Replaces Shell
 
 actor DRPGShellBox : ShellBox Replaces ShellBox
 {
+	Inventory.PickupMessage "You picked up a shotgun shell box."
     Inventory.PickupSound "items/shell"
     
     States
@@ -59,6 +63,7 @@ actor DRPGShellBox : ShellBox Replaces ShellBox
 
 actor DRPGRocketAmmo : RocketAmmo Replaces RocketAmmo
 {
+	Inventory.PickupMessage "You picked up a rocket."
     Inventory.PickupSound "items/rocket"
     
     States
@@ -72,6 +77,7 @@ actor DRPGRocketAmmo : RocketAmmo Replaces RocketAmmo
 
 actor DRPGRocketBox : RocketBox Replaces RocketBox
 {
+	Inventory.PickupMessage "You picked up a rocket crate."
     Inventory.PickupSound "items/rocket"
     
     States
@@ -85,6 +91,7 @@ actor DRPGRocketBox : RocketBox Replaces RocketBox
 
 actor DRPGCell : Cell Replaces Cell
 {
+	Inventory.PickupMessage "You picked up an energy cell."
     Inventory.PickupSound "items/cell"
     
     States
@@ -98,6 +105,7 @@ actor DRPGCell : Cell Replaces Cell
 
 actor DRPGCellPack : CellPack Replaces CellPack
 {
+	Inventory.PickupMessage "You picked up an energy cell pack."
     Inventory.PickupSound "items/cell"
     
     States
@@ -114,6 +122,7 @@ actor DRPGCellPack : CellPack Replaces CellPack
 
 actor DRPGClipHalf : DRPGClip
 {
+	Inventory.PickupMessage "You picked up a short bullet clip."
     Inventory.Amount 5
     Inventory.PickupSound "items/clip"
     
@@ -128,6 +137,7 @@ actor DRPGClipHalf : DRPGClip
 
 actor DRPGClipBoxHalf : DRPGClipBox
 {
+	Inventory.PickupMessage "You picked up a small bullet box."
     Inventory.Amount 25
     Inventory.PickupSound "items/clipbox"
     
@@ -142,6 +152,7 @@ actor DRPGClipBoxHalf : DRPGClipBox
 
 actor DRPGShellHalf : DRPGShell
 {
+	Inventory.PickupMessage "You picked up two shotgun shells."
     Inventory.Amount 2
     Inventory.PickupSound "items/shell"
     
@@ -156,6 +167,7 @@ actor DRPGShellHalf : DRPGShell
 
 actor DRPGShellBoxHalf : DRPGShellBox
 {
+	Inventory.PickupMessage "You picked up a spare shotgun shell box."
     Inventory.Amount 10
     Inventory.PickupSound "items/shell"
     
@@ -170,6 +182,7 @@ actor DRPGShellBoxHalf : DRPGShellBox
 
 actor DRPGRocketBoxHalf : DRPGRocketBox
 {
+	Inventory.PickupMessage "You picked up a mini rocket crate."
     Inventory.Amount 3
     Inventory.PickupSound "items/rocket"
     
@@ -184,6 +197,7 @@ actor DRPGRocketBoxHalf : DRPGRocketBox
 
 actor DRPGCellHalf : DRPGCell
 {
+	Inventory.PickupMessage "You picked up a weak energy cell."
     Inventory.Amount 10
     Inventory.PickupSound "items/cell"
     
@@ -198,6 +212,7 @@ actor DRPGCellHalf : DRPGCell
 
 actor DRPGCellPackHalf : DRPGCellPack
 {
+	Inventory.PickupMessage "You picked up a half spent energy cell pack."
     Inventory.Amount 50
     Inventory.PickupSound "items/cell"
     
@@ -215,7 +230,7 @@ actor DRPGCellPackHalf : DRPGCellPack
 
 ACTOR DRPGBackpack : CustomInventory
 {
-    Inventory.PickupMessage "$GOTBACKPACK"
+    Inventory.PickupMessage "You picked up a backpack with ammo."
     Inventory.PickupSound "items/pack"
     
     States
@@ -235,7 +250,7 @@ ACTOR DRPGBackpack : CustomInventory
 
 actor DRPGSmallBackpack : DRPGBackpack
 {
-    Inventory.PickupMessage "Picked up a Satchel with some ammo!"
+    Inventory.PickupMessage "You picked up a satchel with some ammo."
     Inventory.PickupSound "items/pack"
     
     States
@@ -255,7 +270,7 @@ actor DRPGSmallBackpack : DRPGBackpack
 
 actor DRPGBigBackpack : DRPGBackpack
 {
-    Inventory.PickupMessage "Picked up a Big Golden Backpack loaded with ammo!"
+    Inventory.PickupMessage "You picked up a big golden backpack loaded with ammo."
     Inventory.PickupSound "items/pack"
     
     States
@@ -280,7 +295,7 @@ actor DRPGBigBackpack : DRPGBackpack
 // Givers to give back stolen ammo
 ACTOR DRPGStolenClip : CustomInventory
 {
-	Inventory.PickupMessage "$GOTCLIP"
+	Inventory.PickupMessage "You picked up a stolen bullet clip."
     Inventory.PickupSound "items/clip"
     
     States
@@ -297,7 +312,7 @@ ACTOR DRPGStolenClip : CustomInventory
 
 ACTOR DRPGStolenShell : CustomInventory
 {
-	Inventory.PickupMessage "$GOTSHELLS"
+	Inventory.PickupMessage "You picked up stolen four shotgun shells."
     Inventory.PickupSound "items/shell"
     
     States
@@ -314,7 +329,7 @@ ACTOR DRPGStolenShell : CustomInventory
 
 ACTOR DRPGStolenRocketAmmo : CustomInventory
 {
-	Inventory.PickupMessage "$GOTROCKET"
+	Inventory.PickupMessage "You picked up a stolen rocket."
     Inventory.PickupSound "items/rocket"
     
     States
@@ -331,7 +346,7 @@ ACTOR DRPGStolenRocketAmmo : CustomInventory
 
 ACTOR DRPGStolenCell : CustomInventory
 {
-	Inventory.PickupMessage "$GOTCELL"
+	Inventory.PickupMessage "You picked up a stolen energy cell."
     Inventory.PickupSound "items/cell"
     
     States
