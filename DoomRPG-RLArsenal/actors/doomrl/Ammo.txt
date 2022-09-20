@@ -3,7 +3,8 @@
 
 actor RLClip1 : RLClip Replaces DRPGClip
 {
-	Inventory.PickupSound "items/clip"
+    Inventory.PickupMessage "Picked up a bullet clip."
+    Inventory.PickupSound "items/clip"
     
     States
     {
@@ -16,7 +17,8 @@ actor RLClip1 : RLClip Replaces DRPGClip
 
 actor RLClip2 : RLClip Replaces RLClip
 {
-	Inventory.PickupSound "items/clip"
+    Inventory.PickupMessage "Picked up a bullet clip."
+    Inventory.PickupSound "items/clip"
     
     States
     {
@@ -29,7 +31,8 @@ actor RLClip2 : RLClip Replaces RLClip
 
 actor RLClip3 : RLClip Replaces DRPGClipHalf
 {
-	Inventory.PickupSound "items/clip"
+    Inventory.PickupMessage "Picked up a short bullet clip."
+    Inventory.PickupSound "items/clip"
     
     States
     {
@@ -52,7 +55,8 @@ actor RLClip3 : RLClip Replaces DRPGClipHalf
 
 actor RLClipBox1 : RLClipBox Replaces DRPGClipBox
 {
-	Inventory.PickupSound "items/clipbox"
+    Inventory.PickupMessage "Picked up a bullet box."
+    Inventory.PickupSound "items/clipbox"
     
     States
     {
@@ -65,7 +69,8 @@ actor RLClipBox1 : RLClipBox Replaces DRPGClipBox
 
 actor RLClipBox2 : RLClipBox Replaces RLClipBox
 {
-	Inventory.PickupSound "items/clipbox"
+    Inventory.PickupMessage "Picked up a bullet box."
+    Inventory.PickupSound "items/clipbox"
     
     States
     {
@@ -78,7 +83,8 @@ actor RLClipBox2 : RLClipBox Replaces RLClipBox
 
 actor RLClipBox3 : RLClipBox Replaces DRPGClipBoxHalf
 {
-	Inventory.PickupSound "items/clipbox"
+    Inventory.PickupMessage "Picked up a small bullet box."
+    Inventory.PickupSound "items/clipbox"
     
     States
     {
@@ -103,6 +109,7 @@ actor RLClipBox3 : RLClipBox Replaces DRPGClipBoxHalf
 
 actor RLShell1 : RLShell Replaces DRPGShell
 {
+    Inventory.PickupMessage "Picked up four shotgun shells."
     Inventory.PickupSound "items/shell"
     
     States
@@ -116,6 +123,7 @@ actor RLShell1 : RLShell Replaces DRPGShell
 
 actor RLShell2 : RLShell Replaces RLShell
 {
+    Inventory.PickupMessage "Picked up four shotgun shells."
     Inventory.PickupSound "items/shell"
     
     States
@@ -129,6 +137,7 @@ actor RLShell2 : RLShell Replaces RLShell
 
 actor RLShell3 : RLShell Replaces DRPGShellHalf
 {
+    Inventory.PickupMessage "Picked up two shotgun shells."
     Inventory.PickupSound "items/shell"
     
     States
@@ -157,7 +166,8 @@ actor RLShell3 : RLShell Replaces DRPGShellHalf
 
 actor RLShellBox1 : RLShellBox Replaces DRPGShellBox
 {
-	Inventory.PickupSound "items/shell"
+    Inventory.PickupMessage "Picked up a shotgun shell box."
+    Inventory.PickupSound "items/shell"
     
     States
     {
@@ -170,7 +180,8 @@ actor RLShellBox1 : RLShellBox Replaces DRPGShellBox
 
 actor RLShellBox2 : RLShellBox Replaces RLShellBox
 {
-	Inventory.PickupSound "items/shell"
+    Inventory.PickupMessage "Picked up a shotgun shell box."
+    Inventory.PickupSound "items/shell"
     
     States
     {
@@ -183,7 +194,8 @@ actor RLShellBox2 : RLShellBox Replaces RLShellBox
 
 actor RLShellBox3 : RLShellBox Replaces DRPGShellBoxHalf
 {
-	Inventory.PickupSound "items/shell"
+    Inventory.PickupMessage "Picked up a spare shotgun shell box."
+    Inventory.PickupSound "items/shell"
     
     States
     {
@@ -212,7 +224,8 @@ actor RLShellBox3 : RLShellBox Replaces DRPGShellBoxHalf
 
 actor RLRocketAmmo1 : RLRocketAmmo Replaces DRPGRocketAmmo
 {
-	Inventory.PickupSound "items/rocket"
+    Inventory.PickupMessage "Picked up a rocket."
+    Inventory.PickupSound "items/rocket"
     
     States
     {
@@ -225,7 +238,8 @@ actor RLRocketAmmo1 : RLRocketAmmo Replaces DRPGRocketAmmo
 
 actor RLRocketAmmo2 : RLRocketAmmo Replaces RLRocketAmmo
 {
-	Inventory.PickupSound "items/rocket"
+    Inventory.PickupMessage "Picked up a rocket."
+    Inventory.PickupSound "items/rocket"
     
     States
     {
@@ -241,7 +255,8 @@ actor RLRocketAmmo2 : RLRocketAmmo Replaces RLRocketAmmo
 
 actor RLRocketBox1 : RLRocketBox Replaces DRPGRocketBox
 {
-	Inventory.PickupSound "items/rocket"
+    Inventory.PickupMessage "Picked up a rocket crate."
+    Inventory.PickupSound "items/rocket"
     
     States
     {
@@ -254,7 +269,8 @@ actor RLRocketBox1 : RLRocketBox Replaces DRPGRocketBox
 
 actor RLRocketBox2 : RLRocketBox Replaces RLRocketBox
 {
-	Inventory.PickupSound "items/rocket"
+    Inventory.PickupMessage "Picked up a rocket crate."
+    Inventory.PickupSound "items/rocket"
     
     States
     {
@@ -267,7 +283,8 @@ actor RLRocketBox2 : RLRocketBox Replaces RLRocketBox
 
 actor RLRocketBox3 : RLRocketBox Replaces DRPGRocketBoxHalf
 {
-	Inventory.PickupSound "items/rocket"
+    Inventory.PickupMessage "Picked up a mini rocket crate."
+    Inventory.PickupSound "items/rocket"
 
     States
     {
@@ -292,7 +309,8 @@ actor RLRocketBox3 : RLRocketBox Replaces DRPGRocketBoxHalf
 
 actor RLCell1 : RLCell Replaces DRPGCell
 {
-	Inventory.PickupSound "items/cell"
+    Inventory.PickupMessage "Picked up an energy cell."
+    Inventory.PickupSound "items/cell"
 
     States
     {
@@ -305,7 +323,8 @@ actor RLCell1 : RLCell Replaces DRPGCell
 
 actor RLCell2 : RLCell Replaces RLCell
 {
-	Inventory.PickupSound "items/cell"
+    Inventory.PickupMessage "Picked up an energy cell."
+    Inventory.PickupSound "items/cell"
 
     States
     {
@@ -318,7 +337,8 @@ actor RLCell2 : RLCell Replaces RLCell
 
 actor RLCell3 : RLCell Replaces DRPGCellHalf
 {
-	Inventory.PickupSound "items/cell"
+    Inventory.PickupMessage "Picked up a weak energy cell."
+    Inventory.PickupSound "items/cell"
 
     States
     {
@@ -342,7 +362,8 @@ actor RLCell3 : RLCell Replaces DRPGCellHalf
 
 actor RLCellPack1 : RLCellPack Replaces DRPGCellPack
 {
-	Inventory.PickupSound "items/cell"
+    Inventory.PickupMessage "Picked up an energy cell pack."
+    Inventory.PickupSound "items/cell"
     
     States
     {
@@ -355,7 +376,8 @@ actor RLCellPack1 : RLCellPack Replaces DRPGCellPack
 
 actor RLCellPack2 : RLCellPack Replaces RLCellPack
 {
-	Inventory.PickupSound "items/cell"
+    Inventory.PickupMessage "Picked up an energy cell pack."
+    Inventory.PickupSound "items/cell"
     
     States
     {
@@ -368,7 +390,8 @@ actor RLCellPack2 : RLCellPack Replaces RLCellPack
 
 actor RLCellPack3 : RLCellPack Replaces DRPGCellPackHalf
 {
-	Inventory.PickupSound "items/cell"
+    Inventory.PickupMessage "Picked up a half spent energy cell pack."
+    Inventory.PickupSound "items/cell"
     
     States
     {
