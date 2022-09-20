@@ -246,7 +246,7 @@ actor DRPGTranslocateBall : TelOtherFX1
 // Souls
 actor DRPGSoulBase : CustomInventory
 {
-    Inventory.PickupMessage "Picked up a Soul."
+    Inventory.PickupMessage "You picked up a soul."
     Inventory.PickupSound "skills/buff"
     
     Scale 0.5
@@ -259,7 +259,7 @@ actor DRPGSoulBase : CustomInventory
 
 actor DRPGSoulRed : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \cgRed\c- Soul."
+    Inventory.PickupMessage "You picked up a \cgred\c- soul."
     
     States
     {
@@ -278,7 +278,7 @@ actor DRPGSoulRed : DRPGSoulBase
 
 actor DRPGSoulGreen : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \cdGreen\c- Soul."
+    Inventory.PickupMessage "You picked up a \cdgreen\c- soul."
     
     States
     {
@@ -297,7 +297,7 @@ actor DRPGSoulGreen : DRPGSoulBase
 
 actor DRPGSoulWhite : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \cjWhite\c- Soul."
+    Inventory.PickupMessage "You picked up a \cjwhite\c- soul."
     
     States
     {
@@ -316,7 +316,7 @@ actor DRPGSoulWhite : DRPGSoulBase
 
 actor DRPGSoulPink : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \caPink\c- Soul."
+    Inventory.PickupMessage "You picked up a \capink\c- soul."
     
     States
     {
@@ -335,7 +335,7 @@ actor DRPGSoulPink : DRPGSoulBase
 
 actor DRPGSoulBlue : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \cnBlue\c- Soul."
+    Inventory.PickupMessage "You picked up a \cnblue\c- soul."
     
     States
     {
@@ -354,7 +354,7 @@ actor DRPGSoulBlue : DRPGSoulBase
 
 actor DRPGSoulPurple : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \ctPurple\c- Soul."
+    Inventory.PickupMessage "You picked up a \ctpurple\c- soul."
     
     States
     {
@@ -373,7 +373,7 @@ actor DRPGSoulPurple : DRPGSoulBase
 
 actor DRPGSoulOrange : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \ciOrange\c- Soul."
+    Inventory.PickupMessage "You picked up an \ciorange\c- soul."
     
     States
     {
@@ -392,7 +392,7 @@ actor DRPGSoulOrange : DRPGSoulBase
 
 actor DRPGSoulDarkBlue : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \chDark Blue\c- Soul."
+    Inventory.PickupMessage "You picked up a \chcerulean\c- soul."
     
     States
     {
@@ -411,7 +411,7 @@ actor DRPGSoulDarkBlue : DRPGSoulBase
 
 actor DRPGSoulYellow : DRPGSoulBase
 {
-    Inventory.PickupMessage "Picked up a \ckYellow\c- Soul."
+    Inventory.PickupMessage "You picked up a \ckyellow\c- soul."
     
     States
     {
