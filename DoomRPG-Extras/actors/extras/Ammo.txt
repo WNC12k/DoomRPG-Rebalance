@@ -5,7 +5,7 @@ ACTOR Clip2 : Clip replaces Clip
 {
     Game Doom
     SpawnID 11
-    Inventory.PickupMessage "$GOTCLIP"
+    Inventory.PickupMessage "You picked up a bullet clip."
     Inventory.Amount 10
     Inventory.MaxAmount 200
     Ammo.BackpackAmount 10
@@ -25,7 +25,7 @@ ACTOR ClipBox2 : Clip replaces ClipBox
 {
     Game Doom
     SpawnID 139
-    Inventory.PickupMessage "$GOTCLIPBOX"
+    Inventory.PickupMessage "You picked up a bullet box."
     Inventory.Amount 50
     inventory.pickupsound "items/clipbox"
     States
@@ -41,7 +41,7 @@ ACTOR RocketAmmo2 : RocketAmmo replaces RocketAmmo
 {
     Game Doom
     SpawnID 140
-    Inventory.PickupMessage "$GOTROCKET"
+    Inventory.PickupMessage "You picked up a rocket."
     Inventory.Amount 1
     Inventory.MaxAmount 50
     Ammo.BackpackAmount 1
@@ -61,7 +61,7 @@ ACTOR RocketBox2 : RocketAmmo replaces RocketBox
 {
     Game Doom
     SpawnID 141
-    Inventory.PickupMessage "$GOTROCKBOX"
+    Inventory.PickupMessage "You picked up a rocket box."
     Inventory.Amount 5
     inventory.pickupsound "items/rocket"
     States
@@ -77,7 +77,7 @@ ACTOR Cell2 : Cell replaces Cell
 {
     Game Doom
     SpawnID 75
-    Inventory.PickupMessage "$GOTCELL"
+    Inventory.PickupMessage "You picked up an energy cell."
     Inventory.Amount 20
     Inventory.MaxAmount 300
     Ammo.BackpackAmount 20
@@ -113,7 +113,7 @@ ACTOR Shell2 : Shell replaces Shell
 {
     Game Doom
     SpawnID 12
-    Inventory.PickupMessage "$GOTSHELLS"
+    Inventory.PickupMessage "You picked up four shotgun shells."
     Inventory.Amount 4
     Inventory.MaxAmount 50
     Ammo.BackpackAmount 4
@@ -133,7 +133,7 @@ ACTOR ShellBox2 : Shell replaces ShellBox
 {
     Game Doom
     SpawnID 143
-    Inventory.PickupMessage "$GOTSHELLBOX"
+    Inventory.PickupMessage "You picked up a shotgun shell box."
         inventory.pickupsound "items/shell"
     Inventory.Amount 20
     States
@@ -152,7 +152,7 @@ ACTOR Backpack2 : BackpackItem replaces Backpack
     Game Doom
     SpawnID 144
     Height 26
-    Inventory.PickupMessage "$GOTBACKPACK"
+    Inventory.PickupMessage "You picked up a backpack with ammo."
         inventory.pickupsound "items/pack"
     States
     {
