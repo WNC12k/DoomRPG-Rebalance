@@ -13,9 +13,9 @@ Actor DRPGInvulnerabilityPower : PowerupGiver
 
 ACTOR DRPGInvulnerabilitySphere : CustomInventory
 {
-    Tag "Invulnerability Sphere - Invulnerability for 30 seconds"
+    Tag "Invulnerability sphere (gives invulnerability for 30 seconds)"
     
-    Inventory.PickupMessage "You got an Invulnerability Sphere!"
+    Inventory.PickupMessage "You picked up an invulnerability sphere."
     Inventory.PickupSound "powerups/protect"
     
     -COUNTITEM
@@ -54,11 +54,11 @@ actor DRPGInvulnerabilityCharge : CustomInventory
 {
     +INVBAR
 
-    Tag "Invulnerability Charge - Reflective Invulnerability for 30 seconds"
+    Tag "Invulnerability charge (grants reflective invulnerability for 30 seconds)"
 
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got an Invulnerability Charge!"
+    Inventory.PickupMessage "You picked up an invulnerability charge."
     Inventory.PickupSound "powerups/protect"
     Inventory.UseSound "powerups/protect"
     Inventory.Icon "CRG2"
@@ -108,13 +108,13 @@ Actor DRPGInvisibilityPower : PowerupGiver
 
 ACTOR DRPGBlurSphere : CustomInventory
 {
-    Tag "Blur Sphere - Partial Invisibility for 60 seconds"
+    Tag "Invisibility sphere (bestows partial invisibility for 60 seconds)"
     
     +VISIBILITYPULSE
     +FLOATBOB
     -COUNTITEM
 
-    Inventory.PickupMessage "You got an Invisibility Sphere!"
+    Inventory.PickupMessage "You picked up an invisibility sphere."
     Inventory.PickupSound "powerups/invis"
 
     RenderStyle Translucent
@@ -153,11 +153,11 @@ actor DRPGInvisibilityCharge : CustomInventory
 {
     +INVBAR
 
-    Tag "Invisibility Charge - Complete Invisibility for 60 seconds"
+    Tag "Invisibility charge (provides complete invisibility for 60 seconds)"
 
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got an Invisibility Charge!"
+    Inventory.PickupMessage "You picked up an invisibility charge."
     Inventory.PickupSound "powerups/invis"
     Inventory.UseSound "powerups/invis"
     Inventory.Icon "CRG1"
@@ -195,7 +195,7 @@ actor DRPGTimeFreezer : PowerupGiver
 
 actor DRPGTimeSphere : CustomInventory 25052
 {
-    Tag "Time Sphere - Stops Time for 10 Seconds"
+    Tag "Time sphere (stops time for 10 seconds)"
     
     Scale 0.75  
     
@@ -204,7 +204,7 @@ actor DRPGTimeSphere : CustomInventory 25052
     
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.Pickupmessage "You got a Time Sphere!"
+    Inventory.Pickupmessage "You picked up a time sphere."
     Inventory.PickupSound "powerups/time"
     Inventory.Icon "TIME"
     
@@ -231,11 +231,11 @@ actor DRPGTimeSphere : CustomInventory 25052
 // Regeneration Sphere
 actor DRPGRegenSphere : CustomInventory 25053
 {
-    Tag "Regeneration Sphere - Quickly regenerates HP and EP"
+    Tag "Regeneration sphere (quickly regenerates health and energy)"
     
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a Regeneration Sphere!"
+    Inventory.PickupMessage "You picked up a regeneration sphere."
     Inventory.PickupSound "powerups/regen"
     Inventory.UseSound "powerups/regen"
     Inventory.Icon "REGN"
@@ -277,13 +277,13 @@ Actor DRPGRadSuitPower : PowerupGiver
 
 ACTOR DRPGRadSuit : CustomInventory Replaces Radsuit
 {
-    Tag "Radiation Suit - Protects against Damaging Environments"
+    Tag "Radiation suit (protects against damaging environments for 60 seconds)"
 
     +INVBAR
     
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a Radiation Suit!"
+    Inventory.PickupMessage "You picked up a radiation suit."
     Inventory.PickupSound "powerups/suit"
     Inventory.UseSound "powerups/suit"
     Inventory.Icon "SUIT"
@@ -317,14 +317,14 @@ Actor DRPGInfraredPower : PowerupGiver
 
 ACTOR DRPGInfrared : CustomInventory Replaces Infrared
 {
-    Tag "Night-Vision Goggles - See in the Dark"
+    Tag "Night vision goggles (enables night vision for 120 seconds)"
     
     +INVBAR
     -COUNTITEM
     
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a pair of Infrared Goggles!"
+    Inventory.PickupMessage "You picked up night vision goggles."
     Inventory.PickupSound "powerups/light"
     Inventory.UseSound "powerups/light" 
     Inventory.Icon "PVIS"
@@ -348,7 +348,7 @@ ACTOR DRPGInfrared : CustomInventory Replaces Infrared
 // Computer Area Map and Scanner
 actor DRPGAllMap : CustomInventory Replaces AllMap
 {
-    Tag "Computer Area Map"
+    Tag "Computer map (reveals entire auto map until map leave)"
 
     +INVBAR
     +INVENTORY.FANCYPICKUPSOUND
@@ -357,7 +357,7 @@ actor DRPGAllMap : CustomInventory Replaces AllMap
 
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a Computer Area Map!"
+    Inventory.PickupMessage "You picked up a computer map."
     Inventory.PickupSound "powerups/map"
     Inventory.UseSound "powerups/map"
     Inventory.Icon "PMAP"
@@ -395,7 +395,7 @@ actor DRPGAllMapScanner : PowerupGiver
 // Berserk Pack
 actor DRPGBerserk : Berserk Replaces Berserk
 {
-    Tag "Berserk Pack - Full Health and Increased Melee Damage"
+    Tag "Berserk pack (heals fully, plus increases melee damage by 200% until map leave)"
     
     +INVBAR
     -INVENTORY.AUTOACTIVATE
@@ -403,7 +403,7 @@ actor DRPGBerserk : Berserk Replaces Berserk
     
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a Berserk Pack!"
+    Inventory.PickupMessage "You picked up a berserk pack."
     Inventory.PickupSound "powerups/berserk"
     Inventory.UseSound "powerups/berserk"
     Inventory.Icon "PSTR"
@@ -442,14 +442,14 @@ actor DRPGFlightPower : PowerupGiver
 
 actor DRPGWings : CustomInventory 25054
 {
-    Tag "Wings - Allows Flight"
+    Tag "Wings (allows flight until map leave)"
     
     +INVBAR
     +FLOATBOB
 
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "You got a pair of Wings!"
+    Inventory.PickupMessage "You picked up wings."
     Inventory.PickupSound "powerups/wings"
     Inventory.UseSound "powerups/wings"
     Inventory.Icon "WINGS"
@@ -474,7 +474,7 @@ ACTOR DRPGMegasphere : CustomInventory Replaces MegaSphere
 {
     RenderStyle Add
     
-    Inventory.PickupMessage "You got a Megasphere!"
+    Inventory.PickupMessage "You picked up a mega sphere."
     Inventory.PickupSound "powerups/megasphere"
     
     -COUNTITEM
@@ -504,7 +504,7 @@ actor DRPGImmunityCrystalMelee : CustomInventory
 
     Inventory.Amount 1
     Inventory.MaxAmount 1
-	Inventory.PickupMessage "Got a Melee Immunity Crystal!"
+	Inventory.PickupMessage "You picked up a melee immunity crystal."
 	Inventory.PickupSound "powerups/crystal"
 	Inventory.Icon "CRYSA"
     
@@ -516,7 +516,7 @@ actor DRPGImmunityCrystalMelee : CustomInventory
     +NOBLOOD
     -SPECIAL
     
-    Tag "Melee Immunity Crystal"
+    Tag "Melee immunity crystal"
     
     States
     {
@@ -560,7 +560,7 @@ actor DRPGImmunityCrystalBullet : CustomInventory
 
     Inventory.Amount 1
     Inventory.MaxAmount 1
-	Inventory.PickupMessage "Got a Bullet Immunity Crystal!"
+	Inventory.PickupMessage "You picked up a bullet immunity crystal."
 	Inventory.PickupSound "powerups/crystal"
 	Inventory.Icon "CRYSB"
     
@@ -572,7 +572,7 @@ actor DRPGImmunityCrystalBullet : CustomInventory
     +NOBLOOD
     -SPECIAL
     
-    Tag "Bullet Immunity Crystal"
+    Tag "Bullet immunity crystal"
     
     States
     {
@@ -616,7 +616,7 @@ actor DRPGImmunityCrystalFire : CustomInventory
 
     Inventory.Amount 1
     Inventory.MaxAmount 1
-	Inventory.PickupMessage "Got a Fire Immunity Crystal!"
+	Inventory.PickupMessage "You picked up a fire immunity crystal."
 	Inventory.PickupSound "powerups/crystal"
 	Inventory.Icon "CRYSC"
     
@@ -628,7 +628,7 @@ actor DRPGImmunityCrystalFire : CustomInventory
     +NOBLOOD
     -SPECIAL
     
-    Tag "Fire Immunity Crystal"
+    Tag "Fire immunity crystal"
     
     States
     {
@@ -672,7 +672,7 @@ actor DRPGImmunityCrystalPlasma : CustomInventory
 
     Inventory.Amount 1
     Inventory.MaxAmount 1
-	Inventory.PickupMessage "Got a Plasma Immunity Crystal!"
+	Inventory.PickupMessage "You picked up a plasma immunity crystal."
 	Inventory.PickupSound "powerups/crystal"
 	Inventory.Icon "CRYSD"
     
@@ -684,7 +684,7 @@ actor DRPGImmunityCrystalPlasma : CustomInventory
     +NOBLOOD
     -SPECIAL
     
-    Tag "Plasma Immunity Crystal"
+    Tag "Plasma immunity crystal"
     
     States
     {
@@ -728,7 +728,7 @@ actor DRPGImmunityCrystalLightning : CustomInventory
 
     Inventory.Amount 1
     Inventory.MaxAmount 1
-	Inventory.PickupMessage "Got a Lightning Immunity Crystal!"
+	Inventory.PickupMessage "You picked up a lightning immunity crystal."
 	Inventory.PickupSound "powerups/crystal"
 	Inventory.Icon "CRYSE"
     
@@ -740,7 +740,7 @@ actor DRPGImmunityCrystalLightning : CustomInventory
     +NOBLOOD
     -SPECIAL
     
-    Tag "Lightning Immunity Crystal"
+    Tag "Lightning immunity crystal"
     
     States
     {
@@ -784,7 +784,7 @@ actor DRPGImmunityCrystalToxic : CustomInventory
 
     Inventory.Amount 1
     Inventory.MaxAmount 1
-	Inventory.PickupMessage "Got a Toxic Immunity Crystal!"
+	Inventory.PickupMessage "You picked up a toxic immunity crystal."
 	Inventory.PickupSound "powerups/crystal"
 	Inventory.Icon "CRYSF"
     
@@ -796,7 +796,7 @@ actor DRPGImmunityCrystalToxic : CustomInventory
     +NOBLOOD
     -SPECIAL
     
-    Tag "Toxic Immunity Crystal"
+    Tag "Toxic immunity crystal"
     
     States
     {
@@ -840,7 +840,7 @@ actor DRPGImmunityCrystalRadiation : CustomInventory
 
     Inventory.Amount 1
     Inventory.MaxAmount 1
-	Inventory.PickupMessage "Got a Radiation Immunity Crystal!"
+	Inventory.PickupMessage "You picked up a radiation immunity crystal."
 	Inventory.PickupSound "powerups/crystal"
 	Inventory.Icon "CRYSG"
     
@@ -852,7 +852,7 @@ actor DRPGImmunityCrystalRadiation : CustomInventory
     +NOBLOOD
     -SPECIAL
     
-    Tag "Radiation Immunity Crystal"
+    Tag "Radiation immunity crystal"
     
     States
     {
