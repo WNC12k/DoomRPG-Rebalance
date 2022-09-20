@@ -101,3 +101,16 @@ actor DRPGBFG9000 : BFG9000 Replaces BFG9000
         Stop
     }
 }
+
+// COMPATIBILITY THINGS
+// --------------------------------------------------
+
+actor DRPGBattleRifle : RandomSpawner
+{
+    DropItem "DRPGClipSpawner"
+}
+
+actor DRPGCombatShotgun : RandomSpawner
+{
+    DropItem "DRPGShellSpawner"
+}
