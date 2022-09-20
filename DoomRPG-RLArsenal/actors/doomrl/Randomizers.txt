@@ -259,6 +259,24 @@ actor RLShotgunSpawnerRPG : MapSpot Replaces DRPGShotgunSpawner
     }
 }
 
+actor RLCombatShotgunSpawnerRPG : MapSpot Replaces DRPGCombatShotgunSpawner
+{
+    States
+    {
+    Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(GetCVar("drpg_loot_type") == 3, "SpawnRoguelike")
+        Goto SpawnAdaptive
+    SpawnAdaptive:
+        TNT1 A -1 ACS_NamedExecuteWithResult("DRPGWeaponSpawner", 3)
+        Stop
+    SpawnRoguelike:
+		TNT1 A 0 A_SpawnItem("RLShotgunSpawner")
+        Stop
+    }
+}
+
+
 actor RLDoubleShotgunSpawnerRPG : MapSpot Replaces DRPGSuperShotgunSpawner
 {
     States
@@ -286,6 +304,23 @@ actor RLChaingunSpawnerRPG : MapSpot Replaces DRPGChaingunSpawner
         Goto SpawnAdaptive
     SpawnAdaptive:
         TNT1 A -1 ACS_NamedExecuteWithResult("DRPGWeaponSpawner", Random(5,6))
+        Stop
+    SpawnRoguelike:
+		TNT1 A 0 A_SpawnItem("RLChaingunSpawner")
+        Stop
+    }
+}
+
+actor RLBattleRifleSpawnerRPG : MapSpot Replaces DRPGBattleRifleSpawner
+{
+    States
+    {
+    Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(GetCVar("drpg_loot_type") == 3, "SpawnRoguelike")
+        Goto SpawnAdaptive
+    SpawnAdaptive:
+        TNT1 A -1 ACS_NamedExecuteWithResult("DRPGWeaponSpawner", 6)
         Stop
     SpawnRoguelike:
 		TNT1 A 0 A_SpawnItem("RLChaingunSpawner")
