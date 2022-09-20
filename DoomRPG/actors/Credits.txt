@@ -33,7 +33,7 @@ actor DRPGCredits1 : CustomInventory 25020
 {
     scale 0.5
     
-    Inventory.PickupMessage "You got a \cdCredit\c-."
+    Inventory.PickupMessage "You picked up a \cdcredit\c-."
     Inventory.PickupSound "credits/pickup"
     
     States
@@ -54,7 +54,7 @@ actor DRPGCredits1 : CustomInventory 25020
 // 5 Credits - Blue
 actor DRPGCredits5 : DRPGCredits1 25021
 {
-    Inventory.PickupMessage "You got \cn5 Credits\c-."
+    Inventory.PickupMessage "You picked up \cn5 credits\c-."
     
     States
     {
@@ -74,7 +74,7 @@ actor DRPGCredits5 : DRPGCredits1 25021
 // 10 Credits - Yellow
 actor DRPGCredits10 : DRPGCredits1 25022
 {
-    Inventory.PickupMessage "You got \cf10 Credits\c-."
+    Inventory.PickupMessage "You picked up \cf10 credits\c-."
     
     States
     {
@@ -94,7 +94,7 @@ actor DRPGCredits10 : DRPGCredits1 25022
 // 20 Credits - Red
 actor DRPGCredits20 : DRPGCredits1 25023
 {
-    Inventory.PickupMessage "You got \ca20 Credits\c-."
+    Inventory.PickupMessage "You picked up \ca20 credits\c-."
     
     States
     {
@@ -114,7 +114,7 @@ actor DRPGCredits20 : DRPGCredits1 25023
 // 50 Credits - Purple
 actor DRPGCredits50 : DRPGCredits1 25024
 {
-    Inventory.PickupMessage "You got \ct50 Credits\c-."
+    Inventory.PickupMessage "You picked up \ct50 credits\c-."
     
     States
     {
@@ -134,7 +134,7 @@ actor DRPGCredits50 : DRPGCredits1 25024
 // 100 Credits - Orange
 actor DRPGCredits100 : DRPGCredits1 25025
 {
-    Inventory.PickupMessage "You got \ci100 Credits\c-."
+    Inventory.PickupMessage "You picked up \ci100 credits\c-."
     
     States
     {
@@ -154,7 +154,7 @@ actor DRPGCredits100 : DRPGCredits1 25025
 // 250 Credits - Silver
 actor DRPGCredits250 : DRPGCredits1 25027
 {
-    Inventory.PickupMessage "You got \cw250 Credits\c-."
+    Inventory.PickupMessage "You picked up \cw250 credits\c-."
     
     States
     {
@@ -174,7 +174,7 @@ actor DRPGCredits250 : DRPGCredits1 25027
 // 500 Credits - Gold
 actor DRPGCredits500 : DRPGCredits1 25028
 {
-    Inventory.PickupMessage "You got \cf500 Credits\c-."
+    Inventory.PickupMessage "You picked up \cf500 credits\c-."
     
     States
     {
@@ -194,7 +194,7 @@ actor DRPGCredits500 : DRPGCredits1 25028
 // 1000 Credits - Rainbow
 actor DRPGCredits1000 : DRPGCredits1 25026
 {
-    Inventory.PickupMessage "You got 1000 \cjC\cdr\cne\cfd\cai\ctt\cis\c-! Holy Crap!"
+    Inventory.PickupMessage "You picked up 1000 \cjc\cdr\cne\cfd\cai\ctt\cis\c-. Holy shit!"
     
     States
     {
@@ -218,7 +218,7 @@ actor DRPGUACCard : Inventory
     
     Inventory.Amount 1
     Inventory.MaxAmount 4
-    Inventory.PickupMessage "You got a UAC Card!"
+    Inventory.PickupMessage "You picked up a UAC card."
     Inventory.PickupSound "credits/pickup"
     
     States
