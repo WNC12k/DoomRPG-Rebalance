@@ -3,7 +3,7 @@ actor DRPGChipGold : Inventory
     Scale 0.25
     
     Inventory.MaxAmount 1000
-    Inventory.PickupMessage "Picked up a \cfgold\c- chip."
+    Inventory.PickupMessage "You picked up a \cfgold\c- chip."
     Inventory.PickupSound "items/chip"
     
     States
@@ -19,7 +19,7 @@ actor DRPGChipGoldPack : CustomInventory
 {
     Scale 0.25
     
-    Inventory.PickupMessage "Picked up three \cfgold\c- chips."
+    Inventory.PickupMessage "You picked up three \cfgold\c- chips."
     Inventory.PickupSound "items/chip"
     
     States
@@ -41,7 +41,7 @@ actor DRPGChipPlatinum : Inventory
     Scale 0.25
     
     Inventory.MaxAmount 1000
-    Inventory.PickupMessage "Picked up a \cjplatinum\c- chip."
+    Inventory.PickupMessage "You picked up a \cjplatinum\c- chip."
     Inventory.PickupSound "items/chip"
     
     States
@@ -64,7 +64,7 @@ actor DRPGChipPlatinumPack : CustomInventory
     
     Scale 0.25
     
-    Inventory.PickupMessage "Picked up three \cjplatinum\c- chips."
+    Inventory.PickupMessage "You picked up three \cjplatinum\c- chips."
     Inventory.PickupSound "items/chip"
     
     States
