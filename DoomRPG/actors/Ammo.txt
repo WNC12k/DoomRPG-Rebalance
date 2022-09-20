@@ -118,6 +118,107 @@ actor DRPGCellPack : CellPack Replaces CellPack
 }
 
 // --------------------------------------------------
+// Full Ammo
+
+actor DRPGClipFull : DRPGClip
+{
+    Inventory.PickupMessage "You picked up a bullet clip."
+    Inventory.PickupSound "items/clip"
+
+    States
+    {
+    Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ItemInit", 0)
+        CLIP A -1
+        Stop
+    }
+}
+
+actor DRPGClipBoxFull : DRPGClipBox
+{
+    Inventory.PickupMessage "You picked up a bullet box."
+    Inventory.PickupSound "items/clipbox"
+
+    States
+    {
+    Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ItemInit", 0)
+        AMMO A -1
+        Stop
+    }
+}
+
+actor DRPGShellFull : DRPGShell
+{
+    Inventory.PickupMessage "You picked up four shotgun shells."
+    Inventory.PickupSound "items/shell"
+
+    States
+    {
+    Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ItemInit", 0)
+        SHEL A -1
+        Stop
+    }
+}
+
+actor DRPGShellBoxFull : DRPGShellBox
+{
+    Inventory.PickupMessage "You picked up a shotgun shell box."
+    Inventory.PickupSound "items/shell"
+
+    States
+    {
+    Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ItemInit", 0)
+        SBOX A -1
+        Stop
+    }
+}
+
+actor DRPGRocketBoxFull : DRPGRocketBox
+{
+    Inventory.PickupMessage "You picked up a rocket crate."
+    Inventory.PickupSound "items/rocket"
+
+    States
+    {
+    Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ItemInit", 0)
+        BROK A -1
+        Stop
+    }
+}
+
+actor DRPGCellFull : DRPGCell
+{
+    Inventory.PickupMessage "You picked up an energy cell."
+    Inventory.PickupSound "items/cell"
+
+    States
+    {
+    Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ItemInit", 0)
+        CELL A -1
+        Stop
+    }
+}
+
+actor DRPGCellPackFull : DRPGCellPack
+{
+    Inventory.PickupMessage "You picked up an energy cell pack."
+    Inventory.PickupSound "items/cell"
+
+    States
+    {
+    Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ItemInit", 0)
+        CELP A -1
+        Stop
+    }
+}
+
+// --------------------------------------------------
 // Half Ammo
 
 actor DRPGClipHalf : DRPGClip
@@ -295,7 +396,7 @@ actor DRPGBigBackpack : DRPGBackpack
 // Givers to give back stolen ammo
 ACTOR DRPGStolenClip : CustomInventory
 {
-    Inventory.PickupMessage "You picked up a stolen bullet clip."
+	Inventory.PickupMessage "You picked up a stolen bullet clip."
     Inventory.PickupSound "items/clip"
     
     States
@@ -312,7 +413,7 @@ ACTOR DRPGStolenClip : CustomInventory
 
 ACTOR DRPGStolenShell : CustomInventory
 {
-    Inventory.PickupMessage "You picked up stolen four shotgun shells."
+	Inventory.PickupMessage "You picked up stolen four shotgun shells."
     Inventory.PickupSound "items/shell"
     
     States
@@ -329,7 +430,7 @@ ACTOR DRPGStolenShell : CustomInventory
 
 ACTOR DRPGStolenRocketAmmo : CustomInventory
 {
-    Inventory.PickupMessage "You picked up a stolen rocket."
+	Inventory.PickupMessage "You picked up a stolen rocket."
     Inventory.PickupSound "items/rocket"
     
     States
@@ -346,7 +447,7 @@ ACTOR DRPGStolenRocketAmmo : CustomInventory
 
 ACTOR DRPGStolenCell : CustomInventory
 {
-    Inventory.PickupMessage "You picked up a stolen energy cell."
+	Inventory.PickupMessage "You picked up a stolen energy cell."
     Inventory.PickupSound "items/cell"
     
     States
