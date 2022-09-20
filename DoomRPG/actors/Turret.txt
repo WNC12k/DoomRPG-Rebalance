@@ -168,7 +168,7 @@ actor DRPGPortableTurret
 actor DRPGTurretPart : Inventory
 {
     Inventory.MaxAmount 10000
-    Inventory.PickupMessage "You got a Turret Part."
+    Inventory.PickupMessage "You picked up a turret part."
     Inventory.PickupSound "items/turret"
     
     Scale 0.5
@@ -184,7 +184,7 @@ actor DRPGTurretPart : Inventory
 
 actor DRPGTurretPartCrate : CustomInventory
 {
-    Inventory.PickupMessage "You got a crate of Turret Parts."
+    Inventory.PickupMessage "You picked up a turret part crate."
     Inventory.PickupSound "items/turretcrate"
     
     Scale 0.75
