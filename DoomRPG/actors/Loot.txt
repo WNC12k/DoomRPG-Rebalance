@@ -4,7 +4,7 @@ Actor DRPGLoot : Inventory
     Inventory.Amount 1
     Inventory.DefMaxAmount
     Inventory.InterHubAmount 1000
-    Inventory.PickupMessage "Got a Generic Loot item."
+    Inventory.PickupMessage "You picked up a generic loot item."
     Inventory.PickupSound "items/loot"
     
     +COUNTITEM
@@ -13,7 +13,7 @@ Actor DRPGLoot : Inventory
 // Medical Supplies
 Actor DRPGLootMedicalSupplies : DRPGLoot
 {
-    Inventory.PickupMessage "Got Medical Supplies."
+    Inventory.PickupMessage "You picked up medical supplies."
     
     States
     {
@@ -29,7 +29,7 @@ Actor DRPGLootChemicals : DRPGLoot
 {
     Scale 0.25
     
-    Inventory.PickupMessage "Got Chemicals."
+    Inventory.PickupMessage "You picked up chemicals."
     
     States
     {
@@ -43,7 +43,7 @@ Actor DRPGLootChemicals : DRPGLoot
 // Hazardous Materials
 Actor DRPGLootHazardousMaterials : DRPGLoot
 {
-    Inventory.PickupMessage "Got Hazardous Materials."
+    Inventory.PickupMessage "You picked up hazardous materials."
     
     States
     {
@@ -59,7 +59,7 @@ Actor DRPGLootAnomalousMaterials : DRPGLoot
 {
     Scale 0.75
     
-    Inventory.PickupMessage "Got Anomalous Materials."
+    Inventory.PickupMessage "You picked up anomalous materials."
     
     States
     {
@@ -73,7 +73,7 @@ Actor DRPGLootAnomalousMaterials : DRPGLoot
 // Briefcase Data
 Actor DRPGLootBriefcase : DRPGLoot
 {
-    Inventory.PickupMessage "Got Briefcase."
+    Inventory.PickupMessage "You picked up a briefcase."
     
     States
     {
@@ -89,7 +89,7 @@ Actor DRPGLootComputerData : DRPGLoot
 {
     Scale 0.33
     
-    Inventory.PickupMessage "Got Computer Data."
+    Inventory.PickupMessage "You picked up computer data."
     
     States
     {
@@ -105,7 +105,7 @@ Actor DRPGLootGunParts : DRPGLoot
 {
     Scale 0.75
     
-    Inventory.PickupMessage "Got Gun Parts."
+    Inventory.PickupMessage "You picked up gun parts."
     
     States
     {
@@ -121,7 +121,7 @@ Actor DRPGLootAmmoCasings : DRPGLoot
 {
     Scale 0.75
     
-    Inventory.PickupMessage "Got Ammo Casings."
+    Inventory.PickupMessage "You picked up ammo casings."
     
     States
     {
@@ -137,7 +137,7 @@ Actor DRPGLootFuelCapsule : DRPGLoot
 {
     Scale 0.75
     
-    Inventory.PickupMessage "Got Fuel Capsule."
+    Inventory.PickupMessage "You picked up a fuel capsule."
     
     States
     {
@@ -153,7 +153,7 @@ Actor DRPGLootScrapMetals : DRPGLoot
 {
     Scale 0.5
     
-    Inventory.PickupMessage "Got Scrap Metals."
+    Inventory.PickupMessage "You picked up scrap metals."
     
     States
     {
@@ -169,7 +169,7 @@ Actor DRPGLootScrapElectronics : DRPGLoot
 {
     Scale 0.5
     
-    Inventory.PickupMessage "Got Scrap Electronics."
+    Inventory.PickupMessage "You picked up scrap electronics."
     
     States
     {
@@ -185,7 +185,7 @@ Actor DRPGLootExperimentalParts : DRPGLoot
 {
     Scale 0.75
     
-    Inventory.PickupMessage "Got Experimental Parts."
+    Inventory.PickupMessage "You picked up experimental parts."
     
     States
     {
@@ -201,7 +201,7 @@ Actor DRPGLootDemonArtifact : DRPGLoot
 {
     Scale 0.85
     
-    Inventory.PickupMessage "Got Demon Artifact."
+    Inventory.PickupMessage "You picked up a demon artifact."
     
     States
     {
