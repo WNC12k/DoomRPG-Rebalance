@@ -404,3 +404,9 @@ user    int     drpg_skillwheel_category_7 = -1;
 user    int     drpg_skillwheel_index_7 = -1;
 user    int     drpg_skillwheel_category_8 = -1;
 user    int     drpg_skillwheel_index_8 = -1;
+
+// --------------------------------------------------
+// CVARs for ZHUD
+//
+
+nosave	noarchive	string	drpg_multi_data = "";

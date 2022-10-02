@@ -1699,7 +1699,7 @@ NamedScript Type_DEATH void Dead()
         // Incapacitation announcement
         SetHudSize(320, 200, false);
         SetFont("SMALLFONT");
-        if (AlivePlayers() >= 1)
+        if (SomePlayerAlive())
             HudMessage("%tS was incapacitated", PlayerNumber() + 1);
         else
             HudMessage("%tS has died", PlayerNumber() + 1);
@@ -2675,16 +2675,17 @@ NamedScript void ReviveHandler()
     {
         SetPlayerProperty(PlayerNumber(), false, PROP_TOTALLYFROZEN);
         Players(Player.ReviveeNum).ReviveKeyTimer = 0;
-        Players(Player.ReviveeNum).ReviverTID = 0;
+        if (Players(Player.ReviveeNum).ActualHealth <= 0)
+            Players(Player.ReviveeNum).ReviverTID = 0;
         Player.ReviveeNum = -1;
     }
 }
 
-NamedScript int AlivePlayers()
+NamedScript bool SomePlayerAlive()
 {
-    int AlivePlayers = 0;
     for (int i = 0; i < PlayerCount(); i++)
         if (Players(i).ActualHealth > 0)
-            AlivePlayers++;
-    return AlivePlayers;
+            return true;
+
+    return false;
 }

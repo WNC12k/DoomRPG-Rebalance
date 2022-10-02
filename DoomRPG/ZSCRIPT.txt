@@ -4,6 +4,7 @@ version "3.7"
 #include "zscript/DRPGZShield.zs"
 #include "zscript/DRPGZUtils.zs"
 #include "zscript/DRPGZOutpost.zs" 
+#include "zscript/DRPGZHUD.zs" 
 
 // Damage Types
 const DT_NONE = -1;

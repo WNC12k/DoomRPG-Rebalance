@@ -153,7 +153,7 @@ Start:
     {
         SetHudSize(0, 0, false);
         SetFont("BIGFONT");
-        if (AlivePlayers() >= 1)
+        if (SomePlayerAlive())
         {
             HudMessage("Incapacitated\nHealth: %d", Player.ActualHealth);
             EndHudMessage(HUDMSG_PLAIN, 0, "Brick", 1.5, 0.25, 0.05);
@@ -1552,12 +1552,27 @@ Start:
 
 NamedScript Type_ENTER void MultiplayerHUD()
 {
-    fixed X, Y, Alpha;
-    int HealthPercent, ShieldPercent;
+    //fixed X, Y, Alpha;
+    //int HealthPercent, ShieldPercent;
 
 Start:
     NOP;
 
+    if (InMultiplayer && GetCVar("drpg_multiplayer_hud") && Players(0).HealthMax > 0)
+    {
+        str data = "";
+
+        for (int i = 0; i < MAX_PLAYERS; i++)
+        {
+            if (PlayerInGame(i))
+                data = StrParam("%S%i|%i|%i|%i|", data, Players(i).ActualHealth, Players(i).HealthMax, Players(i).Shield.Charge, Players(i).Shield.Capacity);
+            else
+                data = StrParam("%S0|0|0|0|", data);
+        }
+
+        SetCVarString("drpg_multi_data", data);
+    }
+    /*
     if (Player.GUI.Open || (CompatMode == COMPAT_LEGENDOOM && CheckInventory("LDWeaponInfoScreenActive")))
     {
         Delay(1);
@@ -1612,7 +1627,7 @@ Start:
 
         Delay(1);
     }
-
+    */
     Delay(1);
     goto Start;
 }

@@ -580,7 +580,7 @@ OptionMenu "DoomRPGMultiplayer"
     Option "Restore Ammo on Respawn", "drpg_multi_restoreammo", "OnOff"
     StaticText ""
 
-    Option "Share credit drops", "drpg_multi_sharecredits", "OnOff"
+    Option "Share credit drops evenly", "drpg_multi_sharecredits", "OnOff"
     Option "Share XP evenly", "drpg_multi_sharexp", "OnOff"
     StaticText ""
 
