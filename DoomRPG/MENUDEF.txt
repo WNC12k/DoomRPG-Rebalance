@@ -239,6 +239,13 @@ OptionValue "RankBarTextTypes"
     3, "Right"
 }
 
+OptionValue "DRLAHUD"
+{
+    0, "Disabled"
+    1, "Compact"
+    2, "Standard"
+}
+
 OptionMenu "DoomRPGControls"
 {
     Title "Customize Controls"
@@ -710,6 +717,8 @@ OptionMenu "DoomRPGHUD"
     Slider "Map Event Y Position", "drpg_event_y", -240, 1080, 1
     StaticText ""
 
+    Option "DRLA HUD Mode", "drpg_drla_hud_mode", "DRLAHUD"
+    Option "DRLA Stamina bar", "drpg_drla_hud_staminabar", "OnOff"
     Slider "DRLA HUD X Position", "drpg_drla_x", -320, 1920, 1
     Slider "DRLA HUD Y Position", "drpg_drla_y", -320, 1920, 1
     StaticText ""
@@ -765,7 +774,6 @@ OptionMenu "DoomRPGHUD"
     Option "Skill Wheel Animation Speed", "drpg_skill_wheelspeed", "WheelSpeed"
     Option "Always Show Stats", "drpg_stats_alwaysshow", "OnOff"
     Option "Always Show Aug Battery", "drpg_aug_alwaysshow", "OnOff"
-    Option "DRLA Stamina bar", "drpg_drla_hud_staminabar", "OnOff"
 }
 
 OptionMenu "DoomRPGHUDPresets"

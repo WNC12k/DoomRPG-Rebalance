@@ -222,6 +222,8 @@ user    int     drpg_powerup_x = 660;
 user    int     drpg_powerup_y = 30;
 user    int     drpg_event_x = 235;
 user    int     drpg_event_y = 15;
+user    int     drpg_drla_hud_mode = 2;
+user    bool    drpg_drla_hud_staminabar = true;
 user    int     drpg_drla_x = 500;
 user    int     drpg_drla_y = 30;
 user    int     drpg_ld_x = 335;
@@ -254,7 +256,6 @@ user    int     drpg_mission_complete_y = 240;
 user    int     drpg_skill_wheelspeed = 32;
 user    bool    drpg_stats_alwaysshow = false;
 user    bool    drpg_aug_alwaysshow = false;
-user    bool    drpg_drla_hud_staminabar = true;
 
 // Misc
 server  bool    drpg_debug = false;
