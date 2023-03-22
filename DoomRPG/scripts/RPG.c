@@ -761,110 +761,110 @@ NamedScript void GiveTip()
     TipInfo Tips[MAX_TIPS] =
     {
         // Level/Rank
-        { "\CjLevel",                           "Your level determines your basic strength and progress through the game. Your level is increased by killing monsters, completing missions and achieving combos.", },
-        { "\CkRank",                            "Your rank determines your standing within the UAC. Rank will determine how much money you are paid by the UAC as well as the discount you will receive when purchasing items from the shop.", },
-        { "\CtCombo",                           "The combo system allows you to kill enemies in rapid succession in order to gain bonus XP and Rank. When an enemy is killed, you will gain +1 to your combo counter and your combo timer will reset. When your timer reaches its cooldown point, indicated by the split between the red and green in the bar, it will add the indicated XP and Rank to your totals and calculate a bonus (the green number). If you keep incrementing your combo during the cooldown period, you can keep stacking XP and Rank into the bonus. When the combo timer ends, your combo will be completely reset and your bonus will be added to your totals.", },
+        { "\CjLevel",                           "Your level determines your general competency and progress through the game. Your level is increased by gathering XP by killing monsters, completing missions, and achieving combos.", },
+        { "\CkRank",                            "Your rank determines your standing within the UAC. Rank will determine how much money you are paid by the UAC as well as the discount you will receive when executing financial operations at the Outpost. Your rank is increased by killing monsters, completing missions, achieving combos, and engaging in certain secret activities.", },
+        { "\CtCombo",                           "The combo system allows you to kill enemies in rapid succession in order to gain bonus XP and rank. When an enemy is killed, you will gain +1 to your combo counter, and your combo timer will reset. When your timer reaches its cooldown point, indicated by the split between the red and green in the bar, it will add the indicated XP and rank to your totals and calculate a bonus (the green number). If you keep incrementing your combo during the cooldown period, you can keep stacking XP and rank into the bonus. When the combo timer ends, your combo will be completely reset, and your bonus will be added to your totals.", },
 
         // Currencies
-        { "\CfCredits",                         "Credits are the universal currency used by the UAC and are used for purchasing goods in the shop.", },
-        { "\CdModules",                         "Modules are used to upgrade your stats and skills. They are typically given by level ups, missions and completing level events as well as occasionally being dropped by monsters and found in the world.", },
-        { "\CcTurret Parts",                    "Turret parts are used to build and upgrade your turret. They can be found by disassembling broken-down turrets you find in the world.", },
+        { "\CfCredits",                         "Credits are the universal currency of the UAC and are used for almost all actions at the Outpost that include obtaining goods and services.", },
+        { "\CdModules",                         "Modules are used to upgrade your stats and skills. They are typically given by level ups, missions, and completing level events, as well as occasionally being dropped by monsters and found in the world.", },
+        { "\CcTurret Parts",                    "Turret parts are used to build and upgrade your turret. They can be found around the world by disassembling broken turrets and lying freely.", },
 
         // Stats
-        { "\CgStrength",                        "Your Strength stat determines the extra damage you deal with all types of attacks.", },
-        { "\CdDefense",                         "Your Defense stat determines your resistance to all forms of damage.", },
-        { "\CaVitality",                        "Your Vitality stat determines your max health and health regeneration rate.", },
-        { "\CnEnergy",                          "Your Energy stat determines your max EP and EP regeneration rate.", },
-        { "\CtRegeneration",                    "Your Regeneration stat determines your regeneration rate and the time that Regeneration Spheres last.", },
-        { "\CiAgility",                         "Your Agility stat governs your movement, jumping and fire speeds as well as your survival bonus.", },
-        { "\ChCapacity",                        "Your Capacity stat determines your ammo carrying capacity, how many compounds of each type you can carry for Stims as well as how many inventory items you can hold", },
-        { "\CfLuck",                            "Your Luck stat determines which items can drop as well as the chance which they will drop. Luck also affects several other hidden factors as well.", },
+        { "\CgStrength",                        "Your strength stat determines the extra damage you deal with all types of attacks.", },
+        { "\CdDefense",                         "Your defense stat determines your resistance to all forms of damage.", },
+        { "\CaVitality",                        "Your vitality stat determines your max HP, HP regeneration amount, and resistance to status effects.", },
+        { "\CnEnergy",                          "Your energy stat determines your max EP, EP regeneration amount, and how many and for how long your auras last.", },
+        { "\CtRegeneration",                    "Your regeneration stat determines your EP and HP regeneration rates, toxicity dissipation, and the time that regeneration spheres last.", },
+        { "\CiAgility",                         "Your agility stat governs your movement, jumping, and fire speeds as well as your survival bonus.", },
+        { "\ChCapacity",                        "Your capacity stat determines your ammo carrying capacity, how many compounds of each type you can carry for stims, as well as how many various inventory items you can hold.", },
+        { "\CfLuck",                            "Your luck stat determines which items can drop as well as the chance that they will drop. Luck also affects several other hidden factors as well.", },
 
         // Stats Extended
-        { "\CiSurvival Bonus",                  "Survival Bonus is a special attribute which works as a last stand mechanic. When you take a hit that would kill you and your survival bonus is triggered, you will not be killed by the attack.", },
+        { "\CiSurvival Bonus",                  "Survival bonus is a special attribute that works as a last stand mechanic. When you take a hit that would kill you and your survival bonus is triggered, you will not be killed by the attack and instead be instantly revived with part of your HP and EP restored.", },
         { "\CdPerks",                           "Perks are special enhancements that you receive when you upgrade a stat to 100 points or more.", },
         { "\CgStat Cap",                        "You can only increase a stat past 100 up to the maximum of your current level + 100.", },
 
         // Skills
-        { "\CnEP",                              "Energy Points are needed in order to use skills. They can also be used to charge your Shield and to deposit and withdraw items from your personal locker while not in the Outpost.", },
-        { "\CnOverdrive",                       StrParam("You can Overdrive a skill by holding the \Cd%jS\C- button. Doing this will always use the skill, regardless of it's EP cost. However, this will bring your current EP into the negatives. When negative, you will suffer stat penalties and not be able to use any skills until your EP is restored past 0.", "+speed"), },
-        { "\CnAuras",                           "Auras are special passive abilities you can activate to give you temporary boosts to your stats. Auras will also affect teammates within it's radius, determined by your Energy stat", },
+        { "\CnEP",                              "Energy points (EP) are needed in order to use skills. They can also be used to charge your shield and to deposit and withdraw items from your personal locker while not in the Outpost.", },
+        { "\CnOverdrive",                       StrParam("You can overdrive a skill by holding the \Cd%jS\C- button. Doing this will always use the skill, regardless of its EP cost. However, this will bring your current EP into the negatives. When negative, you will suffer stat penalties and not be able to use any skills until your EP is restored past 0.", "+speed"), },
+        { "\CnAuras",                           "Auras are special passive abilities you can activate to give you temporary boosts to your ability. Auras will also affect teammates within their respective radii, as determined by your energy stat.", },
 
         // Augmentations
-        { "\CkAugmentations",                   "Augmentations give you permanent bonuses to your stats while they are active.", },
-        { "\CkAugmentation Battery",            "Augmentations can only work while your augmentation battery has a charge. Your battery can be recharged by using augmentation batteries from your inventory or by receiving certain types of damage. Battery drain is determined by how many augmentations you have active and how high their levels are. The more augmentation active and the higher their levels, the quicker the battery will drain.", },
-        { "\CkAugmentation Slots",              "You can only activate as many augmentations as you have available slots for. To increase the number of slots you have, you must find an augmentation slot upgrade. Augmentation slot upgrades can be bought from the shop, found as rare drops from enemies or found in the world.", },
+        { "\CkAugmentations",                   "Augmentations give you permanent bonuses to your ability while they are active.", },
+        { "\CkAugmentation Battery",            "Augmentations can only work while your augmentation battery has a charge. Your battery can be recharged by using augmentation batteries from your inventory or by receiving certain types of damage. Battery drain is determined by how many augmentations you have active and how high their levels are. The more augmentations that are active and the higher their levels, the quicker the battery will drain.", },
+        { "\CkAugmentation Slots",              "You can only activate as many augmentations as you have available slots for. To increase the number of slots you have, you must obtain an augmentation slot upgrade. Augmentation slot upgrades can be bought from the shop, found as rare drops from enemies, or found in the world.", },
 
         // Shield
-        { "\CvShields",                         "Shields will protect you from taking direct damage by absorbing the damage into their own charge pool. When a shield takes damage, it's charge is directly affected and will be reduced by the damage's amount. When a shield's charge reaches 0, you will begin taking normal damage again.", },
-        { "\CvShield Components",               "Shields are built from 4 basic components which you can collect and customize during the game. The body is named after the manufacturer and is generally responsible for modifying the capacity of the Shield, but also evenly modifies the other stats as well. The battery is generally responsible for modifying the charge rate of the shield. The capacitor is generally responsible for modifying the charge rate and delay rate of the shield. Accessories give the shield unique effects and abilities which can be triggered in various ways.", },
-        { "\CvShield Stats",                    "Each shield has 4 stats which govern it's behavior and ability. Capacity determines the total amount of charge the shield can hold. Charge Rate determines the amount the charge pool will regenerate when a charge cycle is completed. Delay Rate determines the wait time that occurs when a charge cycle is interrupted before charging will resume again. Charge interval determines the length between charge cycles.", },
-        { "\CvShield Charge Cycle",             "A charging cycle occurs based on the Charge Interval (default of 1 second) and increases the Shield's charge pool, determined by the Charge Rate. When the shield is struck, the charging cycle is interrupted and a waiting period, determined by the Delay Rate, must complete before charging cycles will resume again.", },
+        { "\CvShields",                         "Shields will protect you from direct damage by absorbing the damage into their own charge pool. When a shield takes damage, its charge is directly affected and will be reduced by the damage's amount. When a shield's charge reaches 0, you will begin taking normal damage again.", },
+        { "\CvShield Components",               "Shields are built from 4 basic components, which you can collect and customize during the game. The body is named after the manufacturer and is generally responsible for modifying the capacity of the shield, but it also evenly modifies the other stats as well. The battery is generally responsible for modifying the charge rate of the shield. The capacitor is generally responsible for modifying the charge rate and delay rate of the shield. Accessories give the shield unique effects and abilities, which can be triggered in various ways.", },
+        { "\CvShield Stats",                    "Each shield has 4 stats that govern its behavior and abilities. The capacity determines the total amount of charge the shield can hold. The charge rate determines the amount the charge pool will regenerate when a charge cycle is completed. The delay rate determines the wait time that occurs when a charge cycle is interrupted before charging will resume. The charge interval determines the length between charge cycles.", },
+        { "\CvShield Charge Cycle",             "A charging cycle occurs based on the charge interval (by default, 1 second) and increases the shield's charge pool, which is determined by the charge rate. When the shield is struck, the charging cycle is interrupted, and a waiting period, determined by the delay rate, must complete before charging cycles will resume again.", },
         { "\CvQuick Shield Recharge",           StrParam("You can quickly recharge your shield at the cost of EP by holding \Cd%jS\C- + \Cd%jS\C-.", "+speed", "+use"), },
 
         // Stims
-        { "\CcStims",                           "Stims are portable injected temporary stat increases. There are three forms of Stim vials that can be encountered: Stat vials, Booster vials and Powerup vials.", },
-        { "\CcStim Injectors",                  "Injectors are what are used to actually store the compounds for usage. Injectors can either be bought in the shop or found in the world. There are 4 different injector sizes, which hold varying amounts of compounds.", },
-        { "\CcStim Vials",                      "Vials are the items you pickup which contain the different kinds of compounds. Vials can be bought in the shop or found by killing enemies which have auras or elsewhere in the world.", },
+        { "\CcStims",                           "Stims are portable, injected temporary increases in ability. There are three types of stim vials that can be encountered: stat vials, booster vials, and powerup vials.", },
+        { "\CcStim Injectors",                  "Injectors are what are used to actually store the compounds for use. Injectors can either be bought in the shop or found around the world. There are 4 different injector sizes, which hold varying amounts of compounds.", },
+        { "\CcStim Vials",                      "Vials are the items that contain the different kinds of compounds. Vials can be bought in the shop or found by killing enemies that have auras or elsewhere in the world.", },
         { "\CcStim Stat Vials",                 "Stat vials increase their various corresponding stats when used.", },
-        { "\CcStim Booster Vials",              "Booster vials are special vials which have unique stat-related effects. Purifier vials increase the duration that stat vials will last. Potency vials increase all stats at once.", },
-        { "\CcStim Powerup Vials",              "Powerup vials give various special powers for a limited duration. Unlike the Stat stims, they are unaffected by Purifier vials, and their time is affected solely by the amount of vials put into the Stim.", },
-        { "\CdToxicity",                        "Toxicity is a measure of the radiation and toxins in your body. Toxicity is increased by taking radiation or toxin related damage, such as standing on damage floors. The higher your toxicity levels get, the more penalties you will suffer. If your toxicity levels reach 100%, you will die. Toxicity will naturally dissipate over time, the speed of which is determined by your Regeneration stat.", },
+        { "\CcStim Booster Vials",              "Booster vials are special vials that have unique stat related effects. Purifier vials increase the duration that stat vials will last. Potency vials increase all stats at once.", },
+        { "\CcStim Powerup Vials",              "Powerup vials grant various special powers for a limited duration. Unlike the stat stims, they are unaffected by purifier vials, and their time is affected solely by the amount of vials put into the stim.", },
+        { "\CdToxicity",                        "Toxicity is a measure of the radiation and toxins in your body. Toxicity is increased by exposure to radiation or toxin related damage, such as standing on damage floors. The higher your toxicity levels get, the more penalties you will suffer. If your toxicity levels reach 100%, you will die. Toxicity will naturally dissipate over time, the speed of which is determined by your regeneration stat.", },
 
         // Turrets
-        { "\CdTurrets",                         "Turrets are portable sentry drones which can be built and equipped with multiple offensive and defensive upgrades. Turrets must initially be built from turret parts, at which point the turret may be used and upgraded further as more parts become available.", },
+        { "\CdTurrets",                         "Turrets are portable sentry drones that can be built and equipped with multiple offensive and defensive upgrades. Turrets must initially be built from turret parts, at which point the turret may be used and upgraded further as more parts become available.", },
         { "\CdDestroyed Turrets",               "In the world, you will find destroyed turrets. These turrets can be scavenged for spare turret parts. Some turrets will be in better condition than others, allowing for more parts to be scavenged.", },
-        { "\CdTurret Maintenance",              StrParam("Your turret will need routine maintenance performed on it in order to keep it in working condition. There are three components to maintenance: charging, repairing and refitting. Charging will charge the turret's internal battery, allowing it to stay active on the field. Repairing will patch up the turret, restoring it's health. Refitting occurs when upgrades are performed on the turret, and must be allowed to finish before the turret can be used again. In order for maintenance to begin and to continue, a steady supply of Credits will be deducted from your account. To send the turret in for maintenance, in either the turret menu or with the turret command wheel open, press \Cd%jS\C-.", "+speed"), },
+        { "\CdTurret Maintenance",              StrParam("Your turret will need routine maintenance performed on it in order to keep it in working condition. There are three components to maintenance: charging, repairing, and refitting. Charging will charge the turret's internal battery, allowing it to stay active on the field. Repairing the turret will patch it up, restoring its durability. Refitting occurs when upgrades are performed on the turret and must be allowed to finish before the turret can be used again. In order for maintenance to begin and continue, a steady supply of credits will be deducted from your account. To send the turret in for maintenance, in either the turret menu or with the turret command wheel open, press \Cd%jS\C-.", "+speed"), },
         { "\CdTurret Deployment",               StrParam("To quickly deploy or deactivate your turret, use \Cd%jS\C- + \Cd%jS\C-.", "+speed", "+user2"), },
 
         // Monsters
-        { "\CgMonster Stats",                   "Like you, monsters also have a level and stats which will affect their abilities in various ways.", },
-        { "\CgMonster Auras",                   "Like you, monsters can also have one or multiple auras which will give them special abilities. Each aura a monster has will also double its respective stat.", },
-        { "\CgMonster Shadow Auras",            "Monsters which have all auras active at once will become a shadow enemy with extremely high stats and abilities for their level. These enemies will receive names and should be priority targets to take down, as their combined abilities can quickly overwhelm a player if they are not prepared.", },
-        { "\CgMonster Regeneration Cycle",      "Like you, monsters will regenerate a portion of their health every so often. The amount of health they will regenerate is determined by their regeneration stat.", },
-        { "\CgMonster Threat Level",            "Each monster has a threat level. Their threat level is determined by their level, stats and active auras and ranges from 0 to 10. Threat level can be used as a general way to gauge a monster's abilities and which ones should be prioritized when attacking. The higher a monster's threat level, the higher XP and Rank you will receive for defeating them. Threat level is represented on a monster's health bar by the number of emblems present.", },
-        { "\CgMegabosses",                      "Under certain circumstances, you will encounter monsters known as megabosses. These bosses are extremely difficult, having special and unique behaviors which can quickly and effectively destroy you if not prepared. When killed, megabosses will provide a tremendous amount of loot as well as XP and Rank.", },
+        { "\CgMonster Stats",                   "Like you, monsters also have a level and stats, which will affect their abilities in various ways.", },
+        { "\CgMonster Auras",                   "Like you, monsters can also have one or more auras, which will give them special abilities. Each aura a monster has will also double its respective stat.", },
+        { "\CgMonster Shadow Auras",            "Monsters that have all possible auras active at once will become shadow enemies with extremely high stats and abilities for their level. These enemies will receive names and should be priority targets to take down, as their combined abilities can quickly overwhelm you if you are not prepared.", },
+        { "\CgMonster Regeneration Cycle",      "Like you, monsters will regenerate a portion of their HP every so often. The amount of HP they will regenerate is determined by their regeneration stat.", },
+        { "\CgMonster Threat Level",            "Each monster has a threat level. Their threat level is determined by their level, stats, and active auras, and ranges from 0 to 10. Threat level can be used as a general way to gauge a monster's abilities and which ones should be prioritized when attacking. The higher a monster's threat level, the more XP and rank you will receive for defeating it. The threat level is represented on a monster's health bar by the number of emblems present.", },
+        { "\CgMegabosses",                      "Under certain circumstances, you will encounter monsters known as megabosses. These bosses are extremely difficult, having special and unique behaviors that can quickly and effectively destroy you if you are not prepared. When killed, megabosses will provide a tremendous amount of loot as well as XP and rank.", },
 
         // Status Effects
-        { "\CaStatus Effects",                  "Status effects are debuffs which will affect you in different ways. You can get them from taking different types of damage or by exposing yourself to specific types of hazards. When inflicted with a status effect, it will last for a certain amount of time. Each status effect has 5 levels of intensity which are increasingly more detrimental to you. If you are hit with a status effect you already have, it will add to your current timer and potentially increase it's intensity.", },
-        { "\CcBlindness",                       "Blindness is a status effect which will darken your view and make it harder to see.", },
-        { "\CfConfusion",                       "Confusion is a status effect which will make your vision blurry and make it harder for you to aim and move.", },
-        { "\CqPoison",                          "Poison is a status effect which will deal direct health damage to you every second. It will not actually kill you if your health reaches a critical level.", },
-        { "\CdCorrosion",                       "Corrosion is a status effect which will deal damage to your armor every second.", },
-        { "\CiFatigue",                         "Fatigue is a status effect which will decrease your movement speed and jumping height.", },
-        { "\CtVirus",                           "Virus is a status effect which will stop you from regenerating.", },
-        { "\CnSilence",                         "Silence is a status effect which prevents you from using skills.", },
-        { "\CgCurse",                           "Curse is a status effect which increases the amount of damage you take.", },
-        { "\CvEMP",                             "EMP is a status effect which will completely disable your shields and augmentations and not allow you to re-enable them. It will also drain your augmentation battery.", },
-        { "\CdRadiation",                       "Radiation is a status effect which slowly increases your toxicity levels. It will not increase your toxicity past 85%.", },
+        { "\CaStatus Effects",                  "Status effects are debuffs that will affect you in different ways. You can get them from taking different types of damage or by exposing yourself to specific types of hazards. When inflicted with a status effect, it will last for a certain amount of time. Each status effect has 5 levels of intensity, which are increasingly detrimental to you. If you are hit with a status effect you already have, it will add to your current timer and potentially increase its intensity.", },
+        { "\CcBlindness",                       "Blindness is a status effect that will darken your view and make it harder to see.", },
+        { "\CfConfusion",                       "Confusion is a status effect that will make your vision blurry and make it harder for you to aim and move.", },
+        { "\CqPoison",                          "Poison is a status effect that deals direct damage to you every second. It will not actually kill you if your HP reaches a critical level.", },
+        { "\CdCorrosion",                       "Corrosion is a status effect that will deal damage to your armor every second.", },
+        { "\CiFatigue",                         "Fatigue is a status effect that will decrease your movement speed and jumping height.", },
+        { "\CtVirus",                           "Virus is a status effect that will stop you from regenerating altogether.", },
+        { "\CnSilence",                         "Silence is a status effect that prevents you from using skills.", },
+        { "\CgCurse",                           "Curse is a status effect that increases the amount of damage you take.", },
+        { "\CvEMP",                             "EMP is a status effect that will completely disable your shields and augmentations and not allow you to reenable them. It will also drain your augmentation battery.", },
+        { "\CdRadiation",                       "Radiation is a status effect that slowly increases your toxicity levels. It will not increase your toxicity past 85%, however.", },
 
         // Outpost/Arena
-        { "\CqOutpost",                         "The UAC Outpost is the main hub of operations where you can perform various activities, access various facilities and stock up between levels. You can transport to the Outpost at any time using the Transport skill.", },
-        { "\CgArena",                           "In the Arena, you can fight waves of enemies for XP, Rank and loot.", },
+        { "\CqOutpost",                         "The UAC Outpost is the main hub of operations where you can perform various activities, access various facilities, and stock up between levels. You can transport to the Outpost at any time using the Transport skill.", },
+        { "\CgArena",                           "In the Arena, you can fight waves of enemies for XP, rank, and loot.", },
         { "\CdLevel Transporter",               "In the Outpost, you can use the level transporter to view stats on all the levels you have visited and to transport back to them at will.", },
         { "\CdSkill Computer",                  "In the Outpost, you can use the skill computer to change the current skill level without the need to restart the game.", },
-        { "\CdMinigames",                       "In the Outpost, there are minigames which you can play in order to win items using your gold and platinum chips.", },
+        { "\CdMinigames",                       "In the Outpost, there are minigames that you can play in order to win items using your gold and platinum chips.", },
         { "\CgPractice Target",                 "In the Outpost, you can shoot the target in order to gauge the amount of damage your weapons are doing.", },
 
         // Missions
-        { "\CdMissions",                        "You can accept different missions in the Outpost in order to gain XP, Rank, Credits, Modules and items. There are several different types of missions at varying difficulty levels you can undertake. The available missions will refresh each time you visit the Outpost.", },
-        { "\CdCollection Missions",             "You must collect a specific number of a specified item to complete the mission. These items are found scattered around the world.", },
-        { "\CaKill Missions",                   "You must kill a given amount of enemies of the same type to complete the mission.", },
-        { "\CaKill Auras Missions",             "You must Kill a given amount of enemies which have at least one aura to complete the mission.", },
-        { "\CaKill Reinforcements Missions",    "While in the field, monsters will spawn in around you. You must kill a given amount of them to complete the mission.", },
-        { "\CgAssassination Missions",          "You must eliminate the specified enemy, which will be located somewhere in the level and will always have a shadow aura to complete the mission.", },
-        { "\CkFind Secrets Missions",           "You must find the given amount of unique secrets to complete the mission.", },
-        { "\CnFind Items Missions",             "You must find the given amount of items to complete the mission.", },
+        { "\CdMissions",                        "You can accept different missions in the Outpost in order to gain XP, rank, credits, modules, and items. There are several different types of missions at varying difficulty levels you can undertake. The list of available missions will refresh each time you visit the Outpost.", },
+        { "\CdCollection Missions",             "You must collect a specific number of a specified item to complete the mission. These items are scattered around the world.", },
+        { "\CaKill Missions",                   "You must kill a given number of enemies of the same type to complete the mission.", },
+        { "\CaKill Auras Missions",             "You must kill a given amount of enemies who have at least one aura to complete the mission.", },
+        { "\CaKill Reinforcements Missions",    "While in the field, monsters will spawn around you. You must kill a given number of them to complete the mission.", },
+        { "\CgAssassination Missions",          "You must eliminate the specified shadow enemy, located somewhere in the level, to complete the mission.", },
+        { "\CkFind Secrets Missions",           "You must find the given number of unique secrets to complete the mission.", },
+        { "\CnFind Items Missions",             "You must find the given number of items to complete the mission.", },
         { "\CtAchieve Combo Missions",          "You must get your combo to the given amount to complete the mission.", },
 
         // Shop/Locker
         { "\CfShop",                            "The shop is where you can go to purchase and sell the various equipment and items you can find during the game. The shop also contains a locker system, where you may withdraw and deposit items for later usage.", },
-        { "\ChLocker",                          StrParam("You can access the locker system via the shop and deposit/withdraw your items there. Withdrawing and depositing items has a 1%% cost to your EP per use outside the Outpost. You can switch between the shop and locker using the \Cd%jS\C- key.", "+jump"), },
-        { "\CfShop Cards",                      "While playing, you may find UAC cards which provide you with a discount as well as other benefits. Finding a new card will replace your old card with the upgraded version. Discount benefits from a card will only apply when shopping at the Outpost.", },
+        { "\ChLocker",                          StrParam("You can access the locker system via the shop and deposit or withdraw your items there. Withdrawing and depositing items has a 1%% cost to your EP per use outside the Outpost. You can switch between the shop and locker using the \Cd%jS\C- key.", "+jump"), },
+        { "\CfShop Cards",                      "You may find UAC cards that provide you with a discount as well as other benefits, like access to certain equipment. Finding a new card will replace your old card with the upgraded version. The discount benefits from a card will only apply when shopping at the Outpost.", },
 
         // Level Events
-        { "\CdLevel Events",                    "When entering a level, sometimes unique level-wide events will happen. Each event has it's own unique characteristics and conditions for ending the event.", },
-        { "\CdRolling Level Events",            "Level events will not only occur when entering a level, but previous levels which you have visited will also sometimes contain events and require revisiting in order to participate in the event.", },
+        { "\CdLevel Events",                    "When entering a level, sometimes unique, levelwide events will happen. Each event has its own unique characteristics and conditions for ending the event.", },
+        { "\CdRolling Level Events",            "Level events will not only occur when entering a level, but previous levels that you have visited will also sometimes contain events and require revisiting in order to participate in the event.", },
     };
 
     TipInfo const EventTips[MAPEVENT_MAX] =
@@ -872,20 +872,20 @@ NamedScript void GiveTip()
         { "", "", }, // Never used
 
         { "\CgMegaboss Event",                  "All of the hostiles have vacated the area, and a very powerful creature is lurking about. Return to the Outpost if needed, and make sure you have the power and munitions to take down the death machine.", },
-        { "\CqEnvironmental Hazard Event",      "The area's covered in deadly radiation, but there is also a Radiation Neutralizer to fix the problem. Gather fuel and refill the Neutralizer whenever it runs low, until the radiation is brought down to safe levels.", },
+        { "\CqEnvironmental Hazard Event",      "The area is covered in lethal radiation, but there is also a radiation neutralizer to fix the problem. Gather fuel and refill the neutralizer whenever it runs low, until the radiation is brought down to safe levels.", },
         { "\CiThermonuclear Bomb Event",        "Find as many keys as you can to disable the countdown. Worse comes to worst, you can hack through the key slots by using the bomb without keys, but it's going to take time to do so for each key missing, as indicated by the HUD. And make sure the bomb doesn't get shot!", },
-        { "\CuLow Power Event",                 "The UAC had a major battle in this area, and the discards have been left behind when the area was damaged. Pluck some extra items out of the wreckage before they come back to clean up. You can even get some extra credits and modules if you restore the backup power before you leave.", },
-        { "\CdAll Auras Event",                 "All of the monsters have rather deadly magic auras. Understand their weaknesses, and attempt to stay away from some of them, as they are dangerous.", },
-        { "\CnOne-Monster Event",               "There is one species of demons currently occupying the area. Clearing the area of the hostiles will net you a bonus.", },
-        { "\CgHell Unleashed Event",            "Open the box, and partake in the rare contents within, but be warned: You will anger the demonic army, and they will pursue you endlessly until you are killed or leave the area. The longer you stay, the more likely they are to drop items, but the higher level they will become.", },
-        { "\CdHarmonized Destruction Event",    "All of the enemies in the area have one aura type. Get accustomed to the aura's strength and weakness and use it to your advantage. Don't get caught off-guard, as some monsters can and will have other auras as well.", },
+        { "\CuLow Power Event",                 "The UAC had a major battle in this area, and the discards were left behind when the area was damaged. Pluck some extra items out of the wreckage before they come back to clean up. You can even get some extra credits and modules if you restore the backup power before you leave.", },
+        { "\CdAll Auras Event",                 "All of the monsters have rather deadly magic auras. Understand their weaknesses and attempt to stay away from some of them, as they are dangerous.", },
+        { "\CnOne Monster Event",               "There is one species of demon currently occupying the area. Clearing the area of hostiles will net you a bonus.", },
+        { "\CgHell Unleashed Event",            "Open the box and partake in the rare contents within, but be warned: you will anger the demonic army, and they will pursue you endlessly until you are killed or leave the area. The longer you stay, the more likely they are to drop items, but the deadlier they will become.", },
+        { "\CdHarmonized Destruction Event",    "All of the enemies in the area have the same type of aura. Get accustomed to the aura's strengths and weaknesses and use them to your advantage. Don't get caught off guard, as some monsters can and will have other auras as well.", },
         { "\CdCracks in the Veil Event",        "The area is spatially unstable. Avoid stepping into the portals, as they will teleport you to other points in the area at random. Enemies will be teleported in as well.", },
-        { "\Cg12 Hours 'til Doomsday Event",    "Hell has claimed the area! Run while you still can.", },
-        { "\CqVicious Downpour",                "It's raining acidic substances. Best to wear a radiation suit if you plan to head outdoors.", },
-        { "\CtThe Dark Zone",                   "This is no ordinary mist. The evil fog will slowly sap away the light from its' surroundings. Once that happens, enemies will begin to resurrect and become infused with Shadow Auras. Sticking around here for long is not recommended without preparation.", },
+        { "\Cg12 Hours 'til Doomsday Event",    "Hell has claimed the area! Flee while you still can.", },
+        { "\CqVicious Downpour",                "It's raining acidic substances. It's best to wear a radiation suit if you plan to head outdoors.", },
+        { "\CtThe Dark Zone",                   "This is no ordinary mist. The evil fog will slowly sap away the light from its surroundings. Once that happens, enemies will begin to resurrect and become infused with shadow auras. Sticking around here for too long is not recommended without preparation.", },
 
         { "\CaC       O     N   S    U    M    E         \CgY   O     U", "Tip: Run.", },
-        { "\CmWhispers of Darkness",            "\Cg\"He who fights with monsters should look to it that he himself does not become a monster. \CaAnd when you gaze long into an abyss, \Cuthe abyss also gazes into you.\"", },
+        { "\CmWhispers of Darkness",            "\Cg\"He who fights with monsters should see to it that he himself does not become one. \CaAnd when you gaze long into an abyss, \Cuthe abyss also gazes into you.\"", },
 
 
         { "\CgR\CiA\CkI\CdN\ChB\CtO\CaW\CjS",   "SHE BROKE THE REALITY GENERATOR AGAIN! WE'RE DOOMED!", },
@@ -893,7 +893,7 @@ NamedScript void GiveTip()
         { "\CaHell Event",                      "The difficulty level has increased to \CaHell\C- for this area.", },
         { "\CmArmageddon Event",                "The difficulty level has increased to \CmArmageddon\C- for this area.", },
 
-        { "\CgSinstorm",                        "You're getting close to the source of the invasion. The demonic legion is pulling all of its' last stops. Expect frequent battles with shadow enemies, and reinforcements to pour in relentlessly. Be careful when traversing outdoors, as the fire rain will harm you as well.", },
+        { "\CgSinstorm",                        "You're getting close to the source of the invasion. The demonic legion is pulling out all of its stops. Expect frequent battles with shadow enemies and reinforcements to pour in relentlessly. Be careful when traversing outdoors, as the fire rain will harm you as well.", },
     };
 
     int TipID = Random(0, MAX_TIPS - 1);
