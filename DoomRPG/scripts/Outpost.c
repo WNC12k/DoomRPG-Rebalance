@@ -179,7 +179,7 @@ NamedScript MapSpecial void RegenArea(int ID)
         if (DoMessage)
         {
             SetFont("BIGFONT");
-            HudMessage("Health restored");
+            HudMessage("HP rejuvenated");
             EndHudMessage(HUDMSG_FADEOUT, 0, "Brick", 0.5, 0.33, 2.0, 0.5);
             FadeRange(255, 0, 0, 0.5, 255, 0, 0, 0.0, 1.0);
             ActivatorSound("regen/health", 127);
@@ -197,7 +197,7 @@ NamedScript MapSpecial void RegenArea(int ID)
             if (CheckInventory("RLFireShieldArmorToken") || CheckInventory("RLTowerShieldArmorToken") || CheckInventory("RLBallisticShieldArmorToken") || CheckInventory("RLEnergyShieldArmorToken") || CheckInventory("RLPlasmaShieldArmorToken") || CheckInventory("RLRechargeableEnergyShieldArmorToken"))
             {
                 SetFont("BIGFONT");
-                HudMessage("This type of armor can't be repairing");
+                HudMessage("This type of armor\ncan not be repaired");
                 EndHudMessage(HUDMSG_FADEOUT, 1, "Red", 0.5, 0.33, 2.0, 0.5);
                 ActivatorSound("menu/error", 127);
                 return;
@@ -212,7 +212,7 @@ NamedScript MapSpecial void RegenArea(int ID)
         if (CheckInventory("DRPGCredits") < ArmorFee)
         {
             SetFont("BIGFONT");
-            HudMessage("You need %d credits to repair armor", ArmorFee);
+            HudMessage("You need %d credits\nto repair this armor", ArmorFee);
             EndHudMessage(HUDMSG_FADEOUT, 1, "Red", 0.5, 0.33, 2.0, 0.5);
             ActivatorSound("menu/error", 127);
             return;
@@ -252,7 +252,7 @@ NamedScript MapSpecial void RegenArea(int ID)
             TakeInventory("DRPGCredits", ShieldCharges);
 
             SetFont("BIGFONT");
-            HudMessage("Shield restored");
+            HudMessage("Shield refreshed");
             EndHudMessage(HUDMSG_FADEOUT, 0, "Cyan", 0.5, 0.33, 2.0, 0.5);
             FadeRange(0, 255, 255, 0.5, 0, 255, 255, 0.0, 1.0);
             ActivatorSound("regen/shield", 127);
@@ -325,7 +325,7 @@ NamedScript MapSpecial void RegenArea(int ID)
             AddBattery(1); // One more to get rid of the fraction-of-a-percent
 
         SetFont("BIGFONT");
-        HudMessage("Augmentation Battery Recharged");
+        HudMessage("Augmentation battery recharged");
         EndHudMessage(HUDMSG_FADEOUT, 0, "Yellow", 0.5, 0.33, 2.0, 0.5);
         FadeRange(255, 255, 0, 0.5, 255, 255, 0, 0.0, 1.0);
         ActivatorSound("regen/battery", 127);
@@ -712,7 +712,7 @@ NamedScript MapSpecial void LevelTransport()
             HudMessage("Area Status");
             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 9, "Green", X, Y + Y1 + 120.1, 0.05, 0.025);
             SetFont("SMALLFONT");
-            HudMessage("Monster level (Approx.): %d - %d", MonsterMinLevel, MonsterMaxLevel);
+            HudMessage("Monster Level (Approx.): %d - %d", MonsterMinLevel, MonsterMaxLevel);
             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 10, "White", X, Y + Y1 + 136.1, 0.05, 0.025);
             HudMessage("%S", AreaText);
             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 11, "White", X, Y + Y1 + 152.1, 0.05, 0.025);
@@ -1928,7 +1928,7 @@ NamedScript MapSpecial void OperatingCapsule()
     // If don't use an DoomRL Arsenal, terminate
     if (CompatMode != COMPAT_DRLA)
     {
-        PrintError("The Operating Capsule is not working right now");
+        PrintError("The Operating Capsule\nis not working right now");
         ActivatorSound("menu/error", 127);
         return;
     }
@@ -2119,11 +2119,11 @@ NamedScript MapSpecial void OperatingCapsule()
 
         // Text
         SetFont("BIGFONT");
-        HudMessage("\CdOperating capsule\C-");
+        HudMessage("\CdOperating Capsule\C-");
         EndHudMessage(HUDMSG_FADEOUT, MENU_ID, "White", X + 120.0, Y + 16.0, 0.05, 0.05);
 
         SetFont("BIGFONT");
-        HudMessage("Select operation to remove armor:");
+        HudMessage("Select the armor to remove:");
         EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 24.0, Y + 56.0, 0.05, 0.05);
 
         PrintSprite(ArmorIcons[OperationChoice], 0, X + 240.0,  Y + 180.0, 0.05);
@@ -2207,13 +2207,13 @@ NamedScript MapSpecial void OperatingCapsule()
                 else
                 {
                     if (!CheckInventory(ArmorTokens[OperationChoice]))
-                        HudMessage("Armor is not equipped");
+                        HudMessage("The selected armor\nis not equipped!");
                     else if (CheckInventory("RLArmorInInventory") >= DRLA_ARMOR_MAX)
-                        HudMessage("Inventory armor is full");
+                        HudMessage("Your inventory for\narmor is full!");
                     else if (CheckInventory("DRPGCredits") < Price)
-                        HudMessage("Not enough credits");
+                        HudMessage("You do not have\nenough credits!");
                     else if ((OperationChoice <= 6) && !CheckInventory("DRPGLife"))
-                        HudMessage("You don't have Extra Life");
+                        HudMessage("You do not have\nany extra lives!");
                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 4, "Red", X + 108.0, Y + 304.0, 3.0, 2.0);
                     ActivatorSound("menu/error", 127);
                 }
