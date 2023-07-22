@@ -238,17 +238,17 @@ void DrawMainMenu()
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          0.1, 10.0, 0.05);
     HudMessage("CLASS");
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          95.1, 10.0, 0.05);
-    HudMessage("- PLAYER STATS -");
+    HudMessage("- CHAR. STATS -");
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          180.1, 10.0, 0.05);
     HudMessage("- LEVEL STATS -");
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          180.1, 100.0, 0.05);
-    HudMessage("- AUG ITEMS -");
+    HudMessage("- AUG. ITEMS -");
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          0.1, 175.0, 0.05);
     HudMessage("- SHIELD -");
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          180.1, 175.0, 0.05);
     HudMessage("- STIM ITEMS -");
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          0.1, 290.0, 0.05);
-    HudMessage("- STIM 'N TOXICITY -");
+    HudMessage("- TOXICITY -");
     EndHudMessage(HUDMSG_PLAIN, 0, "Grey",          180.1, 290.0, 0.05);
 
     // Draw Menu
@@ -540,9 +540,9 @@ void DrawStatsMenu()
         case 4:
         {
             if (Player.RegenerationTotal > Player.Regeneration)
-                HudMessage("Regen: %d (+%d)", Player.Regeneration, (Player.RegenerationNat + Player.SoulPurpleCount + Player.RegenerationBonus));
+                HudMessage("Regeneration: %d (+%d)", Player.Regeneration, (Player.RegenerationNat + Player.SoulPurpleCount + Player.RegenerationBonus));
             else
-                HudMessage("Regen: %d", Player.Regeneration);
+                HudMessage("Regeneration: %d", Player.Regeneration);
             EndHudMessage(HUDMSG_PLAIN, 0, MenuCursorColor,   0.1,    125.0,  0.05);
         }
         break;
@@ -605,9 +605,9 @@ void DrawStatsMenu()
             HudMessage("Energy: %d", Player.Energy);
         EndHudMessage(HUDMSG_PLAIN, 0, "LightBlue",  220.1,  75.0,   0.05);
         if (Player.RegenerationTotal > Player.Regeneration)
-            HudMessage("Regen: %d (+%d)", Player.Regeneration, (Player.RegenerationNat + Player.SoulPurpleCount + Player.RegenerationBonus));
+            HudMessage("Regeneration: %d (+%d)", Player.Regeneration, (Player.RegenerationNat + Player.SoulPurpleCount + Player.RegenerationBonus));
         else
-            HudMessage("Regen: %d", Player.Regeneration);
+            HudMessage("Regeneration: %d", Player.Regeneration);
         EndHudMessage(HUDMSG_PLAIN, 0, "Purple",     0.1,    125.0,  0.05);
         if (Player.AgilityTotal > Player.Agility)
             HudMessage("Agility: %d (+%d)", Player.Agility, (Player.AgilityNat + Player.SoulOrangeCount + Player.AgilityBonus));
@@ -718,7 +718,7 @@ void DrawStatsMenu()
         }
         HudMessage("Toxicity Timer: %d Sec", 30 - Player.ToxicityRegenBonus);
         EndHudMessage(HUDMSG_PLAIN, 0, "Green",              30.1,   160.0,  0.05);
-        HudMessage("Speed: %.2k", Player.Speed);
+        HudMessage("Movement Speed: %.2k", Player.Speed);
         EndHudMessage(HUDMSG_PLAIN, 0, "Orange",             250.1,  136.0,  0.05);
         HudMessage("Jump Height: %.2k", Player.JumpHeight);
         EndHudMessage(HUDMSG_PLAIN, 0, "Orange",             250.1,  144.0,  0.05);
@@ -950,14 +950,14 @@ void DrawStatsMenu()
             // Strength
             {
                 StrParam("Strength level - %d:", (naturalStats ? 150 : 75)),
-                "Total damage dealt exponentially increases as HP gets lower",
+                "Total damage dealt growingly increases as HP gets lower",
                 NULL
             },
 
             // Defense
             {
                 StrParam("Defense level - %d:", (naturalStats ? 150 : 75)),
-                "Total damage taken exponentially decreases as HP gets lower",
+                "Total damage taken growingly decreases as HP gets lower",
                 NULL
             },
 
