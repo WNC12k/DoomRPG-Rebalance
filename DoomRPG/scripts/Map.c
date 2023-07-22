@@ -585,14 +585,14 @@ Start:
                 XPBonus = ((XPTable[Players(i).Level] / (long)(10 + RoundInt(10.0 * (Player.Level / 100.0)))) + 50l) / 50l * 50l;
                 Player.XP += XPBonus;
 
-                HudMessage("Monsters Killed Bonus!\n%ld XP Bonus", XPBonus);
+                HudMessage("Monsters Wiped Bonus!\n%ld XP", XPBonus);
             }
 
             if (Players(i).Level == MAX_LEVEL)
             {
                 GiveActorInventory(Players(i).TID, "DRPGCredits", 1000);
 
-                HudMessage("Monsters Killed Bonus!\n%d Credits Bonus", 1000);
+                HudMessage("Monsters Wiped Bonus!\n%d Credits", 1000);
             }
 
             EndHudMessage(HUDMSG_FADEOUT, 0, "Brick", 1.5, 0.4, 3.0, 3.0);
@@ -617,7 +617,7 @@ Start:
             HealThing(MAX_HEALTH);
             Players(i).EP = Players(i).EPMax;
 
-            HudMessage("Items Found Bonus!\nFull HP/EP Restore");
+            HudMessage("Items Found Bonus!\nHP/EP Restoration");
             EndHudMessage(HUDMSG_FADEOUT, 0, "LightBlue", 1.5, 0.6, 3.0, 3.0);
         }
 
@@ -642,14 +642,14 @@ Start:
                 RankBonus = ((RankTable[Players(i).RankLevel] / (long)(20 + RoundInt(20.0 * (Player.RankLevel / 24.0)))) + 250l) / 250l * 250l;
                 Players(i).Rank += RankBonus;
 
-                HudMessage("Secrets Found Bonus!\n%ld Rank Bonus", RankBonus);
+                HudMessage("Secrets Revealed Bonus!\n%ld Rank", RankBonus);
             }
 
             if (Players(i).RankLevel == MAX_RANK)
             {
                 GiveActorInventory(Players(i).TID, "DRPGCredits", 1000);
 
-                HudMessage("Secrets Found Bonus!\n%d Credits Bonus", 1000);
+                HudMessage("Secrets Revealed Bonus!\n%d Credits", 1000);
             }
 
             EndHudMessage(HUDMSG_FADEOUT, 0, "Yellow", 1.5, 0.8, 3.0, 3.0);
@@ -682,7 +682,7 @@ Start:
                 Players(i).XP += XPBonus;
                 Players(i).Rank += RankBonus;
 
-                HudMessage("\CaMonsters Killed Bonus!\n\CnItems Found Bonus!\n\CkSecrets Found Bonus!\n\n\Cj%ld XP Bonus\n\Ck%ld Rank Bonus\n\CnFull HP/EP Restore",
+                HudMessage("\CaMonsters Wiped Bonus!\n\CnItems Found Bonus!\n\CkSecrets Revealed Bonus!\n\n\Cj%ld XP\n\Ck%ld Rank\n\CnHP/EP Restoration",
                            XPBonus, RankBonus);
             }
 
@@ -690,7 +690,7 @@ Start:
             {
                 GiveActorInventory(Players(i).TID, "DRPGCredits", 2000);
 
-                HudMessage("\CaMonsters Killed Bonus!\n\CnItems Found Bonus!\n\CkSecrets Found Bonus!\n\n\Cj%d Credits Bonus\n\Ck%d Credits Bonus\n\CnFull HP/EP Restore",
+                HudMessage("\CaMonsters Wiped Bonus!\n\CnItems Found Bonus!\n\CkSecrets Revealed Bonus!\n\n\Cj%d Credits\n\Ck%d Credits\n\CnHP/EP Restoration",
                            1000, 1000);
             }
 
@@ -701,7 +701,7 @@ Start:
                 Players(i).Rank += RankBonus;
                 GiveActorInventory(Players(i).TID, "DRPGCredits", 1000);
 
-                HudMessage("\CaMonsters Killed Bonus!\n\CnItems Found Bonus!\n\CkSecrets Found Bonus!\n\n\Cj%d Credits Bonus\n\Ck%ld Rank Bonus\n\CnFull HP/EP Restore",
+                HudMessage("\CaMonsters Wiped Bonus!\n\CnItems Found Bonus!\n\CkSecrets Revealed Bonus!\n\n\Cj%d Credits\n\Ck%ld Rank\n\CnHP/EP Restoration",
                            1000, RankBonus);
             }
 
@@ -712,7 +712,7 @@ Start:
                 Players(i).XP += XPBonus;
                 GiveActorInventory(Players(i).TID, "DRPGCredits", 1000);
 
-                HudMessage("\CaMonsters Killed Bonus!\n\CnItems Found Bonus!\n\CkSecrets Found Bonus!\n\n\Cj%ld XP Bonus\n\Ck%d Credits Bonus\n\CnFull HP/EP Restore",
+                HudMessage("\CaMonsters Wiped Bonus!\n\CnItems Found Bonus!\n\CkSecrets Revealed Bonus!\n\n\Cj%ld XP\n\Ck%d Credits\n\CnHP/EP Restoration",
                            XPBonus, 1000);
             }
 
