@@ -980,7 +980,7 @@ void DrawStatsMenu()
             // Regeneration
             {
                 StrParam("Regeneration level - %d:", (naturalStats ? 150 : 75)),
-                "Regeneration rate increase as HP/EP gets lower",
+                "Regeneration rate increases as HP/EP gets lower",
                 NULL
             },
 
