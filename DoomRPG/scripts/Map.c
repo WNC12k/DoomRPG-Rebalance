@@ -716,7 +716,7 @@ Start:
                            XPBonus, 1000);
             }
 
-            EndHudMessage(HUDMSG_FADEOUT, 0, "White", 0.5, 0.2, 5.0, 5.0);
+            EndHudMessage(HUDMSG_FADEOUT, 0, "White", 1.5, 0.2, 5.0, 5.0);
         }
 
         SetActivator(0, AAPTR_NULL);
