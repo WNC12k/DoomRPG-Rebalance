@@ -4615,8 +4615,8 @@ NamedScript MapSpecial void DisassemblingDevice()
                                 SpawnSpotForced(ActorToSpawn, DisassemblingDeviceID, UniqueTID(), 0);
 
                                 SetFont("BIGFONT");
-                                HudMessage("Item assembly is complete");
-                                EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 4, "Green", X + 64.0, Y + 240.0, 3.0, 2.0);
+                                HudMessage("Item assembly completed");
+                                EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 4, "Green", X + 72.0, Y + 240.0, 3.0, 2.0);
                                 ActivatorSound("mission/complete", 127);
                                 FadeRange(0, 0, 0, 1.0, 0, 0, 0, 0.0, 2.0);
 
@@ -5142,8 +5142,8 @@ NamedScript MapSpecial void DemonAssemblingSanctuary()
                     SpawnSpotForced(ActorToSpawn, DemonSanctuaryID, UniqueTID(), 0);
 
                     SetFont("BIGFONT");
-                    HudMessage("Item summoning is complete");
-                    EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 4, "Green", X + 64.0, Y + 240.0, 3.0, 2.0);
+                    HudMessage("Item summon completed");
+                    EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 4, "Green", X + 72.0, Y + 240.0, 3.0, 2.0);
                     ActivatorSound("mission/complete", 127);
                     FadeRange(0, 0, 0, 1.0, 0, 0, 0, 0.0, 2.0);
 
