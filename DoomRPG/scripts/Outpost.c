@@ -2124,7 +2124,7 @@ NamedScript MapSpecial void OperatingCapsule()
 
         SetFont("BIGFONT");
         HudMessage("Select the armor to remove:");
-        EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 24.0, Y + 56.0, 0.05, 0.05);
+        EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 72.0, Y + 56.0, 0.05, 0.05);
 
         PrintSprite(ArmorIcons[OperationChoice], 0, X + 240.0,  Y + 180.0, 0.05);
 
@@ -2791,7 +2791,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                     else
                     {
                         SetFont("BIGFONT");
-                        HudMessage("You have no item in this category");
+                        HudMessage("No items in this category");
                         EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 3, "Red", X + 56.0, Y + 208.0, 0.05, 0.05);
                     }
 
