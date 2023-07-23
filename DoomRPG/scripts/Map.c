@@ -920,14 +920,14 @@ NumberedScript(MAP_EXIT_SCRIPTNUM) MapSpecial void MapExit(bool Secret, bool Tel
                 long int RankBonus = ((RankTable[Players(i).RankLevel] / (long)(10 + RoundInt(10.0 * (Player.RankLevel / 24.0)))) + 250l) / 250l * 250l;
                 Players(i).Rank += RankBonus;
 
-                HudMessage("Par Time Beaten!\n%ld Rank Bonus", RankBonus);
+                HudMessage("Par Time Beaten!\n%ld Rank", RankBonus);
             }
 
             if (Players(i).RankLevel == MAX_RANK)
             {
                 GiveActorInventory(Players(i).TID, "DRPGCredits", 1000);
 
-                HudMessage("Par Time Beaten!\n%d Credits Bonus", 1000);
+                HudMessage("Par Time Beaten!\n%d Credits", 1000);
             }
 
             EndHudMessage(HUDMSG_FADEOUT, 0, "Gold", 1.5, 0.5, 3.0, 2.0);
