@@ -2727,7 +2727,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                         EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 9, "White", X + 308.0, Y + 400.0, 0.05, 0.05);
 
                         SetFont("SMALLFONT");
-                        HudMessage("Possible Extraction:\n\nMaximum amount: \Cd%d pcs.\C-", MaxAmount);
+                        HudMessage("Possible Extraction:\n\nMaximum amount: \Cd%d pcs\C-", MaxAmount);
                         EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 10, "White", X + 32.0, Y + 272.0, 0.05, 0.05);
 
                         // Possible Extraction
@@ -2735,21 +2735,21 @@ NamedScript MapSpecial void DisassemblingDevice()
                         if (ChanceDetails > 0)
                         {
                             SetFont("SMALLFONT");
-                            HudMessage("\CdDetails\C- rate: \Cf%.2k%%\C-", ChanceDetails);
+                            HudMessage("\CdDetail\C- rate: \Cf%.2k%%\C-", ChanceDetails);
                             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 11, "White", X + 32.0, Y + 280.0 + 24.0, 0.05, 0.05);
                         }
                         // For Chips
                         if (ChanceChips > 0)
                         {
                             SetFont("SMALLFONT");
-                            HudMessage("\CfChips\C- rate: \Cf%.2k%%\C-", ChanceChips);
+                            HudMessage("\CfChip\C- rate: \Cf%.2k%%\C-", ChanceChips);
                             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 12, "White", X + 32.0, Y + 280.0 + 32.0, 0.05, 0.05);
                         }
                         // For Recipes
                         if (ChanceBluePrint > 0)
                         {
                             SetFont("SMALLFONT");
-                            HudMessage("\CnRecipes\C- rate: \Cf%.2k%%\C-", ChanceBluePrint);
+                            HudMessage("\CnRecipe\C- rate: \Cf%.2k%%\C-", ChanceBluePrint);
                             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 13, "White", X + 32.0, Y + 280.0 + 40.0, 0.05, 0.05);
                         }
                         // For Battery
@@ -2763,14 +2763,14 @@ NamedScript MapSpecial void DisassemblingDevice()
                         if (ChanceTurret > 0)
                         {
                             SetFont("SMALLFONT");
-                            HudMessage("\CgTurret Parts\C- rate: \Cf%.2k%%\C-", ChanceTurret);
+                            HudMessage("\CgTurret Part\C- rate: \Cf%.2k%%\C-", ChanceTurret);
                             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 15, "White", X + 32.0, Y + 280.0 + 56.0, 0.05, 0.05);
                         }
                         // For ModPacks
                         if (ChanceModPacks > 0)
                         {
                             SetFont("SMALLFONT");
-                            HudMessage("\CrModPacks\C- rate: \Cf%.2k%%\C-", ChanceModPacks);
+                            HudMessage("\CrMod Pack\C- rate: \Cf%.2k%%\C-", ChanceModPacks);
                             EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 16, "White", X + 32.0, Y + 280.0 + 64.0, 0.05, 0.05);
                         }
                         // For Module
@@ -3073,7 +3073,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("Different Details: \Cd%d pcs.\C-", AmountDifferentDetails);
+                                    HudMessage("Different Details: \Cd%d pcs\C-", AmountDifferentDetails);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Gun Parts
@@ -3082,7 +3082,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("Gun Parts: \Cd%d pcs.\C-", AmountGunParts);
+                                    HudMessage("Gun Parts: \Cd%d pcs\C-", AmountGunParts);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Ammo Casings
@@ -3091,7 +3091,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("Ammo Casings: \Cd%d pcs.\C-", AmountAmmoCasings);
+                                    HudMessage("Ammo Casings: \Cd%d pcs\C-", AmountAmmoCasings);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Fuel Capsule
@@ -3100,7 +3100,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("Fuel Capsule: \Cd%d pcs.\C-", AmountFuelCapsule);
+                                    HudMessage("Fuel Capsules: \Cd%d pcs\C-", AmountFuelCapsule);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Scrap Metals
@@ -3109,7 +3109,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("Scrap Metals: \Cd%d pcs.\C-", AmountScrapMetals);
+                                    HudMessage("Scrap Metals: \Cd%d pcs\C-", AmountScrapMetals);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Scrap Electronics
@@ -3118,7 +3118,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("Scrap Electronics: \Cd%d pcs.\C-", AmountScrapElectronics);
+                                    HudMessage("Scrap Electronics: \Cd%d pcs\C-", AmountScrapElectronics);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Experimental Parts
@@ -3127,7 +3127,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("Experimental Parts: \Cd%d pcs.\C-", AmountExperimentalParts);
+                                    HudMessage("Experimental Parts: \Cd%d pcs\C-", AmountExperimentalParts);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Demon Artifacts
@@ -3136,7 +3136,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CaDemon Artifacts\C-: \Cd%d pcs.\C-", AmountDemonArtifacts);
+                                    HudMessage("\CaDemon Artifacts\C-: \Cd%d pcs\C-", AmountDemonArtifacts);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Chip Gold
@@ -3145,7 +3145,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CfChip Gold\C-: \Cd%d pcs.\C-", AmountChipGold);
+                                    HudMessage("\CfChips Gold\C-: \Cd%d pcs\C-", AmountChipGold);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Chip Platinum
@@ -3154,7 +3154,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CwChip Platinum\C-: \Cd%d pcs.\C-", AmountChipPlatinum);
+                                    HudMessage("\CwChips Platinum\C-: \Cd%d pcs\C-", AmountChipPlatinum);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Recipes
@@ -3163,7 +3163,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CnRecipes\C-: \Cd%d pcs.\C-", AmountBluePrint);
+                                    HudMessage("\CnRecipes\C-: \Cd%d pcs\C-", AmountBluePrint);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Battery
@@ -3172,7 +3172,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CaBattery\C-: \Cd%d pcs.\C-", AmountBattery);
+                                    HudMessage("\CaBatteries\C-: \Cd%d pcs\C-", AmountBattery);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Turret
@@ -3181,7 +3181,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CgTurret Parts\C-: \Cd%d pcs.\C-", AmountTurret);
+                                    HudMessage("\CgTurret Parts\C-: \Cd%d pcs\C-", AmountTurret);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For ModPacks
@@ -3190,7 +3190,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CrModPacks\C-: \Cd%d pcs.\C-", AmountModPacks);
+                                    HudMessage("\CrMod Packs\C-: \Cd%d pcs\C-", AmountModPacks);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Module
@@ -3199,7 +3199,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CqModule\C-: \Cd%d pcs.\C-", AmountModule);
+                                    HudMessage("\CqModules\C-: \Cd%d pcs\C-", AmountModule);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
                                 // For Augmentation
@@ -3208,7 +3208,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                                     Y1 += 8.0;
                                     AddMenuID += 1;
                                     SetFont("SMALLFONT");
-                                    HudMessage("\CkAugmentation\C-: \Cd%d pcs.\C-", AmountAug);
+                                    HudMessage("\CkAugmentations\C-: \Cd%d pcs\C-", AmountAug);
                                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + AddMenuID, "White", X + 64.0, Y + Y1 + 272.0, 3.0, 3.0);
                                 }
 
