@@ -2791,7 +2791,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                     else
                     {
                         SetFont("BIGFONT");
-                        HudMessage("You have no items\nin this category");
+                        HudMessage("You have no item in this category");
                         EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 3, "Red", X + 56.0, Y + 208.0, 0.05, 0.05);
                     }
 
