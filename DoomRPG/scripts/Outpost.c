@@ -2681,8 +2681,8 @@ NamedScript MapSpecial void DisassemblingDevice()
                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID, "White", X + 108.0, Y + 16.0, 0.05, 0.05);
 
                     SetFont("BIGFONT");
-                    HudMessage("Select item for disassembling:");
-                    EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 64.0, Y + 56.0, 0.05, 0.05);
+                    HudMessage("Select item to disassembly:");
+                    EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 72.0, Y + 56.0, 0.05, 0.05);
 
                     SetFont("BIGFONT");
                     HudMessage("Category: %S", CategoriesNames[CurrentCategory]);
@@ -2792,7 +2792,7 @@ NamedScript MapSpecial void DisassemblingDevice()
                     {
                         SetFont("BIGFONT");
                         HudMessage("No items in this category");
-                        EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 3, "Red", X + 56.0, Y + 208.0, 0.05, 0.05);
+                        EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 3, "Red", X + 72.0, Y + 208.0, 0.05, 0.05);
                     }
 
                     // Input
@@ -3059,8 +3059,8 @@ NamedScript MapSpecial void DisassemblingDevice()
                                 }
 
                                 SetFont("BIGFONT");
-                                HudMessage("Item disassembly is complete");
-                                EndHudMessage(HUDMSG_FADEOUT, MENU_ID, "Green", X + 64.0, Y + 240.0, 3.0, 3.0);
+                                HudMessage("Item disassembly completed");
+                                EndHudMessage(HUDMSG_FADEOUT, MENU_ID, "Green", X + 72.0, Y + 240.0, 3.0, 3.0);
 
                                 // Extraction Accounting
                                 SetFont("SMALLFONT");
@@ -4357,8 +4357,8 @@ NamedScript MapSpecial void DisassemblingDevice()
                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID, "White", X + 108.0, Y + 16.0, 0.05, 0.05);
 
                     SetFont("BIGFONT");
-                    HudMessage("Select item for assembling:");
-                    EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 64.0, Y + 56.0, 0.05, 0.05);
+                    HudMessage("Select item to assembly:");
+                    EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 72.0, Y + 56.0, 0.05, 0.05);
 
                     SetFont("BIGFONT");
                     HudMessage("Category: %S", CategoriesNames[CurrentCategory]);
@@ -4916,7 +4916,7 @@ NamedScript MapSpecial void DemonAssemblingSanctuary()
         EndHudMessage(HUDMSG_FADEOUT, MENU_ID, "White", X + 132.0, Y + 16.0, 0.05, 0.05);
 
         SetFont("BIGFONT");
-        HudMessage("Select item to summoning:");
+        HudMessage("Select item to summon:");
         EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 1, "White", X + 88.0, Y + 56.0, 0.05, 0.05);
 
         SetFont("BIGFONT");
