@@ -776,7 +776,7 @@ NamedScript void GiveTip()
         { "\CaVitality",                        "Your vitality stat determines your max HP, HP regeneration amount, and resistance to status effects.", },
         { "\CnEnergy",                          "Your energy stat determines your max EP, EP regeneration amount, and how many and for how long your auras last.", },
         { "\CtRegeneration",                    "Your regeneration stat determines your EP and HP regeneration amounts/rates, toxicity dissipation, and the time that regeneration spheres last.", },
-        { "\CiAgility",                         "Your agility stat governs your movement and fire speeds, jumping heights, as well as your survival bonus.", },
+        { "\CiAgility",                         "Your agility stat governs your movement and fire speeds, jumping height, as well as your survival bonus.", },
         { "\ChCapacity",                        "Your capacity stat determines your ammo carrying capacity, how many compounds of each type you can carry for stims, as well as how many various inventory items you can hold.", },
         { "\CfLuck",                            "Your luck stat determines which items can drop as well as the chance that they will drop. Luck also affects several other hidden factors as well.", },
 
