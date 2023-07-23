@@ -2207,13 +2207,13 @@ NamedScript MapSpecial void OperatingCapsule()
                 else
                 {
                     if (!CheckInventory(ArmorTokens[OperationChoice]))
-                        HudMessage("The selected armor\nis not equipped!");
+                        HudMessage("Armor not equipped!");
                     else if (CheckInventory("RLArmorInInventory") >= DRLA_ARMOR_MAX)
-                        HudMessage("Your inventory for\narmor is full!");
+                        HudMessage("Armor inventory full!");
                     else if (CheckInventory("DRPGCredits") < Price)
-                        HudMessage("You do not have\nenough credits!");
+                        HudMessage("Not enough credits!");
                     else if ((OperationChoice <= 6) && !CheckInventory("DRPGLife"))
-                        HudMessage("You do not have\nany extra lives!");
+                        HudMessage("No extra lives!");
                     EndHudMessage(HUDMSG_FADEOUT, MENU_ID + 4, "Red", X + 108.0, Y + 304.0, 3.0, 2.0);
                     ActivatorSound("menu/error", 127);
                 }
