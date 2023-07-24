@@ -1928,7 +1928,7 @@ NamedScript MapSpecial void OperatingCapsule()
     // If don't use an DoomRL Arsenal, terminate
     if (CompatMode != COMPAT_DRLA)
     {
-        PrintError("The Operating Capsule\nis not working right now");
+        PrintError("Currently out of order");
         ActivatorSound("menu/error", 127);
         return;
     }
