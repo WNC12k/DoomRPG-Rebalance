@@ -179,7 +179,7 @@ NamedScript MapSpecial void RegenArea(int ID)
         if (DoMessage)
         {
             SetFont("BIGFONT");
-            HudMessage("HP rejuvenated");
+            HudMessage("HP rejuvenated\nMedkit refilled");
             EndHudMessage(HUDMSG_FADEOUT, 0, "Brick", 0.5, 0.33, 2.0, 0.5);
             FadeRange(255, 0, 0, 0.5, 255, 0, 0, 0.0, 1.0);
             ActivatorSound("regen/health", 127);
