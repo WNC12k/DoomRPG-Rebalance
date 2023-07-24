@@ -328,14 +328,14 @@ void DrawMainMenu()
             fixed DangerLevelMod = (CheckInventory("RLDangerLevel") / (18.0 + (GetCVar("drpg_ws_use_wads") * 32.0)));
             Y1 = 8.0;
 
-            if (DangerLevelMod >= 0.0) NameDangerLevel = "\CdVery Low\C-";
+            if (DangerLevelMod >= 0.0) NameDangerLevel = "\CqVery Low\C-";
             if (DangerLevelMod > 0.10) NameDangerLevel = "\CdLow\C-";
             if (DangerLevelMod > 0.25) NameDangerLevel = "\CiMedium\C-";
             if (DangerLevelMod > 0.5) NameDangerLevel = "\CaHigh\C-";
             if (DangerLevelMod > 0.75) NameDangerLevel = "\CgVery High\C-";
 
             SetFont("SMALLFONT");
-            HudMessage("Danger Level: %d - %S", CheckInventory("RLDangerLevel"), NameDangerLevel);
+            HudMessage("Danger Level: %d (%S)", CheckInventory("RLDangerLevel"), NameDangerLevel);
             EndHudMessage(HUDMSG_PLAIN, 0, "Red", 180.1, 115.0, 0.05);
         }
 
@@ -346,7 +346,7 @@ void DrawMainMenu()
             fixed GameLevelMod = (CheckInventory("PMGameLevel") / (GetCVar("drpg_ws_use_wads") * 32.0 * 4.0));
             Y1 = 8.0;
 
-            if (GameLevelMod >= 0.0) NameGameLevel = "\CdVery Low\C-";
+            if (GameLevelMod >= 0.0) NameGameLevel = "\CqVery Low\C-";
             if (GameLevelMod > 0.10) NameGameLevel = "\CdLow\C-";
             if (GameLevelMod > 0.25) NameGameLevel = "\CiMedium\C-";
             if (GameLevelMod > 0.5) NameGameLevel = "\CaHigh\C-";
