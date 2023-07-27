@@ -772,7 +772,7 @@ NamedScript void GiveTip()
 
         // Stats
         { "\CgStrength",                        "Your strength stat determines the extra damage you deal with all types of attacks.", },
-        { "\CdDefense",                         "Your defense stat determines your resistance to all forms of damage.", },
+        { "\CdDefense",                         "Your defense stat determines your resistance to all forms of damage and knockback.", },
         { "\CaVitality",                        "Your vitality stat determines your max HP, HP regeneration amount, and resistance to status effects.", },
         { "\CnEnergy",                          "Your energy stat determines your max EP, EP regeneration amount, and how many and for how long your auras last.", },
         { "\CtRegeneration",                    "Your regeneration stat determines your EP and HP regeneration amounts/rates, toxicity dissipation, and the time that regeneration spheres last.", },
