@@ -599,64 +599,88 @@ void CheckStats()
         {
             Player.StrengthXP -= StatTable[Player.StrengthNat];
             Player.StrengthNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_STRENGTH);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         if (Player.DefenseXP >= StatTable[Player.DefenseNat] && Player.DefenseNat < NATURALCAP)
         {
             Player.DefenseXP -= StatTable[Player.DefenseNat];
             Player.DefenseNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_DEFENSE);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         if (Player.VitalityXP >= StatTable[Player.VitalityNat] && Player.VitalityNat < NATURALCAP)
         {
             Player.VitalityXP -= StatTable[Player.VitalityNat];
             Player.VitalityNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_VITALITY);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         if (Player.EnergyXP >= StatTable[Player.EnergyNat] && Player.EnergyNat < NATURALCAP)
         {
             Player.EnergyXP -= StatTable[Player.EnergyNat];
             Player.EnergyNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_ENERGY);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         if (Player.RegenerationXP >= StatTable[Player.RegenerationNat] && Player.RegenerationNat < NATURALCAP)
         {
             Player.RegenerationXP -= StatTable[Player.RegenerationNat];
             Player.RegenerationNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_REGENERATION);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         if (Player.AgilityXP >= StatTable[Player.AgilityNat] && Player.AgilityNat < NATURALCAP)
         {
             Player.AgilityXP -= StatTable[Player.AgilityNat];
             Player.AgilityNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_AGILITY);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         if (Player.CapacityXP >= StatTable[Player.CapacityNat] && Player.CapacityNat < NATURALCAP)
         {
             Player.CapacityXP -= StatTable[Player.CapacityNat];
             Player.CapacityNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_CAPACITY);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         if (Player.LuckXP >= StatTable[Player.LuckNat] && Player.LuckNat < NATURALCAP)
         {
             Player.LuckXP -= StatTable[Player.LuckNat];
             Player.LuckNat++;
-            ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_LUCK);
+            if (!GetCVar("drpg_natural_stat_sound_disable"))
+            {
+                ActivatorSound("misc/statup", 127);
+            }
         }
 
         // Add Regeneration XP for having low Health and/or EP

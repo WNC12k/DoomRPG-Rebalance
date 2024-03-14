@@ -280,6 +280,7 @@ user    bool    drpg_shield_sound_charge_enable = true;
 user    bool    drpg_shield_sound_full_enable = true;
 user    bool    drpg_shield_effect_hit_enable = true;
 user	bool	drpg_screen_flash_disable = false;
+user	bool	drpg_natural_stat_sound_disable = false;
 server  int     drpg_ws_use_wads = 1;
 
 // Performance

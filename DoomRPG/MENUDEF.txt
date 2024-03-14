@@ -528,6 +528,9 @@ OptionMenu "DoomRPGStatsNatural"
     Slider "Agility XP Multiplier", "drpg_agility_scalexp", 0.1, 8.0, 0.1
     Slider "Capacity XP Multiplier", "drpg_capacity_scalexp", 0.1, 8.0, 0.1
     Slider "Luck XP Multiplier", "drpg_luck_scalexp", 0.1, 8.0, 0.1
+	StaticText ""
+	StaticText ""
+	Option "Disable Natural Stat Levelling Sound.", "drpg_natural_stat_sound_disable", "OnOff"
 }
 
 OptionMenu "DoomRPGPopoffs"
