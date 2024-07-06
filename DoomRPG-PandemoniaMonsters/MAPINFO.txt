@@ -19,8 +19,10 @@ skill easy
     autousehealth
     
     acsreturn = 1
+	Key = "h"
     
-    name = "Easy"
+	MustConfirm = "75% of monsters health, less aggressive monsters, normal damage taken, nerfed Icon of Sin, can see keys on the map"
+    name = "Hey, not too rough!"
     textcolor = "Green"
 }
 
@@ -35,8 +37,10 @@ skill normal
     autousehealth
 
     acsreturn = 2
+	Key = "p"
     
-    name = "Normal"
+	MustConfirm = "Full monsters health, more aggressive monsters, normal damage taken, harder spawns."
+    name = "Hurt me plenty!"
     textcolor = "Yellow"
 }
 
@@ -52,8 +56,10 @@ skill hard
     defaultskill
 
     acsreturn = 3
+	Key = "u"
     
-    name = "Hard"
+	MustConfirm = "125% of monsters health, medium aggressive monsters, normal damage taken, more harder spawns."
+    name = "Ultra-Violence!"
     textcolor = "Orange"
 }
 
@@ -68,8 +74,10 @@ skill nightmare
     autousehealth
 
     acsreturn = 4
+	Key = "o"
     
-    name = "Nightmare"
+	MustConfirm = "150% of monsters health, very aggressive monsters, +25% damage taken, nightmare spawns."
+    name = "Overkill!"
     textcolor = "Red"
 }
 
@@ -84,7 +92,9 @@ skill hell
     autousehealth
 
     acsreturn = 5
+	Key = "n"
     
-    name = "Hell"
+	MustConfirm = "200% monsters health, very aggressive monsters, +50% damage taken, nightmare spawns."
+    name = "NIGHTMARE!"
     textcolor = "Brick"
 }

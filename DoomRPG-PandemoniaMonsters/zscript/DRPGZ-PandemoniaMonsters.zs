@@ -60,6 +60,24 @@ Class WidowBigShotRPG : WidowBigShot replaces WidowBigShot
 	}
 }
 
+//Pand teleport fog fix (not spawning when reinforcements arrive)
+Class PandTeleportFogRPG : TeleportFog replaces NewTeleportFog
+{
+
+  States
+  {
+  Spawn:
+	TNT1 A 0 NoDelay A_StartSound("Teleport/Normal",1);
+	TNT1 AAAAAA 5 Light("DTFOG1")
+		{
+		A_SpawnItemEx("BFGLightningTrail",0,0,32,0,0,0,0,0,128);
+		A_SpawnItemEx("BFGBallTrail",0,0,32,frandom(0,3),0,frandom(-3,3),random(0,360));
+		//A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,random(10,17),frandom(12,14),random(0,360),0,0,32,frandom(0,6),0,frandom(-6,6),0,0,0,1,-1,-1.2); //can`t add the fancy praticles
+		}
+	Stop;
+	}
+}
+
 //Monsters Things (damage types, drop items and etc.)
 
 //Zombies
@@ -124,6 +142,15 @@ Class SpecOpsRiflemanDropRPG : RandomSpawner
 	{
 		DropItem "DRPGClipSpawner",    255, 208;
 		DropItem "DRPGCellSpawner",    255, 48;
+	}
+}
+
+Class CinderZombieRPG : CinderZombie replaces CinderZombie
+{
+	Default
+	{
+		DropItem "PistolZombieDropRPG";
+		DamageType "Fire";
 	}
 }
 
@@ -262,7 +289,7 @@ Class ChaosWarriorRPG : ChaosWarrior replaces ChaosWarrior
 	{
 		DropItem "ChaosWarriorDropRPG";
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 
@@ -280,6 +307,14 @@ Class ChaosWarriorProjectileDRPG : ChaosWarriorProjectile replaces ChaosWarriorP
 	Default
 	{
 		Damagetype "Radiation";
+	}
+}
+
+Class PyroZombieRPG : PyroZombie replaces PyroZombie
+{
+	Default
+	{
+		DropItem "NewShotgunguyDropRPG";
 	}
 }
 
@@ -343,7 +378,6 @@ Class SpecOpsGunnerRPG : SpecOpsGunner replaces SpecOpsGunner
 	Default
 	{
 		DropItem "SpecOpsGunnerDropRPG";
-		DropItem "PandGameLevelIncreaser", 40;
 	}
 }
 
@@ -362,7 +396,6 @@ Class SpecOpsLieutenantRPG : SpecOpsLieutenant replaces SpecOpsLieutenant
 	Default
 	{
 		DropItem "SpecOpsLieutenantDropRPG";
-		DropItem "PandGameLevelIncreaser", 32;
 	}
 }
 
@@ -383,7 +416,7 @@ Class ChaosDeathmarkRPG : ChaosDeathmark replaces ChaosDeathmark
 	{
 		DropItem "ChaosDeathmarkDropRPG";
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 
@@ -423,7 +456,6 @@ Class PlasmaRifleZombieDropRPG : RandomSpawner
 	}
 }
 
-
 Class BFG10kWarriorRPG : BFG10kWarrior replaces BFG10kWarrior
 {
 	Default
@@ -462,20 +494,47 @@ Class BFGCommandoDropRPG : RandomSpawner
 	}
 }
 
+Class ScourgeZombieRPG : ScourgeZombie replaces ScourgeZombie
+{
+	Default
+	{
+		DropItem "PlasmaRifleZombieDropRPG";
+		DamageType "Slime";
+		DamageFactor "Slime", 0.2;
+	}
+}
+Class ScourgeProjectileDRPG : ScourgeProjectile replaces ScourgeProjectile
+{
+	Default
+	{
+		DamageType "Slime";
+	}
+}
+
+Class InfernalCommandoRPG : InfernalCommando replaces InfernalCommando
+{
+	Default
+	{
+		DropItem "BFGCommandoDropRPG";
+		DamageType "Fire";
+	}
+}
+
 //Imps
 Class DarkImpRPG : DarkImp replaces DarkImp {}
 Class DevilRPG : Devil replaces Devil {}
-Class HarvesterRPG : Harvester replaces Harvester {}
+Class CyberImpRPG : CyberImp replaces CyberImp {}
 Class NewImpRPG : NewImp replaces NewImp {}
 Class PhaseImpRPG : PhaseImp replaces PhaseImp {}
 Class ScoundrelRPG : Scoundrel replaces Scoundrel {}
+Class BrimstoneImpRPG : BrimstoneImp replaces BrimstoneImp {}
 
 Class ChaosImpRPG : ChaosImp replaces ChaosImp
 {
 	Default
 	{
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 
@@ -484,7 +543,7 @@ Class PlaguelingRPG : Plagueling replaces Plagueling
 	Default
 	{
 		DamageType "Slime";
-		DamageFactor "Slime", 0;
+		DamageFactor "Slime", 0.2;
 	}
 }
 Class PlaguelingBallDRPG : PlaguelingBall replaces PlaguelingBall
@@ -499,6 +558,143 @@ Class PlaguelingPoisonPodDRPG : PlaguelingPoisonPod replaces PlaguelingPoisonPod
 	Default
 	{
 		DamageType "Slime";
+	}
+}
+
+Class AbyssalSavageRPG : AbyssalSavage replaces AbyssalSavage
+{
+	Default
+	{
+		DamageType "Shadow";
+		DamageFactor "Shadow", 0;
+	}
+}
+Class AbyssalSavageBallRPG : AbyssalSavageBall replaces AbyssalSavageBall
+{
+	Default
+	{
+		DamageType "Shadow";
+		DamageType "Fire";
+	}
+}
+Class AbyssalSavageDarkBallRPG : AbyssalSavageDarkBall replaces AbyssalSavageDarkBall
+{
+	Default
+	{
+		DamageType "Shadow";
+	}
+	
+	States
+  {
+  Spawn:
+	ABI1 AABB 1 Bright
+		{
+		A_SpawnItemEx("AbyssalGhostProj",0,0,0,frandom(-1,1),frandom(-1,1),frandom(-1,1),0,SXF_TRANSFERSPRITEFRAME|SXF_TRANSFERSCALE);
+		A_SpawnItemEx("AbyssalSavageDarkBallTrail",0,0,0,frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),0,SXF_TRANSFERRENDERSTYLE);
+		A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,random(8,16),frandom(4,8),0,frandom(-6,0),frandom(-6,6),frandom(-6,6),frandom(-2,0),0,frandom(0,3),0,0,-0.03,1,-1,-0.6);
+		}
+	Loop;
+  Death:
+	TNT1 A 0 
+		{
+		for(user_fx = 0;user_fx<=20;user_fx++)
+			A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,random(10,17),frandom(12,14),random(0,360),frandom(0,6),0,frandom(-6,6),frandom(0,6),0,frandom(-6,6),0,0,0,1,-1,-0.75);
+		}
+	ABI1 CCCDDDEEEFFF 1 Bright 
+		{
+		A_SpawnItemEx("AbyssalGhostProj",0,0,0,frandom(-1,1),frandom(-1,1),frandom(-1,1),0,SXF_TRANSFERSPRITEFRAME|SXF_TRANSFERSCALE);
+		A_SetScale(Scale.X+0.08);
+		}
+	Stop;
+	}
+}
+Class AbyssalSavageDarkBeamRPG : AbyssalSavageDarkBeam replaces AbyssalSavageDarkBeam
+{
+	Default
+	{
+		DamageType "Shadow";
+	}
+}
+Class AbyssalSavagePhaseBallRPG : AbyssalSavagePhaseBall replaces AbyssalSavagePhaseBall
+{
+	Default
+	{
+		DamageType "Shadow";
+	}
+}
+Class AbyssalSavageStrongBallRPG : AbyssalSavageStrongBall replaces AbyssalSavageStrongBall //
+{
+	Default
+	{
+		DamageType "Shadow";
+		DamageType "Fire";
+	}
+  
+  States
+  {
+  Spawn:
+	ABI2 ABC 2 Bright
+		{
+		A_SpawnItemEx("BlueFireProjectileTrail2",frandom(-6,0),frandom(-6,6),frandom(-2,6),0,0,frandom(0,3),0,0,128);
+		A_SpawnItemEx("AbyssalSavageBallTrail",0,0,0,frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5));
+		for(user_fx = 0;user_fx<2;user_fx++)
+			A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,random(8,16),frandom(4,8),0,frandom(-6,0),frandom(-8,8),frandom(-8,8),frandom(-4,0),0,frandom(0,4),0,0,-0.03,1,-1,-0.6);
+		}
+	Loop;
+  Death:
+	TNT1 A 0 
+		{
+		A_Explode(40,100,0,0,60);
+		A_SpawnItemEx("BlueBossDeathExplode");
+		A_SpawnItemEx("BlueFireProjectileExplode");
+		for(user_fx = 0;user_fx<=20;user_fx++)
+			A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,random(10,17),frandom(12,14),random(0,360),frandom(0,6),0,frandom(-6,6),frandom(0,6),0,frandom(-6,6),0,0,0,1,-1,-0.75);
+		}
+	ABI2 DEFGH 2 Bright;
+	Stop;
+	}
+}
+Class AbyssalSavageFlareRPG : AbyssalSavageFlare replaces AbyssalSavageFlare //
+{
+	Default
+	{
+		DamageType "Shadow";
+		DamageType "Fire";
+	}
+	States
+  {
+  Spawn:
+	ABI3 AABB 2
+		{
+		A_ChangeVelocity(1,frandom(-3,3),frandom(-1,1),CVF_RELATIVE);
+		A_SpawnItemEx("BlueFireProjectileTrail",frandom(-3,0),frandom(-3,3),frandom(-1,3),0,0,frandom(0,1.5),0,0,128);
+		A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,random(8,16),frandom(4,8),0,frandom(-6,0),frandom(-3,3),frandom(-3,3),frandom(-2,0),0,frandom(0,3),0,0,-0.03,1,-1,-0.6);
+		}
+	Loop;
+  Death:
+	TNT1 A 0
+		{
+		A_SpawnItemEx("BlueFireProjectileExplode");
+		for(user_fx = 0;user_fx<=15;user_fx++)
+			A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,random(10,17),frandom(12,14),random(0,360),frandom(0,6),0,frandom(-6,6),frandom(0,6),0,frandom(-6,6),0,0,0,1,-1,-0.75);
+		}
+	ABI3 CDEFG 3;
+	Stop;
+	}
+}
+Class AbyssalSavageDarkMeleeRPG : AbyssalSavageDarkMelee replaces AbyssalSavageDarkMelee
+{
+	Default
+	{
+		DamageType "Shadow";
+	}
+}
+Class AbyssalSavageMeleeRPG : AbyssalSavageMelee replaces AbyssalSavageMelee
+{
+	Default
+	{
+		DamageType "Shadow";
+		DamageType "Fire";
 	}
 }
 
@@ -528,7 +724,7 @@ Class ChaosFlayerRPG : ChaosFlayer replaces ChaosFlayer
 	Default
 	{
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 Class ChaosFlayerProjectileDRPG : ChaosFlayerProjectile replaces ChaosFlayerProjectile
@@ -551,7 +747,7 @@ Class ChaosOphydianRPG : ChaosOphydian replaces ChaosOphydian
 	Default
 	{
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 Class OphydianHomingFluxDRPG : OphydianHomingFlux replaces OphydianHomingFlux
@@ -720,7 +916,7 @@ Class ChaosUmbraRPG : ChaosUmbra replaces ChaosUmbra
 	Default
   {
 	DamageType "Radiation";
-	DamageFactor "Radiation", 0;
+	DamageFactor "Radiation", 0.2;
   }
   States
   {
@@ -807,6 +1003,8 @@ Class ElectrosoulRPG : Electrosoul replaces Electrosoul
 Class DarkRevenantRPG : DarkRevenant replaces DarkRevenant {}
 Class MissileRevenantRPG : MissileRevenant replaces MissileRevenant {}
 Class NewRevenantRPG : NewRevenant replaces NewRevenant {}
+Class ApollyonRPG : Apollyon replaces Apollyon {}
+
 Class PandSentinelRPG : PandSentinel replaces PandSentinel
 {
 	Default
@@ -829,8 +1027,7 @@ Class ChaosHollowRPG : ChaosHollow replaces ChaosHollow
 	Default
 	{
 		DropItem "DRPGCellSpawner", 128;
-		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 Class HollowBallDRPG : HollowBall replaces HollowBall
@@ -848,15 +1045,41 @@ Class HollowSkullBallDRPG : HollowSkullBall replaces HollowSkullBall
 	}
 }
 
+Class AncientGladiatorRPG : AncientGladiator replaces AncientGladiator
+{
+	Default
+	{
+		DamageType "Radiation";
+		DamageFactor "Radiation", 0.4;
+		
+	}
+}
+Class DropsAncientGladiatorRPG : DropsAncientGladiator replaces DropsAncientGladiator
+{
+  Default
+  {
+  DropItem "DRPGHealthDropper", 256, 1;
+  DropItem "DRPGBlueArmorRandomizer", 265, 5;
+  }
+}
+Class GladiatorFireMissileDRPG : GladiatorFireMissile replaces GladiatorFireMissile
+{
+	Default
+	{
+		DamageType "Fire";
+	}
+}
+
 //Cacos
 Class AgathodemonRPG : Agathodemon replaces Agathodemon {}
+Class AbaddonRPG : Abaddon replaces Abaddon {}
+
 Class CacobotRPG : Cacobot replaces Cacobot
 {
 	Default
 	{
 		DropItem "DRPGCellSpawner";
 		DropItem "DRPGCellSpawner", 32;
-		DropItem "PandGameLevelIncreaser", 40;
 	}
 }
 
@@ -928,6 +1151,15 @@ Class WitherdemonEyeProjectileDRPG : WitherdemonBallDRPG replaces WitherdemonEye
 Class WitherdemonEyeProjectile2DRPG : WitherdemonEyeProjectileDRPG replaces WitherdemonEyeProjectile2 {}
 Class WitherdemonCometDRPG : PlaguelingPoisonPodDRPG replaces WitherdemonComet {}
 
+Class ChaosStalkerRPG : ChaosStalker replaces ChaosStalker
+{
+	Default
+	{
+		DamageType "Radiation";
+		DamageFactor "Radiation", 0.2;
+	}
+}
+
 //Arachnotrons
 Class ArachknightRPG : Arachknight replaces Arachknight
 {
@@ -938,6 +1170,7 @@ Class ArachknightRPG : Arachknight replaces Arachknight
 }
 
 Class NewArachnotronRPG : NewArachnotron replaces NewArachnotron {}
+Class ArachnoscorcherRPG : Arachnoscorcher replaces Arachnoscorcher {}
 
 Class AugmentedArachnotronRPG : AugmentedArachnotron replaces AugmentedArachnotron
 {
@@ -977,7 +1210,7 @@ Class ChaosObserverRPG : ChaosObserver replaces ChaosObserver
 	{
 		DropItem "DRPGCellSpawner", 128;
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 Class ObserverFluxDRPG : ObserverFlux replaces ObserverFlux
@@ -985,6 +1218,15 @@ Class ObserverFluxDRPG : ObserverFlux replaces ObserverFlux
 	Default
 	{
 		DamageType "Radiation";
+	}
+}
+
+Class DemolitronRPG : Demolitron replaces Demolitron
+{
+	Default
+	{
+		DropItem "DRPGCellSpawner", 255;
+		DropItem "DRPGClipSpawner", 180;
 	}
 }
 
@@ -999,7 +1241,7 @@ Class ChaosBeholderRPG : ChaosBeholder replaces ChaosBeholder
 	{
 		DropItem "DRPGCellSpawner", 128;
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 Class BeholderHomingBallDRPG : ChaosWarriorProjectileDRPG replaces BeholderHomingBall {}
@@ -1035,6 +1277,21 @@ Class HadesSphereDRPG : HadesSphere replaces HadesSphere
 	Default
 	{
 		Damagetype "Electric";
+	}
+}
+
+Class AutomatonElementalRPG : AutomatonElemental replaces AutomatonElemental
+{
+	Default
+	{
+		DropItem "DRPGCellSpawner", 180;
+	}
+}
+Class AutomatonElementalBombDRPG : AutomatonElementalBomb replaces AutomatonElementalBomb
+{
+	Default
+	{
+		DamageType "Fire";
 	}
 }
 
@@ -1084,9 +1341,22 @@ Class TankubusRPG : Mancubus
   {
   Spawn:
 	TCU1 A 15 A_Look;
+	TNT1 A 0
+		{
+		if(!tank2 || tank2.bISMONSTER == false)
+			{
+			ClearCounters();
+			Destroy();
+			}
+		}
 	Loop;
   See:
-	TCU1 AB 3 A_Chase(null,null);
+	TCU1 AB 3 
+		{
+		if(!tank2 || tank2.bISMONSTER == false)
+			Destroy();
+		A_Chase(null,null);
+		}
 	Loop;
 	}
 
@@ -1095,7 +1365,7 @@ Class TankubusRPG : Mancubus
 	Super.PostBeginPlay();
 	tank2 = Spawn("Tankubus2RPG",pos);
 	if(tank2) tank2.master = self;
-	A_PlaySound("Tankubus/Loop",7,1.0,1);
+	A_StartSound("Tankubus/Loop",7,CHANF_LOOPING);
 	}
 	
   override bool CanCollideWith(Actor other, bool passive)
@@ -1117,7 +1387,8 @@ Class Tankubus2RPG : Mancubus
   Speed 0;
   PainChance 40;
   PainChance "Bullet", 20;
-  DamageFactor "Bullet", 0.75;
+  DamageFactor "Bullet", 0.5;
+  DamageFactor "Plasma", 1.2;
   +BOSSDEATH;
   +DONTHARMSPECIES;
   +NOINFIGHTSPECIES;
@@ -1138,29 +1409,48 @@ Class Tankubus2RPG : Mancubus
   States
   {
   Spawn:
-    TCU2 A 15 A_Look;
-    Loop;
+	TCU2 A 15 A_Look;
+	TNT1 A 0
+		{
+		if(!master || master.bISMONSTER == false)
+			{
+			ClearCounters();
+			Destroy();
+			}
+		}
+	Loop;
   See:
-    TCU2 A 4 A_Chase();
-    Loop;
+	TCU2 A 4 
+		{
+		if(!master || master.bISMONSTER == false)
+			{
+			ClearCounters();
+			Destroy();
+			}
+		A_Chase();
+		}
+	Loop;
   Missile:
 	TNT1 A 0 A_SetSpeed(5,AAPTR_MASTER);
+	TNT1 A 0 A_StartSound("Mafibus/Attack",2,pitch:0.9);
 	TNT1 A 0 A_Jump(128,"Rockets");
 	TCU2 AA 6 A_FaceTarget;
-  StreetsweeperLoop:
-	TNT1 AAA 0 A_SpawnProjectile("EnemyBulletTracer",50,31,frandom(-10,10),CMF_OFFSETPITCH|CMF_TRACKOWNER,frandom(-5,5));
-	TCU2 B 5 Light("ZOMBIEATK")
+ StreetsweeperLoop:
+	TCU2 B 4 Light("ZOMBIEATK")
 		{
 		A_FaceTarget();
-		A_PlaySound("RapidShotgun/Fire",1);
+		A_StartSound("RapidShotgun/Fire",1);
 		A_SpawnItemEx("ShellCasing",10,34,47,Random(2,4),Random(3,6),Random(3,6),0);
+		for(int a = 0;a<4;a++)
+	  		A_SpawnProjectile("EnemyBulletTracer",50,31,frandom(-10,10),CMF_OFFSETPITCH|CMF_TRACKOWNER,frandom(-5,5));
 		}
-	TNT1 AAA 0 A_SpawnProjectile("EnemyBulletTracer",50,-31,frandom(-10,10),CMF_OFFSETPITCH|CMF_TRACKOWNER,frandom(-5,5));
-	TCU2 C 5 Light("ZOMBIEATK")
+	TCU2 C 4 Light("ZOMBIEATK")
 		{
 		A_FaceTarget();
-		A_PlaySound("RapidShotgun/Fire",1);
+		A_StartSound("RapidShotgun/Fire",1);
 		A_SpawnItemEx("ShellCasing",10,-34,47,Random(2,4),Random(-6,-3),Random(3,6),0);
+		for(int a = 0;a<4;a++)
+	  		A_SpawnProjectile("EnemyBulletTracer",50,-31,frandom(-10,10),CMF_OFFSETPITCH|CMF_TRACKOWNER,frandom(-5,5));
 		}
 	TNT1 A 0 A_MonsterRefire(0,"AttackEnd");
 	Loop;
@@ -1190,23 +1480,23 @@ Class Tankubus2RPG : Mancubus
 	TCU2 A 10 A_SetSpeed(10,AAPTR_MASTER);
 	Goto See;
   Pain:
-    TCU2 A 3 A_SetSpeed(10,AAPTR_MASTER);
-    TCU2 A 3 A_Pain;
-    Goto See;
+	TCU2 A 3 A_SetSpeed(10,AAPTR_MASTER);
+	TCU2 A 3 A_Pain;
+	Goto See;
   Death:
   XDeath:
 	TNT1 A 0 A_RemoveMaster(RMVF_EVERYTHING);
-    TCU3 A 6;
-    TCU3 B 6 A_Scream;
-    TCU3 C 6 A_NoBlocking;
-    TCU3 DEFG 6
+	TCU3 A 6;
+	TCU3 B 6 A_Scream;
+	TCU3 C 6 A_NoBlocking;
+	TCU3 DEFG 6
 		{
 		A_SpawnItemEx("NormalBossDeathExplode",random(-18,18),random(-18,18),random(15,40),0,0,0,0,0,0);
 		A_PandSmallGib();
 		}
 	TCU3 HIJK 6;
-    TCU3 L -1 A_BossDeath;
-    Stop;
+	TCU3 L -1 A_BossDeath;
+	Stop;
   Raise:
 	Stop;
 	}
@@ -1220,6 +1510,15 @@ Class Tankubus2RPG : Mancubus
 	{
 	Super.Tick();
 	A_Warp(AAPTR_MASTER,0,0,0,0,WARPF_INTERPOLATE|WARPF_NOCHECKPOSITION|WARPF_USECALLERANGLE);
+	}
+}
+
+Class ChaosPylonRPG : ChaosPylon replaces ChaosPylon
+{
+	Default
+	{
+		DropItem "DRPGCellSpawner", 200;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 
@@ -1246,6 +1545,23 @@ Class HellViscountRPG : HellViscount replaces HellViscount {}
 Class HellWardenRPG : HellWarden replaces HellWarden {}
 Class InfernobleRPG : Infernoble replaces Infernoble {}
 
+Class HellPrinceAschRPG : HellPrinceAsch replaces HellPrinceAsch
+{
+	Default
+	{
+		DamageFactor "Radiation", 0.4;
+	}
+}
+
+Class DropsHellPrinceRPG : DropsHellPrince replaces DropsHellPrince
+{
+  Default
+  {
+  DropItem "DRPGHealthDropper", 256, 1;
+  DropItem "DRPGBlueArmorRandomizer", 256, 1;
+  }
+}
+
 //Barons
 Class AfritRPG : Afrit replaces Afrit {}
 Class ArchonOfHellRPG : ArchonOfHell replaces ArchonOfHell {}
@@ -1259,7 +1575,6 @@ Class CyberwardenRPG : Cyberwarden replaces Cyberwarden
 		DropItem "DRPGRocketLauncher", 32;
 		DropItem "DRPGRocketAmmoSpawner", 192;
 		DropItem "DRPGRocketBoxSpawner", 32;
-		DropItem "PandGameLevelIncreaser", 64;
 	}
 }
 
@@ -1289,7 +1604,17 @@ Class PyrobruiserRPG : Pyrobruiser replaces Pyrobruiser
 		DropItem "DRPGRocketLauncher", 32;
 		DropItem "DRPGRocketAmmoSpawner", 192;
 		DropItem "DRPGRocketBoxSpawner", 32;
-		DropItem "PandGameLevelIncreaser", 40;
+	}
+}
+
+Class CydestructorRPG : Cydestructor replaces Cydestructor
+{
+	Default
+	{
+		DropItem "DRPGRocketLauncher", 32;
+		DropItem "DRPGRocketAmmoSpawner", 192;
+		DropItem "DRPGRocketBoxSpawner", 32;
+		DropItem "DRPGBlueArmorRandomizer", 128;
 	}
 }
 
@@ -1297,6 +1622,7 @@ Class PyrobruiserRPG : Pyrobruiser replaces Pyrobruiser
 Class NewArchvileRPG : NewArchvile replaces NewArchvile {}
 Class DarkVileRPG : DarkVile replaces DarkVile {}
 Class DiabolistRPG : Diabolist replaces Diabolist {}
+//Class PulsedemonRPG : Pulsedemon replaces Pulsedemon {} //Not implemented in 2.4.1
 Class DistortionistRPG : Distortionist replaces Distortionist
 {
 	Default
@@ -1347,7 +1673,6 @@ Class Epic2AlienRPG : Epic2Alien replaces Epic2Alien
 	}
 }
 
-Class Epic2KeenRPG : Epic2Keen replaces Epic2Keen {}
 Class Scythe2AfritRPG : Scythe2Afrit replaces Scythe2Afrit {}
 Class Scythe2MarineRPG : Scythe2Marine replaces Scythe2Marine
 {
@@ -1369,6 +1694,8 @@ Class AnnihilatorRPG : Annihilator replaces Annihilator
 }
 
 Class NewCyberdemonRPG : NewCyberdemon replaces NewCyberdemon {}
+//Class HellfireAvatarRPG : HellfireAvatar replaces HellfireAvatar {} //Not implemented
+
 Class DarkCardinalRPG : DarkCardinal replaces DarkCardinal
 {
 	Default
@@ -1424,6 +1751,20 @@ Class DreamweaverRPG : Dreamweaver replaces Dreamweaver //I dreamt about a fucki
 	}
 }
 
+Class ChaosEcclesiarchRPG : ChaosEcclesiarch replaces ChaosEcclesiarch
+{
+	Default
+	{
+		DropItem "DRPGCellPackSpawner", 256, 100;
+		DropItem "DRPGCellSpawner", 128, 20;
+		DropItem "DRPGBFG9000Spawner", 256;
+		DropItem "DRPGSoulSphereRandomizer", 200;
+		DamageFactor "Radiation", 0.2;
+		DamageFactor "Fire", 0.8;
+		DamageType "Radiation";
+	}
+}
+
 //Masterminds
 Class ArachnophyteRPG : Arachnophyte replaces Arachnophyte
 {
@@ -1455,10 +1796,11 @@ Class ChaosMonolithRPG : ChaosMonolith replaces ChaosMonolith
 {
 	Default
 	{
-		DropItem "PandGameLevelIncreaser";
 		DropItem "DRPGCellPackSpawner";
+		DropItem "DRPGBFG9000Spawner", 256;
+		DropItem "DRPGSoulSphereRandomizer", 100;
 		DamageType "Radiation";
-		DamageFactor "Radiation", 0;
+		DamageFactor "Radiation", 0.2;
 	}
 }
 Class MonolithHomingBFGDRPG : MonolithHomingBFG replaces MonolithHomingBFG
@@ -1489,14 +1831,14 @@ Class MonolithDeployerRPG : MonolithDeployer replaces MonolithDeployer
 		{
 		A_Warp(AAPTR_DEFAULT,0,0,-1000);
 		A_SpawnItemEx("MonolithDeployerEffectSpawner");
-		A_PlaySound("Monolith/Spawn",1);
+		A_StartSound("Monolith/Spawn",1);
 		MonolithEnemySpawn();
 		}
 	Stop;
 	}
   void MonolithEnemySpawn()
 	{
-	spawnchance = random(1,50);
+	spawnchance = random(1,55);
 	if(spawnchance <= 10)
 		{
 		for(int i = 0;i<4;i++)
@@ -1527,11 +1869,15 @@ Class MonolithDeployerRPG : MonolithDeployer replaces MonolithDeployer
 		for(int i = 0;i<2;i++)
 			SpawnChaosEnemy("ChaosHollowRPG",1);
 		}
-	else if(spawnchance <= 48)
-		SpawnChaosEnemy("ChaosObserverRPG");
 	else if(spawnchance <= 49)
+		SpawnChaosEnemy("ChaosStalkerRPG");
+	else if(spawnchance <= 51)
+		SpawnChaosEnemy("ChaosPylonRPG");
+	else if(spawnchance <= 53)
+		SpawnChaosEnemy("ChaosObserverRPG");
+	else if(spawnchance <= 54)
 		SpawnChaosEnemy("ChaosBeholderRPG");
-	else if(spawnchance <= 50)
+	else if(spawnchance <= 55)
 		SpawnChaosEnemy("CryptekRPG");
 	}
   void SpawnChaosEnemy(name enemy, bool shouldthrust = 0)
@@ -1650,8 +1996,6 @@ Class PandPursuerBossSpawnerRPG : PandPursuerBossSpawner replaces PandPursuerBos
 			rockerstocker.health = 5000;
 		else
 			rockerstocker.health = (rockerstocker.health) + (BeatRoast*500);
-		rockerstocker.target = target;
-		rockerstocker.A_StartSound("Roasterock/Sight",2,0,1.0,0);
 		if(pan_bossmusic)
 			S_ChangeMusic("P_ROAST");
 		}	
@@ -1674,41 +2018,34 @@ Class MyrkuraSpawnerRPG : MyrkuraSpawner replaces MyrkuraSpawner
 	TNT1 A 0 NoDelay 
 		{
 		A_StartSound("Myrkura/Spawn2",15,0,1.0,0);
+		A_QuakeEx(4,4,4,88,0,3500,"",QF_SCALEUP,0,1500,0,256);
 		if(pan_bossmusic)
 			S_ChangeMusic("P_MYRKRA");
 		}
-	MRC3 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1
+	MRC3 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1
 		{
-		for(user_fx = 0;user_fx<=3;user_fx++)
-			{
-			user_pcolor = random(1,4);
-			if(user_pcolor == 1) { A_SpawnParticle("FF4949",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			else if(user_pcolor == 2) { A_SpawnParticle("FF2424",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			else if(user_pcolor == 3) { A_SpawnParticle("FF6D6D",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			else if(user_pcolor == 4) { A_SpawnParticle("FF0000",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			}
+		if(alpha < 1)
+			A_FadeIn(0.03);
+		if(Scale.X < 1)
+			A_SetScale(Scale.X+0.025);
+		for(user_fx = 0;user_fx<3;user_fx++)
+			A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1);
 		}
 	MRC3 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1
 		{
-		for(user_fx = 0;user_fx<=3;user_fx++)
-			{
-			user_pcolor = random(1,4);
-			if(user_pcolor == 1) { A_SpawnParticle("FF4949",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			else if(user_pcolor == 2) { A_SpawnParticle("FF2424",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			else if(user_pcolor == 3) { A_SpawnParticle("FF6D6D",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			else if(user_pcolor == 4) { A_SpawnParticle("FF0000",SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1); }
-			}
 		A_SpawnItemEx("RedFireProjectileTrail2",frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),random(0,360));
+		for(user_fx = 0;user_fx<3;user_fx++)
+			A_SpawnParticle(GetParticleColor(),SPF_FULLBRIGHT|SPF_RELATIVE,25,frandom(15,16),random(0,360),frandom(0,250),0,frandom(0,4),0,0,frandom(5,10),0,0,0,1,-1,-1);
 		}
 	TNT1 A 0
 		{
+		A_QuakeEx(10,10,10,50,0,4500,"",QF_SCALEDOWN,0,0,0,256);
 		A_StartSound("Myrkura/Spawn",1,0,1.0,0);
 		for(fxloop = 0;fxloop<=360;fxloop = fxloop+3)
-			{
 			A_SpawnItemEx("RedFireProjectileTrail2",265,0,random(0,4),0,0,frandom(2,6),fxloop);
-			}
 		let mykura = Spawn("MyrkuraRPG",pos);
-		mykura.target = target;
+		if(target)
+			mykura.target = target;
 		}
 	MRC3 A 1 A_FadeOut;
 	Wait;
@@ -1772,11 +2109,15 @@ Class ChaosRandomSpawnerRPG : ChaosRandomSpawner replaces ChaosRandomSpawner
 		for(int i = 0;i<2;i++)
 			SpawnChaosEnemy("ChaosHollowRPG",1);
 		}
-	else if(spawnchance <= 48)
-		SpawnChaosEnemy("ChaosObserverRPG");
 	else if(spawnchance <= 49)
+		SpawnChaosEnemy("ChaosStalkerRPG");
+	else if(spawnchance <= 51)
+		SpawnChaosEnemy("ChaosPylonRPG");
+	else if(spawnchance <= 53)
+		SpawnChaosEnemy("ChaosObserverRPG");
+	else if(spawnchance <= 54)
 		SpawnChaosEnemy("ChaosBeholderRPG");
-	else if(spawnchance <= 50)
+	else if(spawnchance <= 55)
 		SpawnChaosEnemy("CryptekRPG");
 	}
 
@@ -1789,6 +2130,25 @@ Class ChaosRandomSpawnerRPG : ChaosRandomSpawner replaces ChaosRandomSpawner
 	}
 }
 
+//Nassis replacer
+Class ChaosCultistRPG : ChaosCultist replaces ChaosCultist
+{
+	Default
+	{
+		DamageType "Radiation";
+		DamageFactor "Radiation", 0.5;
+	}
+}
+
+Class ChaosAcolyteRPG : ChaosAcolyte replaces ChaosAcolyte
+{
+	Default
+	{
+		DamageType "Radiation";
+		DamageFactor "Radiation", 0.5;
+	}
+}
+
 // Calling the ACS MonsterInit script for monsters
 class Pandemonia_MonsterInit : EventHandler
 {
@@ -1798,18 +2158,19 @@ class Pandemonia_MonsterInit : EventHandler
         {
 			 static const string PandemoniaMonsters[] =
             {
-                		"LaserRifleZombieRPG", "PistolZombieRPG", "PlasmaPistolZombieRPG",									//Zombies
-				"SpecOpsRiflemanRPG", 					
+                "LaserRifleZombieRPG", "PistolZombieRPG", "PlasmaPistolZombieRPG",											//Zombies
+				"SpecOpsRiflemanRPG", "CinderZombieRPG",
 				
-               			"AutoShotgunZombieRPG", "ChaosWarriorRPG", "RocketZombieRPG", "ShotgunAdmiralRPG", 					//Shotgunners
+               	"AutoShotgunZombieRPG", "ChaosWarriorRPG", "RocketZombieRPG", "ShotgunAdmiralRPG", 							//Shotgunners
 				"NewShotgunguyRPG",	"SlugShotgunZombieRPG", "SpecOpsShotgunnerRPG", "SuperShotgunZombieRPG",
+				"PyroZombieRPG",
 				
 				"AssaultGunnerRPG", "BFG10kWarriorRPG", "BFGCommandoRPG", "ChaingunZombieRPG", 								//Commandos
 				"ChaosDeathmarkRPG", "NailborgCommandoRPG", "PlasmaRifleZombieRPG", "SpecOpsGunnerRPG", 
-				"SpecOpsLieutenantRPG",
+				"SpecOpsLieutenantRPG", "ScourgeZombieRPG", "InfernalCommandoRPG",
 				
-				"ChaosImpRPG",	"DarkImpRPG", "DevilRPG", "HarvesterRPG", "NewImpRPG", "PhaseImpRPG", 						//Imps
-				"PlaguelingRPG", "ScoundrelRPG",
+				"ChaosImpRPG",	"DarkImpRPG", "DevilRPG", "CyberImpRPG", "NewImpRPG", "PhaseImpRPG", 						//Imps
+				"PlaguelingRPG", "ScoundrelRPG", "BrimstoneImpRPG", "AbyssalSavageRPG",
 				
 				"BloodFiendRPG", "ChaosFlayerRPG", "MagmaDemonRPG", "PandMaulerRPG", "MechDemonRPG", 						//Pinkys
 				"NewDemonRPG",
@@ -1821,45 +2182,51 @@ class Pandemonia_MonsterInit : EventHandler
 				"PandWraithRPG",			
 				
 				"ChaosHollowRPG", "DarkRevenantRPG", "MissileRevenantRPG", "NewRevenantRPG", "PandSentinelRPG",				//Revevants
-				"SentryRPG",
+				"SentryRPG", "ApollyonRPG",
 				
 				"AgathodemonRPG", "CacobotRPG", "NewCacodemonRPG", "CrackodemonRPG", "DarkCacodemonRPG",					//Cacodemons
-				"WitherdemonRPG",
+				"WitherdemonRPG", "AbaddonRPG", "ChaosStalkerRPG", 
 				
 				"ArachknightRPG", "NewArachnotronRPG", "AugmentedArachnotronRPG", "ChaosObserverRPG", 						//Arachnotrons
-				"FusionArachnotronRPG", "NailgunArachnotronRPG", "WidowRPG", 
+				"FusionArachnotronRPG", "NailgunArachnotronRPG", "WidowRPG", "ArachnoscorcherRPG", 
+				"DemolitronRPG",
 				
 				"ChaosBeholderRPG", "DarkElementalRPG", "HadesElementalRPG", "NewPainElementalRPG", 						//Pain Elementals
-				"PlasmaticElementalRPG",	
+				"PlasmaticElementalRPG", "AutomatonElementalRPG",	
 				
-				"CorpulentRPG", "HectebusRPG", "MafibusRPG", "MancubusRPG", "MaxibusRPG", "Tankubus2RPG",					//Mancubuses
+				"CorpulentRPG", "HectebusRPG", "MafibusRPG", "MancubusRPG", "MaxibusRPG", "Tankubus2RPG", 					//Mancubuses
+				"ChaosPylonRPG",
 				
 				"CyberHellKnightRPG", "CyberHellViscountRPG", "NewHellKnightRPG", "HellViscountRPG", 						//Knights
-				"HellWardenRPG", "InfernobleRPG", 
+				"HellWardenRPG", "InfernobleRPG",
 				
 				"AfritRPG", "ArchonOfHellRPG", "NewBaronOfHellRPG", "BruiserDemonRPG", "CyberwardenRPG", 					//Barons
-				"CybruiserRPG",	"DarkCybruiserRPG", "PyrobruiserRPG", 
+				"CybruiserRPG",	"DarkCybruiserRPG", "PyrobruiserRPG", "CydestructorRPG",
 				
 				"NewArchvileRPG", "CryptekRPG", "DarkVileRPG", "DiabolistRPG", "DistortionistRPG", 							//Arch-Viles
 				"InfernalistRPG",
+				
+				"ChaosCultistRPG", "ChaosAcolyteRPG",																		//Nazi
 				
 				"Epic2AlienRPG", "Scythe2AfritRPG", "Scythe2MarineRPG"														//Patch
             };
 			
             static const string PandemoniaBosses[] =
             {
-               			"AnnihilatorRPG", "NewCyberdemonRPG", "DarkCardinalRPG", "DarkCyberdemonRPG", "DreamweaverRPG",		//Cyberdemons
-				"EradicatorRPG", "PlamexisRPG", "TerminatorRPG", 
+				"AncientGladiatorRPG", "HellPrinceAschRPG",																	//Normal Bosses
+				
+               	"AnnihilatorRPG", "NewCyberdemonRPG", "DarkCardinalRPG", "DarkCyberdemonRPG", "DreamweaverRPG",				//Cyberdemons
+				"EradicatorRPG", "PlamexisRPG", "TerminatorRPG", "ChaosEcclesiarchRPG",
 				
 				"ArachnophyteRPG", "ChaosMonolithRPG", "DemolisherRPG", "NewSpiderMastermindRPG", 							//Masterminds
 				"SpiderMastersparkRPG",	
 				
 				"MyrkuraRPG", "GeneralRoasterockRPG"																		//Special Bosses
-		};
+			};
 
 			static const string PandemoniaOtherThings[] =
             {
-                		"SayoriRPG", "Epic2KeenRPG"																			//Other Things
+                "SayoriRPG" 																						//Other Things
             };
 
             for (int i = 0; i < PandemoniaMonsters.size(); i++)

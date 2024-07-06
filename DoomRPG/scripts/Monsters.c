@@ -425,14 +425,16 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "PistolZombie",                      "Pistol Zombie",                       1,      0, false, "You hear shuffling footsteps and moans!" },
     { "PlasmaPistolZombie",                "Plasma Pistol Zombie",               32,      3, false, "Scientist notes laying around there..." },
     { "LaserRifleZombie",                  "Laser Rifle Zombie",                116,      6, false, "You feel like you're being targeted!" },
+    { "CinderZombie",                  	   "Cinder Zombie",                		131,      7, false, "Someone want to take out you!" },
     { "SpecOpsRifleman",                   "Spec Ops Rifleman",                 164,      8, false, "Systems catch a mumbling radio communications.\nYou smell a plasma..." },
 
     // Shotgunner
     { "NewShotgunguy",                     "Shotgun Zombie",                     12,      1, false, "You hear the sound of shotguns pumping!" },
-    { "SlugShotgunZombie",                 "Slug Shotgun Zombie",                18,      1, false, "You hear the sound of shotguns pumping!\nCorpses are lying around with a single hole in their heads..." },
+    { "SlugShotgunZombie",                 "Slug Shotgun Zombie",                50,      2, false, "You hear the sound of shotguns pumping!\nCorpses are lying around with a single hole in their heads..." },
     { "AutoShotgunZombie",                 "Auto Shotgun Zombie",                75,      5, false, "You see couple of 12cal. mags on the ground!" },
-    { "RocketZombie",                      "Rocket Zombie",                      78,      5, false, "A persistent smell of blood and rocket fuel is in the air." },
-    { "SuperShotgunZombie",                "Super Shotgun Zombie",               96,      8, false, "The sound of break action flies above splattered bodies!" },
+	{ "SuperShotgunZombie",                "Super Shotgun Zombie",               90,      7, false, "The sound of break action flies above splattered bodies!" },
+    { "RocketZombie",                      "Rocket Zombie",                     101,      8, false, "A persistent smell of blood and rocket fuel is in the air." },
+    { "PyroZombie",                		   "Pyro Zombie",               		117,      9, false, "A ship with a flamethrower supplies crashed nearby." },
     { "SpecOpsShotgunner",                 "Spec Ops Shotgunner",               138,     10, false, "Systems catch a mumbling radio communications.\nYou hear the sound of shotguns pumping behind your back!" },
     { "ChaosWarrior",                      "Chaos Warrior",                     180,     15, false, "Something is wrong here...\nAn undead, silent warriors are stalking this place." },
     { "ShotgunAdmiral",                    "Shotgun Admiral",                   199,     16, false, "Torn corpses are all around you... and the walls are covered in bullet holes!" },
@@ -442,10 +444,12 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "ChaingunZombie",                    "Chaingunner",                        29,      2, false, "Ammo belts rustle and clank in the dark!" },
     { "PlasmaRifleZombie",                 "Plasmagunner",                       40,      3, false, "The sound of a plasma rifle priming makes you flinch!" },
     { "NailborgCommando",                  "Nailborg Commando",                  75,      6, false, "Someone`s hand is nailed to the wall!" },
+    { "ScourgeZombie",                 	   "Scourge Zombie",                  	 82,      7, false, "Radar detected toxicity infusion devices!" },
     { "SpecOpsGunner",                     "Spec Ops Gunner",                    88,      7, false, "Systems catch a mumbling radio communications.\nYou notice a lot of empty rifle magazines on the ground..." },
     { "BFGCommando",                       "BFG Commando",                      100,      8, false, "You notice some wasted power cells on the floor,\nused only by the most powerful weapons!" },
-    { "SpecOpsLieutenant",                 "Spec Ops Lieutenant",               125,     10, false, "An evil laughter echoes everywhere! \nThe infernal gods demand a sacrifice..." },
+    { "InfernalCommando",                  "Infernal Commando",                 150,     11, false, "Enemy uses lots of pyro blast devices!" },
     { "ChaosDeathmark",                    "Chaos Deathmark",                   175,     14, false, "Something is wrong here...\nYou are marked for death!" },
+	{ "SpecOpsLieutenant",                 "Spec Ops Lieutenant",               200,     15, false, "An evil laughter echoes everywhere! \nThe infernal gods demand a sacrifice..." },
     { "BFG10kWarrior",                     "BFG10k Warrior",                    225,     18, false, "Walls around you are twisted with a huge plasma holes." },
 
     // Imp
@@ -454,8 +458,10 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "Devil",                             "Devil",                              60,      5, false, "The walls are scratched and flame-scorched!" },
     { "Scoundrel",                         "Scoundrel",                          48,      4, false, "You hear a mad beast chunter in the dark!" },
     { "PhaseImp",                          "Phase Imp",                         114,      9, false, "Something is watching you from another dimension." },
+    { "BrimstoneImp",                      "Brimstone Imp",                     136,     11, false, "High concentrations of sulfur has been detected in this area." },
     { "Plagueling",                        "Plagueling",                        168,     14, false, "A gruesome toxic scent makes it hard to breathe." },
-    { "ChaosImp",                          "Chaos Imp",                         204,     17, false, "Something is wrong here...\nRadioactive electrical zaps can be heard there." },
+    { "ChaosImp",                          "Chaos Imp",                         204,     17, false, "Something is wrong here...\nRadioactive electrical zaps can be heard here." },
+    { "AbyssalSavage",                     "Abyssal Savage",                    270,     20, false, "The Аbyss whispers to you...\nThe walls are scratched and flame-scorched." },
 
     // Demon
     { "NewDemon",                          "Demon",                              34,      4, false, "Hungry growls echo around you!" },
@@ -478,16 +484,19 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "DarkCacodemon",                     "Dark Cacodemon",                     86,      7, false, "Aggressive screeches drown out all other sound!" },
     { "Agathodemon",                       "Agathodemon",                       119,      9, false, "You hear the hum of an electrical substation...\nWhich is not there!" },
     { "Crackodemon",                       "Crackodemon",                       140,     11, false, "Your hair is on end from the electric field in this place!" },
+	{ "Abaddon",                           "Abaddon",                       	155,     12, false, "The fires are looking for you!" },
     { "Witherdemon",                       "Witherdemon",                       178,     13, false, "The local corpses melted from some infection!" },
     { "Cacobot",                           "Cacobot",                           238,     15, false, "Something is interrupting the incoming signal..." },
+    { "ChaosStalker",                      "Chaos Stalker",                     250,     16, false, "Something is wrong here...\nScreeches drown out all other sound!" },
 
     // Hell Knight
-    { "NewHellKnight",                     "Hell Knight",                       64,      12, false, "A battle cry chants in the distance!" },
+    { "NewHellKnight",                     "Hell Knight",                        64,     12, false, "A battle cry chants in the distance!" },
     { "HellViscount",                      "Hell Viscount",                     112,     13, false, "Heavy hoofsteps echo through the chambers!" },
     { "HellWarden",                        "Hell Warden",                       144,     14, false, "Shield strikes can be heard from afar!" },
     { "CyberHellKnight",                   "Cyber Hell Knight",                 182,     15, false, "Clanking footsteps herald Hell's mechanical legions!" },
     { "CyberHellViscount",                 "Cyber Hell Viscount",               204,     16, false, "You hear the clanking of metal hooves and the smell of burnt flesh!" },
     { "Infernoble",                        "Infernoble",                        244,     17, false, "An evil laugh can be heard through the flames!" },
+    { "HellPrinceAsch",                    "Hell Prince Asch",                  300,     21, true,  "Beware!\nRoyalty descended on this place!" },
 
     // Baron of Hell
     { "NewBaronOfHell",                    "Baron Of Hell",                      72,     14, false, "Seems you've found Hell's nobility!" },
@@ -498,6 +507,7 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "DarkCybruiser",                     "Dark Cybruiser",                    214,     17, false, "Sensors detected dark technology in this location!" },
     { "Cyberwarden",                       "Cyberwarden",                       236,     18, false, "Sounds of shield bashing and guns loading echoes throught this sector." },
     { "Pyrobruiser",                       "Pyrobruiser",                       261,     21, false, "The walls tremble from the onslaught of the fiery army!" },
+    { "Cydestructor",                      "Cydestructor",                      280,     22, false, "Hell`s armory has arrived!" },
 
     // Lost Souls
     { "NewLostSoul",                       "Lost Soul",                          38,      4, false, "The sound of many flames echo around!" },
@@ -512,6 +522,7 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "DarkElemental",                     "Dark Elemental",                    118,     18, false, "Toxic traces are everywhere!" },
     { "PlasmaticElemental",                "Plasmatic Elemental",               164,     19, false, "Sounds like a BFG shot is being prepared somewhere!" },
     { "HadesElemental",                    "Hades Elemental",                   228,     20, false, "An electric shriek can be heard from afar!" },
+    { "AutomatonElemental",                "Automaton Elemental",               245,     20, false, "Advance cybernetic signal has been detected in the area." },
     { "ChaosBeholder",                     "Chaos Beholder",                    262,     21, false, "Something is wrong here...\nThe level of radioactive plasma exceeds all norms in this place!" },
 
     // Revevant
@@ -519,8 +530,10 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "DarkRevenant",                      "Dark Revenant",                     110,     15, false, "Aggressive bone clatter all around you!" },
     { "MissileRevenant",                   "Missile Revenant",                  130,     16, false, "Sensors detect a large heavy rocket supplies in the area.\n...and no living sings." },
     { "Sentry",                            "Sentry",                            154,     17, false, "Screeching of bones and metal echoes from the corner!" },
+    { "Apollyon",                          "Apollyon",                          170,     17, false, "A scout drone saw burning bones in this location!" },
     { "ChaosHollow",                       "Chaos Hollow",                      212,     18, false, "Something is wrong here...\nEmpty eye sockets are looking straight into your soul!" },
-    { "PandSentinel",                      "Sentinel",                          275,     20, false, "Incoming radio transmission...\nEnemy heavy machines have been detected in your sector!" },
+    { "PandSentinel",                      "Sentinel",                          240,     19, false, "Incoming radio transmission...\nEnemy heavy machines have been detected in your sector!" },
+    { "AncientGladiator",                  "Ancient Gladiator",                 300,     21, true,  "Incoming radio transmission...\nYou hear the shout of the stands!" },
 
     // Mancubus
     { "Mancubus",                          "Mancubus",                          102,     16, false, "You hear deep, guttural noises!" },
@@ -529,15 +542,18 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
 //  { "Tankubus",                          "Tankubus",                          224,     17, false, "Tracks of tank treads capture your attention!" },
     { "Corpulent",                         "Corpulent",                         253,     18, false, "Deep growling and blasts of searing heat greet you here!" },
     { "Maxibus",                           "Maxibus",                           282,     19, false, "You hear deeper, more guttular noises!" },
+    { "ChaosPylon",                        "Chaos Pylon",                       290,     20, false, "Something is wrong here...\nAncient mechanisms detected you!" },
 
     // Arachnotron
     { "NewArachnotron",                    "Arachnotron",                        82,     12, false, "Leg servos squeak and whirr nearby!" },
     { "NailgunArachnotron",                "Nailgun Arachnotron",               104,     12, false, "Somebody's leg is nailed to the wall!" },
     { "FusionArachnotron",                 "Fusion Arachnotron",                128,     13, false, "The walls are covered with numberless marks of red plasma." },
     { "AugmentedArachnotron",              "Augmented Arachnotron",             142,     14, false, "The charging of heavy plasma guns fills the air with humming!" },
-    { "Widow",                             "Widow",                             202,     16, false, "Surrounding corpses have railgun and plasma marks on them." },
+    { "Widow",                             "Widow",                             202,     15, false, "Surrounding corpses have railgun and plasma marks on them." },
+    { "Arachnoscorcher",                   "Arachnoscorcher",                   212,     16, false, "It seems that the fire has even eaten into the walls." },
     { "Arachknight",                       "Arachknight",                       224,     17, false, "The ancient technology of hell has awakened!" },
     { "ChaosObserver",                     "Chaos Observer",                    264,     21, false, "Something is wrong here...\nFlying radiation sources detected in close proximity!" },
+    { "Demolitron",                        "Demolitron",                        286,     22, false, "Alert!\nHeavy weapon platforms detected in this area!" },
 
     // Archvile
     { "NewArchvile",                       "Arch-Vile",                         112,     18, false, "You hear a crackling flames!" },
@@ -548,8 +564,10 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "Cryptek",                           "Cryptek",                           292,     21, false, "Something is wrong here...\nCryptic destuctive power lingers nearby." },
 
     // Other
-    { "Epic2Alien",                        "Alien",                               3,      2, false, "It seems aliens are hunting for our technology." },
-    { "Scythe2Marine",                     "Traitor Marine",                     60,      5, false, "Traitors want to sacrifice you to the infernal gods!" },
+    { "Epic2Alien",                        "Alien",                              20,      4, false, "It seems aliens are hunting for our technology." },
+	{ "ChaosCultist",                      "Chaos Cultist",                      30,      5, false, "You hear distant prayers in an unknown language." },
+	{ "ChaosAcolyte",                      "Chaos Acolyte",                      40,      6, false, "Incoming radio transmission...\nDisrupt the summon of the Ecclesiarch, now!" },
+    { "Scythe2Marine",                     "Traitor Marine",                     60,      8, false, "Traitors want to sacrifice you to the infernal gods!" },
     { "Scythe2Afrit",                      "Infernal Afrit",                     82,     14, false, "Strong flames are burning your gear!" },
 
     // Mastermind
@@ -567,11 +585,12 @@ MonsterInfo const MonsterDataPANDM[MAX_DEF_MONSTERS_PANDM] =
     { "Terminator",                        "Terminator",                        298,     24, true, "Heavily armed demons desire your termination!" },
     { "Dreamweaver",                       "Dreamweaver",                       306,     24, true, "Something otherworldly and devastating weaves at the edge of your senses..." },
     { "Plamexis",                          "Plamexis",                          312,     25, true, "Hell's sun is shining on you!" },
+    { "ChaosEcclesiarch",                  "Chaos Ecclesiarch",                 314,     25, true, "Something is wrong here...\nBow before the will of Chaos!" },
     { "Eradicator",                        "Eradicator",                        316,     25, true, "The strongest demonic beasts have come to eradicate your soul!\n...And your ears." },
 
     // Special Bosses
     { "GeneralRoasterock",                 "General Roasterock",                244,     24, true, "You feel like you're about to get roasted!" },
-    { "Myrkura",                           "Myrkura",                           260,     24, true, "Bloodthirsty anomalous entities filled this place!" },
+    { "Myrkura",                           "Myrkura",                           280,     24, true, "Bloodthirsty anomalous entities filled this place!" },
 
 };
 
